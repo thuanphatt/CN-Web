@@ -5,11 +5,15 @@
             <!-- footer first section -->
             <h2 class="footer-top-head-w3l font-weight-bold mb-2">Giới thiệu về chúng tôi</h2>
             <p class="footer-main mb-4">
-                If you're considering a new laptop, looking for a powerful new car stereo or shopping for a new HDTV, we
-                make it easy to
-                find exactly what you need at a price you can afford. We offer Every Day Low Prices on TVs, laptops,
-                cell phones, tablets
-                and iPads, video games, desktop computers, cameras and camcorders, audio, video and more.</p>
+                Dù mới được thành lập trong vài năm gần đây nhưng T-P Watch đã, đang và sẽ vươn lên giữ vị trí số 1
+                trong những cửa hàng bán lẽ đồng hồ tại Việt Nam, tiếp tục sứ mệnh mang vẻ đẹp, tinh hoa của những chiếc
+                đồng hồ chính hãng cao cấp của các thương hiệu đồng hồ nổi tiếng đến với những người đam mê đồng hồ tại
+                Việt Nam.
+
+                Với mong muốn đem đến khách hàng những giá trị cao nhất, T-P Watch không chỉ bán những chiếc đồng hồ
+                chính hãng tốt nhất tới khách hàng mà còn đem tới khách hàng những chế độ bảo hành, hậu mãi mà khó có
+                cửa hàng nào đáp ứng được.
+            </p>
             <!-- //footer first section -->
             <!-- footer second section -->
             <div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
