@@ -314,6 +314,7 @@ CREATE TABLE `tbl_slider` (
 INSERT INTO `tbl_slider` (`slider_id`, `slider_image`, `slider_caption`, `slider_active`) VALUES
 (1, 'b2.jpg', 'Slider khuyến mãi ', 1),
 (2, 'b3.jpg', 'Slider 50%', 0);
+(3, 'slider1.png', 'Slider 50%', 1);
 
 --
 -- Indexes for dumped tables
