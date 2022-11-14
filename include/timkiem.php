@@ -21,7 +21,7 @@
  				<div class="wrapper">
  					<!-- first section -->
  					<div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
- 						<div class="row">
+ 						<div class="row d-flex justify-content-center">
  							<?php
 								while ($row_sanpham = mysqli_fetch_array($sql_product)) {
 								?>
