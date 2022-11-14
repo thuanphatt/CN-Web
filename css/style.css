@@ -658,7 +658,7 @@ h3.tittle-w3l span {
 }
 
 .link-product-add-cart {
-  background: hsla(205, 92%, 41%, 0.72);
+  background: var(--black-color);
   color: var(--white-color);
   display: inline-block;
   height: 37px;
@@ -2111,7 +2111,7 @@ div#testimonials h4.m-title {
 
 .con-ic i {
   font-size: 22px;
-  color: #f45c80;
+  color: var(--primary-color);
   width: 80px;
   height: 80px;
   line-height: 3.5;
