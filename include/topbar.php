@@ -61,7 +61,7 @@ if (isset($_POST['dangnhap_home'])) {
                     }
                     ?>
                     <li class="text-center border-right text-white">
-                        <i class="fas fa-phone mr-2"></i> 369369369
+                        <i class="fas fa-phone mr-2"></i> test123
                     </li>
                     <li class="text-center border-right text-white">
                         <a href="#" data-toggle="modal" data-target="#dangnhap" class="text-white">
