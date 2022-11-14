@@ -43,7 +43,9 @@ if (isset($_POST['dangnhap_home'])) {
     <div class="container-fluid">
         <div class="row main-top-w3l py-2">
             <div class="col-lg-4 header-most-top">
-
+                <p class="text-white text-lg-left text-center">Cung cấp các dịch vụ hàng đầu Việt Nam
+                    <i class="fas fa-shopping-cart ml-1"></i>
+                </p>
             </div>
             <div class="col-lg-8 header-right mt-lg-0 mt-2">
                 <!-- header lists -->
@@ -62,7 +64,7 @@ if (isset($_POST['dangnhap_home'])) {
                     }
                     ?>
                     <li class="text-center border-right text-white">
-                        <i class="fas fa-phone mr-2"></i> test
+                        <i class="fas fa-phone mr-2"></i> 369369369
                     </li>
                     <li class="text-center border-right text-white">
                         <a href="#" data-toggle="modal" data-target="#dangnhap" class="text-white">
@@ -172,7 +174,7 @@ if (isset($_POST['dangnhap_home'])) {
             <div class="col-md-3 logo_agile">
                 <h1 class="text-center">
                     <a href="index.php" class="font-weight-bold font-italic">
-                        <img src="images/logo.png" alt=" " class="img-fluid">T-P Watch
+                        T-P Watch
                     </a>
                 </h1>
             </div>

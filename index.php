@@ -10,8 +10,7 @@ include_once('db/connect.php');
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
-    <meta name="keywords"
-        content="Electro Store Responsive web template, Bootstrap Web Templates, Flat Web Templates, Android Compatible web template, Smartphone Compatible web template, free webdesigns for Nokia, Samsung, LG, SonyEricsson, Motorola web design" />
+    <meta name="keywords" content="T-P Watch" />
     <script>
     addEventListener("load", function() {
         setTimeout(hideURLbar, 0);
@@ -49,36 +48,36 @@ include_once('db/connect.php');
 
 <body>
     <?php
-	include('include/topbar.php');
-	include('include/menu.php');
-	include('include/slider.php');
+    include('include/topbar.php');
+    include('include/menu.php');
+    include('include/slider.php');
 
-	if (isset($_GET['quanly'])) {
-		$tam = $_GET['quanly'];
-	} else {
-		$tam = '';
-	}
+    if (isset($_GET['quanly'])) {
+        $tam = $_GET['quanly'];
+    } else {
+        $tam = '';
+    }
 
-	if ($tam == 'danhmuc') {
-		include('include/danhmuc.php');
-	} elseif ($tam == 'chitietsp') {
-		include('include/chitietsp.php');
-	} elseif ($tam == 'giohang') {
-		include('include/giohang.php');
-	} elseif ($tam == 'timkiem') {
-		include('include/timkiem.php');
-	} elseif ($tam == 'tintuc') {
-		include('include/tintuc.php');
-	} elseif ($tam == 'chitiettin') {
-		include('include/chitiettin.php');
-	} elseif ($tam == 'xemdonhang') {
-		include('include/xemdonhang.php');
-	} else {
-		include('include/home.php');
-	}
+    if ($tam == 'danhmuc') {
+        include('include/danhmuc.php');
+    } elseif ($tam == 'chitietsp') {
+        include('include/chitietsp.php');
+    } elseif ($tam == 'giohang') {
+        include('include/giohang.php');
+    } elseif ($tam == 'timkiem') {
+        include('include/timkiem.php');
+    } elseif ($tam == 'tintuc') {
+        include('include/tintuc.php');
+    } elseif ($tam == 'chitiettin') {
+        include('include/chitiettin.php');
+    } elseif ($tam == 'xemdonhang') {
+        include('include/xemdonhang.php');
+    } else {
+        include('include/home.php');
+    }
 
-	include('include/footer.php');
-	?>
+    include('include/footer.php');
+    ?>
     <!-- js-files -->
     <!-- jquery -->
     <script src="js/jquery-2.2.3.min.js"></script>
@@ -125,7 +124,7 @@ include_once('db/connect.php');
     <!--  <script src="js/minicart.js"></script> -->
     <script>
     paypals.minicarts
-    .render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+        .render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
     paypals.minicarts.cart.on('checkout', function(evt) {
         var items = this.items(),
