@@ -5,6 +5,7 @@ License: Creative Commons Attribution 3.0 Unported
 License URL: http://creativecommons.org/licenses/by/3.0/
 --*/
 :root {
+  --primary-color: #8b4513;
   --black-color: #000;
   --white-color: #fff;
 }
@@ -113,11 +114,13 @@ label {
 
 .modal-title {
   font-size: 30px;
-  color: #0879c9;
+  color: var(--black-color);
 }
 
 .modal-content {
-  border: 10px solid rgba(244, 92, 93, 0.82);
+  border: 1px solid #333;
+  border-radius: 5px;
+  box-shadow: 0 0 0 0.2rem rgb(52 58 64 / 50%);
 }
 
 label.col-form-label {
@@ -127,7 +130,7 @@ label.col-form-label {
 }
 
 p.dont-do a {
-  color: #f45c5d;
+  color: var(--primary-color);
 }
 
 .modal-footer .btn-primary,
@@ -160,7 +163,7 @@ p.dont-do a {
   cursor: pointer;
   letter-spacing: 1px;
   padding: 10px 0;
-  background: #0879c9;
+  background: var(--black-color);
   color: var(--white-color);
   margin: 2vw 0 1.5vw;
   -webkit-transition: 0.5s all;
@@ -223,7 +226,7 @@ input[type="submit"] {
 /*-- logo --*/
 
 .logo_agile h1 a {
-  color: var(--black-color);
+  color: var(--primary-color);
   font-size: 38px;
   text-decoration: none;
   letter-spacing: 1px;
@@ -276,7 +279,7 @@ button.w3view-cart {
 .navbar-light .navbar-nav .active > .nav-link,
 .navbar-light .navbar-nav .nav-link.show,
 .navbar-light .navbar-nav .nav-link.active {
-  color: #f45c5d;
+  color: var(--primary-color);
 }
 
 /*-- navigation-dropdown --*/
@@ -298,13 +301,13 @@ ul.multi-column-dropdown li a {
 }
 
 ul.multi-column-dropdown li a:hover {
-  color: #f45c5d;
+  color: var(--primary-color);
 }
 
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
 .dropdown-menu > .active > a:focus {
-  background-color: #f45c5d;
+  background-color: var(--primary-color);
 }
 
 .dropdown-item {
@@ -313,7 +316,7 @@ ul.multi-column-dropdown li a:hover {
 
 .dropdown-item.active,
 .dropdown-item:active {
-  background-color: #0879c9;
+  background-color: var(--primary-color);
 }
 
 /*-- //navigation-dropdown --*/
@@ -374,10 +377,10 @@ ul.multi-column-dropdown li a:hover {
 }
 
 .carousel-caption {
-  background: rgba(16, 16, 16, 0.27);
-  text-align: left;
-  position: inherit;
-  box-shadow: 0px 2px 2px 2px rgba(2, 2, 2, 0.43);
+  /* background: rgba(16, 16, 16, 0.27); */
+  text-align: center;
+  position: fixed;
+  /* box-shadow: 0px 2px 2px 2px rgba(2, 2, 2, 0.43); */
 }
 
 .carousel-caption h2,
@@ -391,7 +394,7 @@ ul.multi-column-dropdown li a:hover {
 .carousel-caption h2 span,
 .carousel-caption h3 span {
   font-weight: 800;
-  color: #f45c5d;
+  color: var(--primary-color);
 }
 
 .carousel-caption p {
@@ -421,7 +424,7 @@ ul.multi-column-dropdown li a:hover {
 
 .button2 {
   display: inline-block;
-  background: #0879c9;
+  background: var(--primary-color);
   border-radius: 4px;
   color: var(--white-color);
   letter-spacing: 2px;
@@ -430,7 +433,7 @@ ul.multi-column-dropdown li a:hover {
 
 .button2:hover,
 .button2:focus {
-  background: #f45c5d;
+  background: var(--primary-color);
   color: var(--white-color);
 }
 
@@ -450,7 +453,7 @@ h3.tittle-w3l {
 }
 
 h3.tittle-w3l span {
-  color: #0879c9;
+  color: var(--primary-color);
   font-size: 50px;
   letter-spacing: 0;
 }
@@ -471,7 +474,7 @@ h3.tittle-w3l span {
 .snipcart-details input.button {
   font-size: 13px;
   color: var(--white-color);
-  background: #0879c9;
+  background: var(--black-color);
   text-decoration: none;
   border: none;
   border-radius: 0;
@@ -492,7 +495,7 @@ h3.tittle-w3l span {
 }
 
 .snipcart-details input.button:hover {
-  background: var(--black-color);
+  background: var(--primary-color);
 }
 
 .product_list_header input.button {
@@ -836,7 +839,7 @@ h3.tittle-w3l span {
 }
 
 .search-hotel form input[type="submit"] {
-  background: url(../images/search.png) no-repeat 13px 11px #0879c9;
+  background: url(../images/search.png) no-repeat 13px 11px var(--primary-color);
   width: 44px;
   height: 39px;
   border: none;
@@ -854,7 +857,7 @@ h3.tittle-w3l span {
 }
 
 h3.agileits-sear-head {
-  color: #f45c5d;
+  color: var(--primary-color);
   font-size: 21px;
 }
 
@@ -921,7 +924,7 @@ input.checked {
 /*-- best seller (scroll) --*/
 
 .f-grid a {
-  color: #0879c9;
+  color: var(--primary-color);
   font-size: 15px;
 }
 
@@ -977,7 +980,7 @@ span.item_price {
 }
 
 .product-sec1.product-sec2 {
-  background: #f45c5d;
+  background: var(--primary-color);
   position: relative;
 }
 
@@ -1002,7 +1005,7 @@ p.w3l-nut-middle {
 }
 
 .agile_inner_drop_nav_info.p-4 h5 {
-  color: #0879c9;
+  color: var(--primary-color);
   letter-spacing: 1px;
 }
 
@@ -1078,7 +1081,7 @@ h2.footer-top-head-w3l {
 .icon-fot i {
   font-size: 41px;
   line-height: 1.4;
-  color: #0879c9;
+  color: var(--primary-color);
 }
 
 .text-form-footer {
@@ -1114,7 +1117,7 @@ h2.footer-top-head-w3l {
 }
 
 .footer-grids ul li a:hover {
-  color: #f45c5d;
+  color: var(--primary-color);
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -1123,7 +1126,7 @@ h2.footer-top-head-w3l {
 }
 
 .footer-grids ul li i {
-  color: #f45c5d;
+  color: var(--primary-color);
   padding-right: 10px;
 }
 
@@ -1221,7 +1224,7 @@ h2.footer-top-head-w3l {
   padding: 10px;
   letter-spacing: 1px;
   width: 18%;
-  background: #f45c5d;
+  background: var(--primary-color);
   border: none;
   cursor: pointer;
   -webkit-transition: 0.5s all;
@@ -1232,7 +1235,7 @@ h2.footer-top-head-w3l {
 }
 
 .w3l-agileits input[type="submit"]:hover {
-  background: #0879c9;
+  background: var(--primary-color);
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
   -o-transition: 0.5s all;
@@ -1271,7 +1274,7 @@ h2.footer-top-head-w3l {
 /*-- copyright --*/
 
 .copy-right {
-  background: #0879c9;
+  background: var(--primary-color);
 }
 
 .copy-right p {
@@ -1353,7 +1356,7 @@ ul.w3_short li {
 }
 
 ul.w3_short li a {
-  color: #f45c5d;
+  color: var(--primary-color);
   text-decoration: none;
 }
 
@@ -1377,7 +1380,7 @@ ul.w3_short {
 /*-- faq-page --*/
 
 h3.w3-head {
-  color: #f45c5d;
+  color: var(--primary-color);
   font-size: 28px;
   letter-spacing: 1px;
 }
@@ -1414,7 +1417,7 @@ li.subitem1 p {
   width: 90%;
   border: none;
   padding: 16px;
-  border-bottom: solid 1px #0879c9;
+  border-bottom: solid 1px var(--primary-color);
   height: 150px;
   outline: none;
   resize: none;
@@ -1423,7 +1426,7 @@ li.subitem1 p {
 .wthree-help form input[type="submit"] {
   font-size: 16px;
   color: var(--white-color);
-  background: #f45c5d;
+  background: var(--primary-color);
   outline: none;
   border: none;
   cursor: pointer;
@@ -1436,7 +1439,7 @@ li.subitem1 p {
 }
 
 .wthree-help form input[type="submit"]:hover {
-  background: #0879c9;
+  background: var(--primary-color);
   -webkit-transform: translateY(8px);
   -ms-transform: translateY(8px);
   -o-transform: translateY(8px);
@@ -1452,7 +1455,7 @@ li.subitem1 p {
 .wthree-help a {
   color: var(--white-color);
   padding: 10px 20px;
-  background: #0879c9;
+  background: var(--primary-color);
 }
 
 /*-- //help page --*/
@@ -1509,11 +1512,11 @@ li.subitem1 p {
 }
 
 .product-single-w3l {
-  border-top: 1px solid #0879c9;
+  border-top: 1px solid var(--primary-color);
 }
 
 .product-single-w3l p i {
-  color: #0879c9;
+  color: var(--primary-color);
   font-size: 24px;
 }
 
@@ -1538,7 +1541,7 @@ li.subitem1 p {
 /*-- checkout --*/
 
 .checkout-right h4 {
-  color: #f45c5d;
+  color: var(--primary-color);
   font-size: 26px;
   letter-spacing: 1px;
 }
@@ -1668,7 +1671,7 @@ td.invert-image a img {
 /*-- checkout form --*/
 
 .address_form_agile h4 {
-  color: #0879c9;
+  color: var(--primary-color);
   font-size: 24px;
   letter-spacing: 1px;
 }
@@ -1682,7 +1685,7 @@ td.invert-image a img {
   margin-bottom: 20px;
   outline: none;
   border: none;
-  border-bottom: 1px solid #f45c5d;
+  border-bottom: 1px solid var(--primary-color);
   -webkit-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
   -moz-box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
   box-shadow: 0px 0px 3px 0px rgba(0, 0, 0, 0.31);
@@ -1691,7 +1694,7 @@ td.invert-image a img {
 button.submit.check_out {
   padding: 12px 25px;
   letter-spacing: 1px;
-  background: #0879c9;
+  background: var(--primary-color);
   font-size: 16px;
   color: var(--white-color);
   border: none;
@@ -1704,7 +1707,7 @@ button.submit.check_out {
 }
 
 button.submit.check_out:hover {
-  background: #f45c5d;
+  background: var(--primary-color);
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
@@ -1731,7 +1734,7 @@ button.submit.check_out:hover {
 }
 
 .checkout-right-basket a:hover {
-  background: #f45c5d;
+  background: var(--primary-color);
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
@@ -1741,7 +1744,7 @@ button.submit.check_out:hover {
 
 .checkout-right-basket a span {
   margin-left: 7px;
-  color: #0879c9;
+  color: var(--primary-color);
   font-size: 20px;
 }
 
@@ -1775,10 +1778,10 @@ button.submit.check_out:hover {
   position: relative;
   padding: 6px 50px 11px;
   letter-spacing: 3px;
-  background: #0879c9;
+  background: var(--primary-color);
   font-size: 1.5em;
   color: var(--white-color);
-  border: 1px solid #0879c9;
+  border: 1px solid var(--primary-color);
   outline: none;
   text-transform: uppercase;
   cursor: pointer;
@@ -1870,7 +1873,7 @@ a.btn.btn-primary {
 }
 
 .vertical_post h5 {
-  color: #f45c5d;
+  color: var(--primary-color);
   font-size: 20px;
   margin: 0 0 18px 0;
   letter-spacing: 1px;
@@ -1949,7 +1952,7 @@ select.form-control.option-w3ls {
 
 .vertical_post form input[type="submit"],
 .number-paymk input[type="submit"] {
-  background: #0879c9;
+  background: var(--primary-color);
   color: #ffffff;
   text-align: center;
   padding: 11px 19px;
@@ -1969,7 +1972,7 @@ select.form-control.option-w3ls {
 
 .vertical_post form input[type="submit"]:hover,
 .number-paymk input[type="submit"]:hover {
-  background: #f45c5d;
+  background: var(--primary-color);
   transition: 0.5s all;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
@@ -2011,7 +2014,7 @@ h3.title:before {
 }
 
 .welcome-left h3 {
-  color: #f45c5d;
+  color: var(--primary-color);
   font-size: 36px;
   letter-spacing: 1px;
 }
@@ -2025,7 +2028,7 @@ h3.title:before {
 
 .readmore-w3-agileits a {
   border: 1px solid var(--white-color);
-  background: #0879c9;
+  background: var(--primary-color);
   display: inline-block;
   text-decoration: none;
   color: var(--white-color);
@@ -2082,7 +2085,7 @@ div#testimonials h4.m-title {
   bottom: -11.5%;
   border-left: 14px solid transparent;
   border-right: 14px solid transparent;
-  border-bottom: 18px solid #f45c5d;
+  border-bottom: 18px solid var(--primary-color);
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
@@ -2117,7 +2120,7 @@ div#testimonials h4.m-title {
 
 .contact-grid1 h4 {
   font-size: 24px;
-  color: #0879c9;
+  color: var(--primary-color);
   letter-spacing: 1px;
 }
 
@@ -2166,7 +2169,7 @@ div#testimonials h4.m-title {
   outline: none;
   padding: 12px 0;
   border: none;
-  background: #0879c9;
+  background: var(--primary-color);
   font-size: 1em;
   color: var(--white-color);
   width: 100%;
@@ -2398,7 +2401,7 @@ div#testimonials h4.m-title {
     font-size: 15px;
   }
   .navbar-light .navbar-toggler {
-    border-color: #0879c9;
+    border-color: var(--primary-color);
     border-radius: 0;
   }
   .carousel-caption p {
