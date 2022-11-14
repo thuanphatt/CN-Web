@@ -6,7 +6,7 @@ include_once('db/connect.php');
 <html lang="zxx">
 
 <head>
-    <title>Web bán điện máy</title>
+    <title>T-P Watch</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
