@@ -3,7 +3,7 @@ session_start();
 include_once('db/connect.php');
 ?>
 <!DOCTYPE html>
-<html lang="zxx">
+<html lang="en">
 
 <head>
     <title>T-P Watch</title>
