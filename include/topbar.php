@@ -53,15 +53,16 @@ if (isset($_POST['dangnhap_home'])) {
                     if (isset($_SESSION['dangnhap_home'])) {
 
                     ?>
-                        <li class="text-center border-right text-white">
-                            <a href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>" class="text-white">
-                                <i class="fas fa-truck mr-2"></i>Xem đơn hàng : <?php echo $_SESSION['dangnhap_home'] ?></a>
-                        </li>
+                    <li class="text-center border-right text-white">
+                        <a href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>"
+                            class="text-white">
+                            <i class="fas fa-truck mr-2"></i>Xem đơn hàng : <?php echo $_SESSION['dangnhap_home'] ?></a>
+                    </li>
                     <?php
                     }
                     ?>
                     <li class="text-center border-right text-white">
-                        <i class="fas fa-phone mr-2"></i> 369369369
+                        <i class="fas fa-phone mr-2"></i> test
                     </li>
                     <li class="text-center border-right text-white">
                         <a href="#" data-toggle="modal" data-target="#dangnhap" class="text-white">
@@ -182,7 +183,8 @@ if (isset($_POST['dangnhap_home'])) {
                     <!-- search -->
                     <div class="col-10 agileits_search">
                         <form class="form-inline" action="index.php?quanly=timkiem" method="POST">
-                            <input class="form-control mr-sm-2" name="search_product" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
+                            <input class="form-control mr-sm-2" name="search_product" type="search"
+                                placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
                             <button class="btn my-2 my-sm-0" name="search_button" type="submit">Tìm kiếm</button>
                         </form>
                     </div>
