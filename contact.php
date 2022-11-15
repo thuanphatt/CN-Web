@@ -242,170 +242,53 @@
                                 <span class="sr-only">(current)</span>
                             </a>
                         </li>
+                        <?php
+                        include('./db/connect.php');
+                        $sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
+                        while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
+                        ?>
+                        <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link "
+                                href="index.php?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>"
+                                role="button" aria-haspopup="true" aria-expanded="false">
+                                <?php echo $row_category_danhmuc['category_name'] ?>
+                            </a>
+
+                        </li>
+                        <?php
+                        }
+                        ?>
                         <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
+                            <?php
+                            $sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
+
+                            ?>
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Electronics
+                                Tin tức
                             </a>
                             <div class="dropdown-menu">
-                                <div class="agile_inner_drop_nav_info p-4">
-                                    <h5 class="mb-3">Mobiles, Computers</h5>
-                                    <div class="row">
-                                        <div class="col-sm-6 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li>
-                                                    <a href="product.html">All Mobile Phones</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">All Mobile Accessories</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Cases & Covers</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Screen Protectors</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Power Banks</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">All Certified Refurbished</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Tablets</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Wearable Devices</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Smart Home</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-6 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li>
-                                                    <a href="product.html">Laptops</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Drives & Storage</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Printers & Ink</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Networking Devices</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Computer Accessories</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Game Zone</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product.html">Software</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
+                                <?php
+                                while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
+                                ?>
+                                <a class="dropdown-item"
+                                    href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>"><?php echo $row_danhmuctin['tendanhmuc'] ?></a>
+                                <?php
+                                }
+                                ?>
                             </div>
                         </li>
                         <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
-                                Appliances
+                                Trang
                             </a>
                             <div class="dropdown-menu">
-                                <div class="agile_inner_drop_nav_info p-4">
-                                    <h5 class="mb-3">TV, Appliances, Electronics</h5>
-                                    <div class="row">
-                                        <div class="col-sm-6 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li>
-                                                    <a href="product2.html">Televisions</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Home Entertainment Systems</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Headphones</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Speakers</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">MP3, Media Players & Accessories</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Audio & Video Accessories</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Cameras</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">DSLR Cameras</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Camera Accessories</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                        <div class="col-sm-6 multi-gd-img">
-                                            <ul class="multi-column-dropdown">
-                                                <li>
-                                                    <a href="product2.html">Musical Instruments</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Gaming Consoles</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">All Electronics</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Air Conditioners</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Refrigerators</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Washing Machines</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Kitchen & Home Appliances</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">Heating & Cooling Appliances</a>
-                                                </li>
-                                                <li>
-                                                    <a href="product2.html">All Appliances</a>
-                                                </li>
-                                            </ul>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </li>
-                        <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-                            <a class="nav-link" href="about.html">About Us</a>
-                        </li>
-                        <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-                            <a class="nav-link" href="product.html">New Arrivals</a>
-                        </li>
-                        <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Pages
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="product.html">Product 1</a>
-                                <a class="dropdown-item" href="product2.html">Product 2</a>
+                                <a class="dropdown-item" href="product.html">Sản phẩm mới</a>
+
                                 <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="single.html">Single Product 1</a>
-                                <a class="dropdown-item" href="single2.html">Single Product 2</a>
-                                <div class="dropdown-divider"></div>
-                                <a class="dropdown-item" href="checkout.html">Checkout Page</a>
-                                <a class="dropdown-item" href="payment.html">Payment Page</a>
+                                <a class="dropdown-item" href="checkout.html">Kiểm tra hàng</a>
+                                <a class="dropdown-item" href="payment.html">Thanh toán</a>
                             </div>
                         </li>
                         <li class="nav-item active">
@@ -515,61 +398,20 @@
 
     <!-- map -->
     <div class="map mt-sm-0 mt-4">
-        <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d805196.5077734194!2d144.49270863101745!3d-37.97015423820711!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6ad646b5d2ba4df7%3A0x4045675218ccd90!2sMelbourne+VIC%2C+Australia!5e0!3m2!1sen!2sin!4v1474020956974"
-            allowfullscreen></iframe>
+        <iframe src="https://www.google.com/maps/embed/v1/place?key=AIzaSyCa37JyL2-HYunK1IDlYDVUJc4NblcyM_o
+    &q=Can+Tho,Vietnam" allowfullscreen></iframe>
     </div>
     <!-- //map -->
-
-    <!-- middle section -->
-    <div class="join-w3l1 py-sm-5 py-4">
-        <div class="container py-xl-4 py-lg-2">
-            <div class="row">
-                <div class="col-lg-6">
-                    <div class="join-agile text-left p-4">
-                        <div class="row">
-                            <div class="col-sm-7 offer-name">
-                                <h6>Smooth, Rich & Loud Audio</h6>
-                                <h4 class="mt-2 mb-3">Branded Headphones</h4>
-                                <p>Sale up to 25% off all in store</p>
-                            </div>
-                            <div class="col-sm-5 offerimg-w3l">
-                                <img src="images/off1.png" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-lg-6 mt-lg-0 mt-5">
-                    <div class="join-agile text-left p-4">
-                        <div class="row ">
-                            <div class="col-sm-7 offer-name">
-                                <h6>A Bigger Phone</h6>
-                                <h4 class="mt-2 mb-3">Smart Phones 5</h4>
-                                <p>Free shipping order over $100</p>
-                            </div>
-                            <div class="col-sm-5 offerimg-w3l">
-                                <img src="images/off2.png" alt="" class="img-fluid">
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- middle section -->
 
     <!-- footer -->
     <footer>
         <div class="footer-top-first">
             <div class="container py-md-5 py-sm-4 py-3">
                 <!-- footer first section -->
-                <h2 class="footer-top-head-w3l font-weight-bold mb-2">Electronics :</h2>
+                <h2 class="footer-top-head-w3l font-weight-bold mb-2">Đồng hồ :</h2>
                 <p class="footer-main mb-4">
-                    If you're considering a new laptop, looking for a powerful new car stereo or shopping for a new
-                    HDTV, we make it easy to
-                    find exactly what you need at a price you can afford. We offer Every Day Low Prices on TVs, laptops,
-                    cell phones, tablets
-                    and iPads, video games, desktop computers, cameras and camcorders, audio, video and more.</p>
+                    Được thành lập vào những ngày cuối cùng của năm 1991, Đồng Hồ Hải Triều đã tồn tại và phát triển đến
+                    ngày nay và đang dần vươn lên trở thành 1 trong những chuỗi bán lẻ đồng hồ hàng đầu ở Việt Nam.</p>
                 <!-- //footer first section -->
                 <!-- footer second section -->
                 <div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
