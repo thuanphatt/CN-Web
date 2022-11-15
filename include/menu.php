@@ -69,8 +69,8 @@ $sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category
                             <a class="dropdown-item" href="product.php">Sản phẩm mới</a>
 
                             <div class="dropdown-divider"></div>
-                            <a class="dropdown-item" href="checkout.html">Kiểm tra hàng</a>
-                            <a class="dropdown-item" href="payment.html">Thanh toán</a>
+                            <a class="dropdown-item" href="checkout.php">Kiểm tra hàng</a>
+                            <a class="dropdown-item" href="payment.php">Thanh toán</a>
                         </div>
                     </li>
                     <li class="nav-item">

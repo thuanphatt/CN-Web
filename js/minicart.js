@@ -2084,7 +2084,7 @@
 
           parent: typeof document !== "undefined" ? document.body : null,
 
-          action: "checkout.html",
+          action: "checkout.php",
 
           target: "",
 

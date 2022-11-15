@@ -8,13 +8,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 
 <head>
-	<title>Payment Page</title>
+	<title>Faqs Page</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="T-P Watch " />
 	<script>
-		addEventListener("load", function () {
+		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
 		}, false);
 
@@ -38,12 +38,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //Custom-Files -->
 
 	<!-- web fonts -->
-	<link
-		href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
-		rel="stylesheet">
-	<link
-		href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-		rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 	<!-- //web fonts -->
 
 </head>
@@ -522,13 +518,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Password" id="password1"
-								required="">
+							<input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Confirm Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Confirm Password"
-								id="password2" required="">
+							<input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
 						</div>
 						<div class="right-w3l">
 							<input type="submit" class="form-control" value="Register">
@@ -567,8 +561,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!-- search -->
 						<div class="col-10 agileits_search">
 							<form class="form-inline" action="#" method="post">
-								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm"
-									aria-label="Search" required>
+								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
 								<button class="btn my-2 my-sm-0" type="submit">Tìm kiếm</button>
 							</form>
 						</div>
@@ -607,186 +600,67 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</select>
 					</form>
 				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto text-center mr-xl-5">
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="index.php">Home
+							<a class="nav-link" href="index.php">Trang chủ
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
+						<?php
+						include('./db/connect.php');
+						$sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
+						while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
+						?>
+							<li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
+								<a class="nav-link " href="index.php?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>" role="button" aria-haspopup="true" aria-expanded="false">
+									<?php echo $row_category_danhmuc['category_name'] ?>
+								</a>
+
+							</li>
+						<?php
+						}
+						?>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								Electronics
+							<?php
+							$sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
+
+							?>
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Tin tức
 							</a>
 							<div class="dropdown-menu">
-								<div class="agile_inner_drop_nav_info p-4">
-									<h5 class="mb-3">Mobiles, Computers</h5>
-									<div class="row">
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.php">All Mobile Phones</a>
-												</li>
-												<li>
-													<a href="product.php">All Mobile Accessories</a>
-												</li>
-												<li>
-													<a href="product.php">Cases & Covers</a>
-												</li>
-												<li>
-													<a href="product.php">Screen Protectors</a>
-												</li>
-												<li>
-													<a href="product.php">Power Banks</a>
-												</li>
-												<li>
-													<a href="product.php">All Certified Refurbished</a>
-												</li>
-												<li>
-													<a href="product.php">Tablets</a>
-												</li>
-												<li>
-													<a href="product.php">Wearable Devices</a>
-												</li>
-												<li>
-													<a href="product.php">Smart Home</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.php">Laptops</a>
-												</li>
-												<li>
-													<a href="product.php">Drives & Storage</a>
-												</li>
-												<li>
-													<a href="product.php">Printers & Ink</a>
-												</li>
-												<li>
-													<a href="product.php">Networking Devices</a>
-												</li>
-												<li>
-													<a href="product.php">Computer Accessories</a>
-												</li>
-												<li>
-													<a href="product.php">Game Zone</a>
-												</li>
-												<li>
-													<a href="product.php">Software</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+								<?php
+								while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
+								?>
+									<a class="dropdown-item" href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
+										<?php echo $row_danhmuctin['tendanhmuc'] ?>
+									</a>
+								<?php
+								}
+								?>
 							</div>
 						</li>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								Appliances
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Trang
 							</a>
 							<div class="dropdown-menu">
-								<div class="agile_inner_drop_nav_info p-4">
-									<h5 class="mb-3">TV, Appliances, Electronics</h5>
-									<div class="row">
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product2.html">Televisions</a>
-												</li>
-												<li>
-													<a href="product2.html">Home Entertainment Systems</a>
-												</li>
-												<li>
-													<a href="product2.html">Headphones</a>
-												</li>
-												<li>
-													<a href="product2.html">Speakers</a>
-												</li>
-												<li>
-													<a href="product2.html">MP3, Media Players & Accessories</a>
-												</li>
-												<li>
-													<a href="product2.html">Audio & Video Accessories</a>
-												</li>
-												<li>
-													<a href="product2.html">Cameras</a>
-												</li>
-												<li>
-													<a href="product2.html">DSLR Cameras</a>
-												</li>
-												<li>
-													<a href="product2.html">Camera Accessories</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product2.html">Musical Instruments</a>
-												</li>
-												<li>
-													<a href="product2.html">Gaming Consoles</a>
-												</li>
-												<li>
-													<a href="product2.html">All Electronics</a>
-												</li>
-												<li>
-													<a href="product2.html">Air Conditioners</a>
-												</li>
-												<li>
-													<a href="product2.html">Refrigerators</a>
-												</li>
-												<li>
-													<a href="product2.html">Washing Machines</a>
-												</li>
-												<li>
-													<a href="product2.html">Kitchen & Home Appliances</a>
-												</li>
-												<li>
-													<a href="product2.html">Heating & Cooling Appliances</a>
-												</li>
-												<li>
-													<a href="product2.html">All Appliances</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+								<a class="dropdown-item" href="product.php">Sản phẩm mới</a>
+
+								<div class="dropdown-divider"></div>
+								<a class="dropdown-item" href="checkout.php">Kiểm tra hàng</a>
+								<a class="dropdown-item" href="payment.php">Thanh toán</a>
 							</div>
 						</li>
-						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="about.php">About Us</a>
-						</li>
-						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="product.php">New Arrivals</a>
-						</li>
-						<li class="nav-item dropdown active mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								Pages
-							</a>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="product.php">Product 1</a>
-								<a class="dropdown-item" href="product2.html">Product 2</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="single.html">Single Product 1</a>
-								<a class="dropdown-item" href="single2.html">Single Product 2</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="checkout.html">Checkout Page</a>
-								<a class="dropdown-item active" href="payment.html">Payment Page</a>
-							</div>
+						<li class="nav-item active">
+							<a class="nav-link" href="contact.php">Liên hệ</a>
 						</li>
 						<li class="nav-item">
-							<a class="nav-link" href="contact.php">Liên hệ</a>
+							<a class="nav-link" href="about.php">Về chúng tôi</a>
 						</li>
 					</ul>
 				</div>
@@ -809,254 +683,172 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<a href="index.php">Home</a>
 						<i>|</i>
 					</li>
-					<li>Payment Page</li>
+					<li>Faqs</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<!-- //page -->
-	<!-- payment page-->
-	<div class="privacy py-sm-5 py-4">
+
+	<!-- Faqs -->
+	<div class="faqs-w3l py-sm-5 py-4">
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>P</span>ayment
+				<span>F</span>aqs
 			</h3>
 			<!-- //tittle heading -->
-			<div class="checkout-right">
-				<!--Horizontal Tab-->
-				<div id="parentHorizontalTab">
-					<ul class="resp-tabs-list hor_1">
-						<li>Cash on delivery (COD)</li>
-						<li>Credit/Debit</li>
-						<li>Net Banking</li>
-						<li>Paypal Account</li>
-					</ul>
-					<div class="resp-tabs-container hor_1">
-
-						<div>
-							<div class="vertical_post check_box_agile">
-								<h5>COD</h5>
-								<div class="checkbox">
-									<div class="check_box_one cashon_delivery">
-										<label class="anim">
-											<input type="checkbox" class="checkbox">
-											<span> We also accept Credit/Debit card on delivery. Please Check with the
-												agent.</span>
-										</label>
-									</div>
-
-								</div>
-							</div>
-						</div>
-						<div>
-							<form action="#" method="post" class="creditly-card-form agileinfo_form">
-								<div class="creditly-wrapper wthree, w3_agileits_wrapper">
-									<div class="credit-card-wrapper">
-										<div class="first-row form-group">
-											<div class="controls">
-												<label class="control-label">Name on Card</label>
-												<input class="billing-address-name form-control" type="text" name="name"
-													placeholder="John Smith">
-											</div>
-											<div class="w3_agileits_card_number_grids my-3">
-												<div class="w3_agileits_card_number_grid_left">
-													<div class="controls">
-														<label class="control-label">Card Number</label>
-														<input class="number credit-card-number form-control"
-															type="text" name="number" inputmode="numeric"
-															autocomplete="cc-number" autocompletetype="cc-number"
-															x-autocompletetype="cc-number"
-															placeholder="&#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149; &#149;&#149;&#149;&#149;">
-													</div>
-												</div>
-												<div class="w3_agileits_card_number_grid_right mt-2">
-													<div class="controls">
-														<label class="control-label">CVV</label>
-														<input class="security-code form-control" Â· inputmode="numeric"
-															type="text" name="security-code"
-															placeholder="&#149;&#149;&#149;">
-													</div>
-												</div>
-												<div class="clear"> </div>
-											</div>
-											<div class="controls">
-												<label class="control-label">Expiration Date</label>
-												<input class="expiration-month-and-year form-control" type="text"
-													name="expiration-month-and-year" placeholder="MM / YY">
-											</div>
-										</div>
-										<button class="submit mt-3">
-											<span>Make a payment </span>
-										</button>
-									</div>
-								</div>
-							</form>
-
-						</div>
-						<div>
-							<div class="vertical_post">
-								<form action="#" method="post">
-									<h5>Select From Popular Banks</h5>
-									<div class="swit-radio">
-										<div class="check_box_one">
-											<div class="radio_one">
-												<label>
-													<input type="radio" name="radio" checked="">
-													<i></i>Syndicate Bank</label>
-											</div>
-										</div>
-										<div class="check_box_one">
-											<div class="radio_one">
-												<label>
-													<input type="radio" name="radio">
-													<i></i>Bank of Baroda</label>
-											</div>
-										</div>
-										<div class="check_box_one">
-											<div class="radio_one">
-												<label>
-													<input type="radio" name="radio">
-													<i></i>Canara Bank</label>
-											</div>
-										</div>
-										<div class="check_box_one">
-											<div class="radio_one">
-												<label>
-													<input type="radio" name="radio">
-													<i></i>ICICI Bank</label>
-											</div>
-										</div>
-										<div class="check_box_one">
-											<div class="radio_one">
-												<label>
-													<input type="radio" name="radio">
-													<i></i>State Bank Of India</label>
-											</div>
-										</div>
-										<div class="clearfix"></div>
-									</div>
-									<h5>Or Select Other Bank</h5>
-									<div class="section_room_pay">
-										<select class="year">
-											<option value="">=== Other Banks ===</option>
-											<option value="ALB-NA">Allahabad Bank NetBanking</option>
-											<option value="ADB-NA">Andhra Bank</option>
-											<option value="BBK-NA">Bank of Bahrain and Kuwait NetBanking</option>
-											<option value="BBC-NA">Bank of Baroda Corporate NetBanking</option>
-											<option value="BBR-NA">Bank of Baroda Retail NetBanking</option>
-											<option value="BOI-NA">Bank of India NetBanking</option>
-											<option value="BOM-NA">Bank of Maharashtra NetBanking</option>
-											<option value="CSB-NA">Catholic Syrian Bank NetBanking</option>
-											<option value="CBI-NA">Central Bank of India</option>
-											<option value="CUB-NA">City Union Bank NetBanking</option>
-											<option value="CRP-NA">Corporation Bank</option>
-											<option value="DBK-NA">Deutsche Bank NetBanking</option>
-											<option value="DCB-NA">Development Credit Bank</option>
-											<option value="DC2-NA">Development Credit Bank - Corporate</option>
-											<option value="DLB-NA">Dhanlaxmi Bank NetBanking</option>
-											<option value="FBK-NA">Federal Bank NetBanking</option>
-											<option value="IDS-NA">Indusind Bank NetBanking</option>
-											<option value="IOB-NA">Indian Overseas Bank</option>
-											<option value="ING-NA">ING Vysya Bank (now Kotak)</option>
-											<option value="JKB-NA">Jammu and Kashmir NetBanking</option>
-											<option value="JSB-NA">Janata Sahakari Bank Limited</option>
-											<option value="KBL-NA">Karnataka Bank NetBanking</option>
-											<option value="KVB-NA">Karur Vysya Bank NetBanking</option>
-											<option value="LVR-NA">Lakshmi Vilas Bank NetBanking</option>
-											<option value="OBC-NA">Oriental Bank of Commerce NetBanking</option>
-											<option value="CPN-NA">PNB Corporate NetBanking</option>
-											<option value="PNB-NA">PNB NetBanking</option>
-											<option value="RSD-DIRECT">Rajasthan State Co-operative Bank-Debit Card
-											</option>
-											<option value="RBS-NA">RBS (The Royal Bank of Scotland)</option>
-											<option value="SWB-NA">Saraswat Bank NetBanking</option>
-											<option value="SBJ-NA">SB Bikaner and Jaipur NetBanking</option>
-											<option value="SBH-NA">SB Hyderabad NetBanking</option>
-											<option value="SBM-NA">SB Mysore NetBanking</option>
-											<option value="SBT-NA">SB Travancore NetBanking</option>
-											<option value="SVC-NA">Shamrao Vitthal Co-operative Bank</option>
-											<option value="SIB-NA">South Indian Bank NetBanking</option>
-											<option value="SBP-NA">State Bank of Patiala NetBanking</option>
-											<option value="SYD-NA">Syndicate Bank NetBanking</option>
-											<option value="TNC-NA">Tamil Nadu State Co-operative Bank NetBanking
-											</option>
-											<option value="UCO-NA">UCO Bank NetBanking</option>
-											<option value="UBI-NA">Union Bank NetBanking</option>
-											<option value="UNI-NA">United Bank of India NetBanking</option>
-											<option value="VJB-NA">Vijaya Bank NetBanking</option>
-										</select>
-									</div>
-									<input type="submit" value="PAY NOW">
-								</form>
-							</div>
-						</div>
-						<div>
-							<div id="tab4" class="tab-grid" style="display: block;">
-								<div class="row">
-									<div class="col-md-6 pay-forms">
-										<img class="pp-img" src="images/paypal.png" alt="Image Alternative text"
-											title="Image Title">
-										<p>Important: You will be redirected to PayPal's website to securely complete
-											your payment.</p>
-										<a class="btn btn-primary">Checkout via Paypal</a>
-									</div>
-									<div class="col-md-6 number-paymk">
-										<form action="#" method="post"
-											class="creditly-card-form-2 shopf-sear-headinfo_form">
-											<section class="creditly-wrapper payf_wrapper">
-												<div class="credit-card-wrapper">
-													<div class="first-row form-group">
-														<div class="controls">
-															<label class="control-label">Card Holder </label>
-															<input class="billing-address-name form-control" type="text"
-																name="name" placeholder="John Smith">
-														</div>
-														<div class="paymntf_card_number_grids my-2">
-															<div class="fpay_card_number_grid_left">
-																<div class="controls">
-																	<label class="control-label">Card Number</label>
-																	<input
-																		class="number credit-card-number-2 form-control"
-																		type="text" name="number" inputmode="numeric"
-																		autocomplete="cc-number"
-																		autocompletetype="cc-number"
-																		x-autocompletetype="cc-number"
-																		placeholder="•••• •••• •••• ••••">
-																</div>
-															</div>
-															<div class="fpay_card_number_grid_right mt-2">
-																<div class="controls">
-																	<label class="control-label">CVV</label>
-																	<input class="security-code-2 form-control" Â·=""
-																		inputmode="numeric" type="text"
-																		name="security-code" placeholder="•••">
-																</div>
-															</div>
-															<div class="clear"> </div>
-														</div>
-														<div class="controls">
-															<label class="control-label">Valid Thru</label>
-															<input class="expiration-month-and-year-2 form-control"
-																type="text" name="expiration-month-and-year"
-																placeholder="MM / YY">
-														</div>
-													</div>
-													<input class="submit" type="submit" value="Proceed Payment">
-												</div>
-											</section>
-										</form>
-									</div>
-								</div>
-							</div>
-						</div>
-					</div>
-				</div>
-				<!--Plug-in Initialisation-->
+			<h3 class="w3-head mb-2">Top 10 Frequently asked questions</h3>
+			<div class="faq-w3agile">
+				<ul class="faq pl-4">
+					<li class="item1 mt-3 pl-2">
+						<a href="#" title="click here">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+							tempor vehicula ipsum nec ?</a>
+						<ul>
+							<li class="subitem1">
+								<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
+									euismod tincidunt ut laoreet dolore.
+									At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
+									praesentium voluptatum deleniti atque
+									corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
+									provident.</p>
+							</li>
+						</ul>
+					</li>
+					<li class="item2 mt-3 pl-2">
+						<a href="#" title="click here">The standard Lorem Ipsum passage Etiam faucibus viverra libero
+							vel efficitur. Ut semper nisl ut laoreet ultrices ?</a>
+						<ul>
+							<li class="subitem1">
+								<p> Tincidunt ut laoreet dolore At vero eos et Lorem ipsum dolor sit amet, consectetuer
+									adipiscing elit, sed diam nonummy
+									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
+									et iusto odio dignissimos ducimus
+									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+									molestias excepturi sint occaecati
+									cupiditate non provident.</p>
+							</li>
+						</ul>
+					</li>
+					<li class="item3 mt-3 pl-2">
+						<a href="#" title="click here">Consectetuer adipiscing elit Etiam faucibus viverra libero vel
+							efficitur. Ut semper nisl ut laoreet ultrices?</a>
+						<ul>
+							<li class="subitem1">
+								<p>Dincidunt ut laoreet dolore At vero eos et Lorem ipsum dolor sit amet, consectetuer
+									adipiscing elit, sed diam nonummy
+									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
+									et iusto odio dignissimos ducimus
+									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+									molestias excepturi sint occaecati
+									cupiditate non provident.</p>
+							</li>
+						</ul>
+					</li>
+					<li class="item4 mt-3 pl-2">
+						<a href="#" title="click here">Sed diam nonummy nibh euismod Etiam faucibus viverra libero vel
+							efficitur. Ut semper nisl ut laoreet ultrices?</a>
+						<ul>
+							<li class="subitem1">
+								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+									nonummy nibh euismod consectetuer
+									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
+									ducimus qui blanditiis praesentium
+									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+									occaecati cupiditate non provident.</p>
+							</li>
+						</ul>
+					</li>
+					<li class="item5 mt-3 pl-2">
+						<a href="#" title="click here">Euismod tincidunt laoreet Etiam faucibus viverra libero vel
+							efficitur ?</a>
+						<ul>
+							<li class="subitem1">
+								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+									nonummy nibh euismod consectetuer
+									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
+									ducimus qui blanditiis praesentium
+									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+									occaecati cupiditate non provident.</p>
+							</li>
+						</ul>
+					</li>
+					<li class="item6 mt-3 pl-2">
+						<a href="#" title="click here">Voluptas sit aspernatur aut Ut semper nisl ut laoreet ultrices
+							?</a>
+						<ul>
+							<li class="subitem1">
+								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+									nonummy nibh euismod consectetuer
+									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
+									ducimus qui blanditiis praesentium
+									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+									occaecati cupiditate non provident.</p>
+							</li>
+						</ul>
+					</li>
+					<li class="item7 mt-3 pl-2">
+						<a href="#" title="click here">Donec ut quam ligula feugiat Ut semper nisl ut laoreet ultrices
+							?</a>
+						<ul>
+							<li class="subitem1">
+								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
+									nonummy nibh euismod consectetuer
+									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
+									ducimus qui blanditiis praesentium
+									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
+									occaecati cupiditate non provident.</p>
+							</li>
+						</ul>
+					</li>
+					<li class="item8 mt-3 pl-2">
+						<a href="#" title="click here">The standard Lorem Ipsum Ut semper nisl ut laoreet ultrices
+							passage ?</a>
+						<ul>
+							<li class="subitem1">
+								<p>Lorem ipsum dolor sit amet At vero eos et Lorem ipsum dolor sit amet, consectetuer
+									adipiscing elit, sed diam nonummy
+									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
+									et iusto odio dignissimos ducimus
+									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+									molestias excepturi sint occaecati
+									cupiditate non provident.</p>
+							</li>
+						</ul>
+					</li>
+					<li class="item9 mt-3 pl-2">
+						<a href="#" title="click here">Consectetuer adipiscing Ut semper nisl ut laoreet ultrices elit
+							?</a>
+						<ul>
+							<li class="subitem1">
+								<p>Lorem ipsum dolor sit amet At vero eos et Lorem ipsum dolor sit amet, consectetuer
+									adipiscing elit, sed diam nonummy
+									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
+									et iusto odio dignissimos ducimus
+									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
+									molestias excepturi sint occaecati
+									cupiditate non provident.</p>
+							</li>
+						</ul>
+					</li>
+					<li class="item10 mt-3 pl-2">
+						<a href="#" title="click here">Sed diam nonummy Ut semper nisl ut laoreet ultrices nibh euismod
+							?</a>
+						<ul>
+							<li class="subitem1">
+								<p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod consectetuer adipiscing
+									elit, sed diam nonummy nibh euismod
+									accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
+									deleniti atque corrupti quos dolores
+									et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+							</li>
+						</ul>
+					</li>
+				</ul>
 			</div>
 		</div>
 	</div>
-	<!-- //payment page -->
+	<!-- //Faqs -->
 
 	<!-- middle section -->
 	<div class="join-w3l1 py-sm-5 py-4">
@@ -1179,7 +971,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<a href="help.html">Help</a>
 							</li>
 							<li class="mb-3">
-								<a href="faqs.html">Faqs</a>
+								<a href="faqs.php">Faqs</a>
 							</li>
 							<li class="mb-3">
 								<a href="terms.html">Terms of use</a>
@@ -1253,252 +1045,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<!-- //footer third section -->
 
-		<!-- footer fourth section -->
-		<div class="agile-sometext py-md-5 py-sm-4 py-3">
-			<div class="container">
-				<!-- brands -->
-				<div class="sub-some">
-					<h5 class="font-weight-bold mb-2">Mobile & Tablets :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Android Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Smartphones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Feature Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Unboxed Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Refurbished Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2"> Tablets</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">CDMA Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Value Added Services</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Sell Old</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Used Mobiles</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">Computers :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Laptops </a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Printers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Routers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Ink & Toner Cartridges</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Monitors</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Video Games</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Unboxed & Refurbished Laptops</a>
-						</li>
-						<li>
-							<a href="product.php" class="border-right pr-2">Assembled Desktops</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Data Cards</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">TV, Audio & Large Appliances :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">TVs & DTH</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Home Theatre Systems</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Hidden Cameras & CCTVs</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Refrigerators</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Washing Machines</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Air Conditioners</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Cameras</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Speakers</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">Mobile & Laptop Accessories :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Headphones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Power Banks </a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Backpacks</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Mobile Cases & Covers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Pen Drives</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">External Hard Disks</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Mouse</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Smart Watches & Fitness Bands</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">MicroSD Cards</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">Appliances :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Trimmers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Hair Dryers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Emergency Lights</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Water Purifiers </a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Electric Kettles</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Hair Straighteners</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Induction Cooktops</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Sewing Machines</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Geysers</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">Popular on T-P Watch</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Offers & Coupons</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Couple Watches</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Gas Stoves</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Air Coolers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Air Purifiers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Headphones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Headsets</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Pressure Cookers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Sandwich Makers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Air Friers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Irons</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">LED TV</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Sandwich Makers</a>
-						</li>
-					</ul>
-				</div>
-				<!-- //brands -->
-				<!-- payment -->
-				<div class="sub-some child-momu mt-4">
-					<h5 class="font-weight-bold mb-3">Payment Method</h5>
-					<ul>
-						<li>
-							<img src="images/pay2.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay5.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay1.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay4.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay6.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay3.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay7.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay8.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay9.png" alt="">
-						</li>
-					</ul>
-				</div>
-				<!-- //payment -->
-			</div>
-		</div>
-		<!-- //footer fourth section (text) -->
+
 	</footer>
 	<!-- //footer -->
 	<!-- copyright -->
@@ -1518,13 +1065,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- nav smooth scroll -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$(".dropdown").hover(
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
 					$(this).toggleClass('open');
 				},
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
 					$(this).toggleClass('open');
 				}
@@ -1536,7 +1083,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- popup modal (for location)-->
 	<script src="js/jquery.magnific-popup.js"></script>
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$('.popup-with-zoom-anim').magnificPopup({
 				type: 'inline',
 				fixedContentPos: false,
@@ -1558,7 +1105,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script>
 		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
-		paypals.minicarts.cart.on('checkout', function (evt) {
+		paypals.minicarts.cart.on('checkout', function(evt) {
 			var items = this.items(),
 				len = items.length,
 				total = 0,
@@ -1579,7 +1126,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- password-script -->
 	<script>
-		window.onload = function () {
+		window.onload = function() {
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
 		}
@@ -1596,76 +1143,30 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</script>
 	<!-- //password-script -->
 
-	<!-- easy-responsive-tabs -->
-	<link rel="stylesheet" type="text/css" href="css/easy-responsive-tabs.css " />
-	<script src="js/easyResponsiveTabs.js"></script>
-
+	<!-- script for tabs -->
 	<script>
-		$(document).ready(function () {
-			//Horizontal Tab
-			$('#parentHorizontalTab').easyResponsiveTabs({
-				type: 'default', //Types: default, vertical, accordion
-				width: 'auto', //auto or any width like 600px
-				fit: true, // 100% fit in a container
-				tabidentify: 'hor_1', // The tab groups identifier
-				activate: function (event) { // Callback function if tab is switched
-					var $tab = $(this);
-					var $info = $('#nested-tabInfo');
-					var $name = $('span', $info);
-					$name.text($tab.text());
-					$info.show();
-				}
-			});
-		});
-	</script>
-	<!-- //easy-responsive-tabs -->
+		$(function() {
 
-	<!-- credit-card -->
-	<script src="js/creditly.js"></script>
-	<link rel="stylesheet" href="css/creditly.css" type="text/css" media="all" />
-	<script>
-		$(function () {
-			var creditly = Creditly.initialize(
-				'.creditly-wrapper .expiration-month-and-year',
-				'.creditly-wrapper .credit-card-number',
-				'.creditly-wrapper .security-code',
-				'.creditly-wrapper .card-type');
+			var menu_ul = $('.faq > li > ul'),
+				menu_a = $('.faq > li > a');
 
+			menu_ul.hide();
 
-			$(".creditly-card-form .submit").click(function (e) {
+			menu_a.click(function(e) {
 				e.preventDefault();
-				var output = creditly.validate();
-				if (output) {
-					// Your validated credit card output
-					console.log(output);
+				if (!$(this).hasClass('active')) {
+					menu_a.removeClass('active');
+					menu_ul.filter(':visible').slideUp('normal');
+					$(this).addClass('active').next().stop(true, true).slideDown('normal');
+				} else {
+					$(this).removeClass('active');
+					$(this).next().stop(true, true).slideUp('normal');
 				}
 			});
+
 		});
 	</script>
-
-	<!-- creditly2 (for paypal) -->
-	<script src="js/creditly2.js"></script>
-	<script>
-		$(function () {
-			var creditly = Creditly2.initialize(
-				'.creditly-wrapper .expiration-month-and-year-2',
-				'.creditly-wrapper .credit-card-number-2',
-				'.creditly-wrapper .security-code-2',
-				'.creditly-wrapper .card-type');
-
-			$(".creditly-card-form-2 .submit").click(function (e) {
-				e.preventDefault();
-				var output = creditly.validate();
-				if (output) {
-					// Your validated credit card output
-					console.log(output);
-				}
-			});
-		});
-	</script>
-
-	<!-- //credit-card -->
-
+	<!-- script for tabs -->
 
 	<!-- smoothscroll -->
 	<script src="js/SmoothScroll.min.js"></script>
@@ -1675,8 +1176,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="js/move-top.js"></script>
 	<script src="js/easing.js"></script>
 	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
 				event.preventDefault();
 
 				$('html,body').animate({
@@ -1689,7 +1190,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- smooth-scrolling-of-move-up -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			/*
 			var defaults = {
 				containerID: 'toTop', // fading element id

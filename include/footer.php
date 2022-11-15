@@ -89,7 +89,7 @@
                             <a href="help.html">Help</a>
                         </li>
                         <li class="mb-3">
-                            <a href="faqs.html">Faqs</a>
+                            <a href="faqs.php">Faqs</a>
                         </li>
                         <li class="mb-3">
                             <a href="terms.html">Terms of use</a>

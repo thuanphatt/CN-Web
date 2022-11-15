@@ -8,13 +8,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 
 <head>
-	<title>Faqs Page</title>
+	<title>Điều khoản</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="T-P Watch " />
 	<script>
-		addEventListener("load", function () {
+		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
 		}, false);
 
@@ -38,12 +38,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //Custom-Files -->
 
 	<!-- web fonts -->
-	<link
-		href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
-		rel="stylesheet">
-	<link
-		href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-		rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 	<!-- //web fonts -->
 
 </head>
@@ -522,13 +518,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Password" id="password1"
-								required="">
+							<input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Confirm Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Confirm Password"
-								id="password2" required="">
+							<input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
 						</div>
 						<div class="right-w3l">
 							<input type="submit" class="form-control" value="Register">
@@ -567,8 +561,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!-- search -->
 						<div class="col-10 agileits_search">
 							<form class="form-inline" action="#" method="post">
-								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm"
-									aria-label="Search" required>
+								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
 								<button class="btn my-2 my-sm-0" type="submit">Tìm kiếm</button>
 							</form>
 						</div>
@@ -607,186 +600,67 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</select>
 					</form>
 				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto text-center mr-xl-5">
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="index.php">Home
+							<a class="nav-link" href="index.php">Trang chủ
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
+						<?php
+						include('./db/connect.php');
+						$sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
+						while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
+						?>
+							<li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
+								<a class="nav-link " href="index.php?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>" role="button" aria-haspopup="true" aria-expanded="false">
+									<?php echo $row_category_danhmuc['category_name'] ?>
+								</a>
+
+							</li>
+						<?php
+						}
+						?>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								Electronics
+							<?php
+							$sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
+
+							?>
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Tin tức
 							</a>
 							<div class="dropdown-menu">
-								<div class="agile_inner_drop_nav_info p-4">
-									<h5 class="mb-3">Mobiles, Computers</h5>
-									<div class="row">
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.php">All Mobile Phones</a>
-												</li>
-												<li>
-													<a href="product.php">All Mobile Accessories</a>
-												</li>
-												<li>
-													<a href="product.php">Cases & Covers</a>
-												</li>
-												<li>
-													<a href="product.php">Screen Protectors</a>
-												</li>
-												<li>
-													<a href="product.php">Power Banks</a>
-												</li>
-												<li>
-													<a href="product.php">All Certified Refurbished</a>
-												</li>
-												<li>
-													<a href="product.php">Tablets</a>
-												</li>
-												<li>
-													<a href="product.php">Wearable Devices</a>
-												</li>
-												<li>
-													<a href="product.php">Smart Home</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.php">Laptops</a>
-												</li>
-												<li>
-													<a href="product.php">Drives & Storage</a>
-												</li>
-												<li>
-													<a href="product.php">Printers & Ink</a>
-												</li>
-												<li>
-													<a href="product.php">Networking Devices</a>
-												</li>
-												<li>
-													<a href="product.php">Computer Accessories</a>
-												</li>
-												<li>
-													<a href="product.php">Game Zone</a>
-												</li>
-												<li>
-													<a href="product.php">Software</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+								<?php
+								while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
+								?>
+									<a class="dropdown-item" href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
+										<?php echo $row_danhmuctin['tendanhmuc'] ?>
+									</a>
+								<?php
+								}
+								?>
 							</div>
 						</li>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								Appliances
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Trang
 							</a>
 							<div class="dropdown-menu">
-								<div class="agile_inner_drop_nav_info p-4">
-									<h5 class="mb-3">TV, Appliances, Electronics</h5>
-									<div class="row">
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product2.html">Televisions</a>
-												</li>
-												<li>
-													<a href="product2.html">Home Entertainment Systems</a>
-												</li>
-												<li>
-													<a href="product2.html">Headphones</a>
-												</li>
-												<li>
-													<a href="product2.html">Speakers</a>
-												</li>
-												<li>
-													<a href="product2.html">MP3, Media Players & Accessories</a>
-												</li>
-												<li>
-													<a href="product2.html">Audio & Video Accessories</a>
-												</li>
-												<li>
-													<a href="product2.html">Cameras</a>
-												</li>
-												<li>
-													<a href="product2.html">DSLR Cameras</a>
-												</li>
-												<li>
-													<a href="product2.html">Camera Accessories</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product2.html">Musical Instruments</a>
-												</li>
-												<li>
-													<a href="product2.html">Gaming Consoles</a>
-												</li>
-												<li>
-													<a href="product2.html">All Electronics</a>
-												</li>
-												<li>
-													<a href="product2.html">Air Conditioners</a>
-												</li>
-												<li>
-													<a href="product2.html">Refrigerators</a>
-												</li>
-												<li>
-													<a href="product2.html">Washing Machines</a>
-												</li>
-												<li>
-													<a href="product2.html">Kitchen & Home Appliances</a>
-												</li>
-												<li>
-													<a href="product2.html">Heating & Cooling Appliances</a>
-												</li>
-												<li>
-													<a href="product2.html">All Appliances</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="about.php">About Us</a>
-						</li>
-						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="product.php">New Arrivals</a>
-						</li>
-						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								Pages
-							</a>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="product.php">Product 1</a>
-								<a class="dropdown-item" href="product2.html">Product 2</a>
+								<a class="dropdown-item" href="product.php">Sản phẩm mới</a>
+
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="single.html">Single Product 1</a>
-								<a class="dropdown-item" href="single2.html">Single Product 2</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="checkout.html">Checkout Page</a>
-								<a class="dropdown-item" href="payment.html">Payment Page</a>
+								<a class="dropdown-item" href="checkout.php">Kiểm tra hàng</a>
+								<a class="dropdown-item" href="payment.php">Thanh toán</a>
 							</div>
 						</li>
 						<li class="nav-item">
 							<a class="nav-link" href="contact.php">Liên hệ</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" href="about.php">Về chúng tôi</a>
 						</li>
 					</ul>
 				</div>
@@ -806,175 +680,111 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="container">
 				<ul class="w3_short">
 					<li>
-						<a href="index.php">Home</a>
+						<a href="index.php">Trang chủ</a>
 						<i>|</i>
 					</li>
-					<li>Faqs</li>
+					<li>Điều khoản</li>
 				</ul>
 			</div>
 		</div>
 	</div>
 	<!-- //page -->
 
-	<!-- Faqs -->
-	<div class="faqs-w3l py-sm-5 py-4">
+	<!-- terms -->
+	<div class="terms py-sm-5 py-4">
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>F</span>aqs
+				<span>T</span>erms
+				<span>O</span>f
+				<span>U</span>se
 			</h3>
 			<!-- //tittle heading -->
-			<h3 class="w3-head mb-2">Top 10 Frequently asked questions</h3>
-			<div class="faq-w3agile">
-				<ul class="faq pl-4">
-					<li class="item1 mt-3 pl-2">
-						<a href="#" title="click here">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-							tempor vehicula ipsum nec ?</a>
-						<ul>
-							<li class="subitem1">
-								<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-									euismod tincidunt ut laoreet dolore.
-									At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-									praesentium voluptatum deleniti atque
-									corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
-									provident.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item2 mt-3 pl-2">
-						<a href="#" title="click here">The standard Lorem Ipsum passage Etiam faucibus viverra libero
-							vel efficitur. Ut semper nisl ut laoreet ultrices ?</a>
-						<ul>
-							<li class="subitem1">
-								<p> Tincidunt ut laoreet dolore At vero eos et Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy
-									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
-									et iusto odio dignissimos ducimus
-									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-									molestias excepturi sint occaecati
-									cupiditate non provident.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item3 mt-3 pl-2">
-						<a href="#" title="click here">Consectetuer adipiscing elit Etiam faucibus viverra libero vel
-							efficitur. Ut semper nisl ut laoreet ultrices?</a>
-						<ul>
-							<li class="subitem1">
-								<p>Dincidunt ut laoreet dolore At vero eos et Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy
-									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
-									et iusto odio dignissimos ducimus
-									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-									molestias excepturi sint occaecati
-									cupiditate non provident.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item4 mt-3 pl-2">
-						<a href="#" title="click here">Sed diam nonummy nibh euismod Etiam faucibus viverra libero vel
-							efficitur. Ut semper nisl ut laoreet ultrices?</a>
-						<ul>
-							<li class="subitem1">
-								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-									nonummy nibh euismod consectetuer
-									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
-									ducimus qui blanditiis praesentium
-									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-									occaecati cupiditate non provident.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item5 mt-3 pl-2">
-						<a href="#" title="click here">Euismod tincidunt laoreet Etiam faucibus viverra libero vel
-							efficitur ?</a>
-						<ul>
-							<li class="subitem1">
-								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-									nonummy nibh euismod consectetuer
-									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
-									ducimus qui blanditiis praesentium
-									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-									occaecati cupiditate non provident.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item6 mt-3 pl-2">
-						<a href="#" title="click here">Voluptas sit aspernatur aut Ut semper nisl ut laoreet ultrices
-							?</a>
-						<ul>
-							<li class="subitem1">
-								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-									nonummy nibh euismod consectetuer
-									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
-									ducimus qui blanditiis praesentium
-									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-									occaecati cupiditate non provident.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item7 mt-3 pl-2">
-						<a href="#" title="click here">Donec ut quam ligula feugiat Ut semper nisl ut laoreet ultrices
-							?</a>
-						<ul>
-							<li class="subitem1">
-								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-									nonummy nibh euismod consectetuer
-									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
-									ducimus qui blanditiis praesentium
-									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-									occaecati cupiditate non provident.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item8 mt-3 pl-2">
-						<a href="#" title="click here">The standard Lorem Ipsum Ut semper nisl ut laoreet ultrices
-							passage ?</a>
-						<ul>
-							<li class="subitem1">
-								<p>Lorem ipsum dolor sit amet At vero eos et Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy
-									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
-									et iusto odio dignissimos ducimus
-									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-									molestias excepturi sint occaecati
-									cupiditate non provident.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item9 mt-3 pl-2">
-						<a href="#" title="click here">Consectetuer adipiscing Ut semper nisl ut laoreet ultrices elit
-							?</a>
-						<ul>
-							<li class="subitem1">
-								<p>Lorem ipsum dolor sit amet At vero eos et Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy
-									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
-									et iusto odio dignissimos ducimus
-									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-									molestias excepturi sint occaecati
-									cupiditate non provident.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item10 mt-3 pl-2">
-						<a href="#" title="click here">Sed diam nonummy Ut semper nisl ut laoreet ultrices nibh euismod
-							?</a>
-						<ul>
-							<li class="subitem1">
-								<p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod consectetuer adipiscing
-									elit, sed diam nonummy nibh euismod
-									accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-									deleniti atque corrupti quos dolores
-									et quas molestias excepturi sint occaecati cupiditate non provident.</p>
-							</li>
-						</ul>
-					</li>
-				</ul>
-			</div>
+			<h3 class="w3-head w3-secong-head text-capitalize">please read these terms and conditions carefully.</h3>
+			<h6 class="my-md-4 my-3">Personal Information</h6>
+			<ol start="1" class="pl-sm-4 pl-3">
+				<li class="font-weight-light pl-sm-4 mb-2">Lorem Ipsum is simply dummy text of the printing and
+					typesetting industry.it has a more-or-less normal distribution of
+					letters, as opposed Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+				</li>
+				<li class="font-weight-light pl-sm-4 mb-2">Sed ut perspiciatis unde omnis iste natus error sit
+					voluptatem accusantium doloremque laudantium, totam rem aperiam,
+					eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
+					Nemo enim ipsam voluptatem
+					quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores</li>
+				<li class="font-weight-light pl-sm-4 mb-2">Lorem Ipsum is simply dummy text of the printing and
+					typesetting industry.it has a more-or-less normal distribution of
+					letters, as opposed Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+				</li>
+			</ol>
+
+			<h6 class="my-md-4 my-3">License & Site access</h6>
+			<p class="font-weight-light pl-sm-4 mb-2">Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit
+				aut fugit, sed quia consequuntur magni dolores eos qui
+				ratione voluptatem sequi nesciunt..</p>
+			<p class="font-weight-light pl-sm-4 mb-2">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
+				consectetur, adipisci velit, sed quia non numquam eius
+				modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+			<p class="font-weight-light pl-sm-4 mb-2">Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+				Ut enim ad minim veniam, quis nostrud exercitation
+				ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+
+			<h6 class="my-md-4 my-3">Eligibility :</h6>
+			<p class="font-weight-light pl-sm-4 mb-2">If you are going to use a passage of Lorem Ipsum, you need to be
+				sure there isn't anything embarrassing hidden in the
+				middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
+				necessary</p>
+			<p class="font-weight-light pl-sm-4 mb-2">first true generator on the Internet. It uses a dictionary of over
+				200 Latin words, combined with a handful of model sentence
+				structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore
+				always free from repetition,
+				injected humour</p>
+
+			<h6 class="my-md-4 my-3">Account & Registration</h6>
+			<p class="font-weight-light pl-sm-4 mb-2">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
+				Bonorum et Malorum" (The Extremes of Good and Evil)
+				by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
+				Renaissance. The
+				first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+			<p class="font-weight-light pl-sm-4 mb-2">Latin professor at Hampden-Sydney College in Virginia, looked up
+				one of the more obscure Latin words, consectetur, from
+				a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
+				undoubtable source.
+				Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"</p>
+			<p class="font-weight-light pl-sm-4 mb-2">This book is a treatise on the theory of ethics, very popular
+				during the Renaissance. The first line of Lorem Ipsum, "Lorem
+				ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
+
+			<h6 class="my-md-4 my-3">Cancellation by Site / Customer</h6>
+			<p class="font-weight-light pl-sm-4 mb-2"> Lorem Ipsum as their default model text, and a search for 'lorem
+				ipsum' will uncover many web sites still in their infancy.
+				Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected
+				humour and the like).</p>
+			<p class="font-weight-light pl-sm-4 mb-2"> Latin words, combined with a handful of model sentence
+				structures, to generate Lorem Ipsum which looks reasonable. The
+				generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic
+				words etc.</p>
+
+			<h6 class="my-md-4 my-3">You Agree and Confirm</h6>
+			<p class="font-weight-light pl-sm-4 mb-2">There are many variations of passages of Lorem Ipsum available,
+				but the majority have suffered alteration in some form,
+				by injected humour, or randomised words which don't look even slightly believable. If you are going to
+				use a passage
+				of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All
+				the Lorem Ipsum
+				generators on the Internet tend to repeat predefined chunks as necessary, making this the first true
+				generator on the
+				Internet.
+			</p>
+			<h6 class="my-md-4 my-3">Copyright & Trademark</h6>
+			<p class="font-weight-light pl-sm-4 mb-2"> you need to be sure there isn't anything embarrassing hidden in
+				the middle of text. All the Lorem Ipsum generators on
+				the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the
+				Internet. It
+				uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures</p>
 		</div>
 	</div>
-	<!-- //Faqs -->
+	<!-- //terms -->
 
 	<!-- middle section -->
 	<div class="join-w3l1 py-sm-5 py-4">
@@ -1097,7 +907,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<a href="help.html">Help</a>
 							</li>
 							<li class="mb-3">
-								<a href="faqs.html">Faqs</a>
+								<a href="faqs.php">Faqs</a>
 							</li>
 							<li class="mb-3">
 								<a href="terms.html">Terms of use</a>
@@ -1171,252 +981,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 		<!-- //footer third section -->
 
-		<!-- footer fourth section -->
-		<div class="agile-sometext py-md-5 py-sm-4 py-3">
-			<div class="container">
-				<!-- brands -->
-				<div class="sub-some">
-					<h5 class="font-weight-bold mb-2">Mobile & Tablets :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Android Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Smartphones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Feature Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Unboxed Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Refurbished Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2"> Tablets</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">CDMA Phones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Value Added Services</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Sell Old</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Used Mobiles</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">Computers :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Laptops </a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Printers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Routers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Ink & Toner Cartridges</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Monitors</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Video Games</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Unboxed & Refurbished Laptops</a>
-						</li>
-						<li>
-							<a href="product.php" class="border-right pr-2">Assembled Desktops</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Data Cards</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">TV, Audio & Large Appliances :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">TVs & DTH</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Home Theatre Systems</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Hidden Cameras & CCTVs</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Refrigerators</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Washing Machines</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Air Conditioners</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Cameras</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Speakers</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">Mobile & Laptop Accessories :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Headphones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Power Banks </a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Backpacks</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Mobile Cases & Covers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Pen Drives</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">External Hard Disks</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Mouse</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Smart Watches & Fitness Bands</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">MicroSD Cards</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">Appliances :</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Trimmers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Hair Dryers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Emergency Lights</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Water Purifiers </a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Electric Kettles</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Hair Straighteners</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Induction Cooktops</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Sewing Machines</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Geysers</a>
-						</li>
-					</ul>
-				</div>
-				<div class="sub-some mt-4">
-					<h5 class="font-weight-bold mb-2">Popular on T-P Watch</h5>
-					<ul>
-						<li class="m-sm-1">
-							<a href="product.php" class="border-right pr-2">Offers & Coupons</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Couple Watches</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Gas Stoves</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Air Coolers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Air Purifiers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Headphones</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2"> Headsets</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Pressure Cookers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Sandwich Makers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Air Friers</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Irons</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">LED TV</a>
-						</li>
-						<li class="m-sm-1">
-							<a href="product2.html" class="border-right pr-2">Sandwich Makers</a>
-						</li>
-					</ul>
-				</div>
-				<!-- //brands -->
-				<!-- payment -->
-				<div class="sub-some child-momu mt-4">
-					<h5 class="font-weight-bold mb-3">Payment Method</h5>
-					<ul>
-						<li>
-							<img src="images/pay2.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay5.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay1.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay4.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay6.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay3.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay7.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay8.png" alt="">
-						</li>
-						<li>
-							<img src="images/pay9.png" alt="">
-						</li>
-					</ul>
-				</div>
-				<!-- //payment -->
-			</div>
-		</div>
-		<!-- //footer fourth section (text) -->
+
 	</footer>
 	<!-- //footer -->
 	<!-- copyright -->
@@ -1436,13 +1001,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- nav smooth scroll -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$(".dropdown").hover(
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
 					$(this).toggleClass('open');
 				},
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
 					$(this).toggleClass('open');
 				}
@@ -1454,7 +1019,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- popup modal (for location)-->
 	<script src="js/jquery.magnific-popup.js"></script>
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$('.popup-with-zoom-anim').magnificPopup({
 				type: 'inline',
 				fixedContentPos: false,
@@ -1476,7 +1041,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script>
 		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
-		paypals.minicarts.cart.on('checkout', function (evt) {
+		paypals.minicarts.cart.on('checkout', function(evt) {
 			var items = this.items(),
 				len = items.length,
 				total = 0,
@@ -1497,7 +1062,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- password-script -->
 	<script>
-		window.onload = function () {
+		window.onload = function() {
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
 		}
@@ -1514,31 +1079,6 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	</script>
 	<!-- //password-script -->
 
-	<!-- script for tabs -->
-	<script>
-		$(function () {
-
-			var menu_ul = $('.faq > li > ul'),
-				menu_a = $('.faq > li > a');
-
-			menu_ul.hide();
-
-			menu_a.click(function (e) {
-				e.preventDefault();
-				if (!$(this).hasClass('active')) {
-					menu_a.removeClass('active');
-					menu_ul.filter(':visible').slideUp('normal');
-					$(this).addClass('active').next().stop(true, true).slideDown('normal');
-				} else {
-					$(this).removeClass('active');
-					$(this).next().stop(true, true).slideUp('normal');
-				}
-			});
-
-		});
-	</script>
-	<!-- script for tabs -->
-
 	<!-- smoothscroll -->
 	<script src="js/SmoothScroll.min.js"></script>
 	<!-- //smoothscroll -->
@@ -1547,8 +1087,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="js/move-top.js"></script>
 	<script src="js/easing.js"></script>
 	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
 				event.preventDefault();
 
 				$('html,body').animate({
@@ -1561,7 +1101,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- smooth-scrolling-of-move-up -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			/*
 			var defaults = {
 				containerID: 'toTop', // fading element id
