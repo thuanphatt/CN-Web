@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 
 <head>
-	<title> About Us Page</title>
+	<title> Về chúng tôi</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -682,7 +682,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<a href="index.php">Home</a>
 						<i>|</i>
 					</li>
-					<li>About Us</li>
+					<li>Về chúng tôi</li>
 				</ul>
 			</div>
 		</div>
@@ -694,8 +694,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>A</span>bout
-				<span>U</span>s
+				<span>V</span>ề
+				<span>C</span>húng
+				<span>T</span>ôi
 			</h3>
 			<!-- //tittle heading -->
 			<div class="row">
@@ -870,7 +871,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<h3 class="text-white font-weight-bold mb-3">Menu</h3>
 						<ul>
 							<li class="mb-3">
-								<a href="about.php">About Us</a>
+								<a href="about.php">Về chúng tôi</a>
 							</li>
 							<li class="mb-3">
 								<a href="contact.php">Liên hệ</a>

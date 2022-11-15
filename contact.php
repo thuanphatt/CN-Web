@@ -2,7 +2,7 @@
 <html lang="en">
 
 <head>
-    <title>Contact Page</title>
+    <title>Liên hệ</title>
     <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
@@ -459,7 +459,7 @@
                         <h3 class="text-white font-weight-bold mb-3">Menu</h3>
                         <ul>
                             <li class="mb-3">
-                                <a href="about.php">About Us</a>
+                                <a href="about.php">Về chúng tôi</a>
                             </li>
                             <li class="mb-3">
                                 <a href="contact.php">Liên hệ</a>
