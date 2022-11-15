@@ -5,7 +5,7 @@
             <!-- footer first section -->
             <h2 class="footer-top-head-w3l font-weight-bold mb-2">Giới thiệu về chúng tôi</h2>
             <p class="footer-main mb-4">
-                Dù mới được thành lập trong vài năm gần đây nhưng T-P Watch đã, đang và sẽ vươn lên giữ vị trí số 1
+                Dù mới được thành lập trong vài năm gần đây nhưng T-P Watch đã và đang sẽ vươn lên giữ vị trí số 1
                 trong những cửa hàng bán lẽ đồng hồ tại Việt Nam, tiếp tục sứ mệnh mang vẻ đẹp, tinh hoa của những chiếc
                 đồng hồ chính hãng cao cấp của các thương hiệu đồng hồ nổi tiếng đến với những người đam mê đồng hồ tại
                 Việt Nam.

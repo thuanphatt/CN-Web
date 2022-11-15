@@ -10,31 +10,31 @@
                 <div class="agileinfo-ads-display col-lg-9">
                     <div class="wrapper">
                         <?php
-						$sql_cate_home = mysqli_query($con, "SELECT * FROM tbl_category ORDER BY category_id DESC");
-						while ($row_cate_home = mysqli_fetch_array($sql_cate_home)) {
-							$id_category = $row_cate_home['category_id'];
-						?>
+                        $sql_cate_home = mysqli_query($con, "SELECT * FROM tbl_category ORDER BY category_id DESC");
+                        while ($row_cate_home = mysqli_fetch_array($sql_cate_home)) {
+                            $id_category = $row_cate_home['category_id'];
+                        ?>
                         <!-- first section -->
                         <div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
                             <h3 class="heading-tittle text-center font-italic">
                                 <?php echo $row_cate_home['category_name'] ?></h3>
                             <div class="row">
                                 <?php
-									$sql_product = mysqli_query($con, "SELECT * FROM tbl_sanpham ORDER BY sanpham_id DESC");
-									while ($row_sanpham = mysqli_fetch_array($sql_product)) {
-										if ($row_sanpham['category_id'] == $id_category) {
-									?>
+                                    $sql_product = mysqli_query($con, "SELECT * FROM tbl_sanpham ORDER BY sanpham_id DESC");
+                                    while ($row_sanpham = mysqli_fetch_array($sql_product)) {
+                                        if ($row_sanpham['category_id'] == $id_category) {
+                                    ?>
                                 <div class="col-md-4 product-men mt-5">
                                     <div class="men-pro-item simpleCart_shelfItem">
                                         <div class="men-thumb-item text-center">
                                             <img src="images/<?php echo $row_sanpham['sanpham_image'] ?>" alt=""
                                                 style="height:200px ; width: 200px;">
-                                            <div class="men-cart-pro">
-                                                <div class="inner-men-cart-pro">
-                                                    <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>"
-                                                        class="link-product-add-cart">Xem sản phẩm</a>
+                                            <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>"
+                                                class="link-product-add-cart">
+                                                <div class="men-cart-pro">
+                                                    <div class="inner-men-cart-pro"> </div>
                                                 </div>
-                                            </div>
+                                            </a>
                                         </div>
                                         <div class="item-info-product text-center border-top mt-4">
                                             <h4 class="pt-1">
@@ -68,15 +68,15 @@
                                     </div>
                                 </div>
                                 <?php
-										}
-									}
-									?>
+                                        }
+                                    }
+                                    ?>
                             </div>
                         </div>
                         <!-- //first section -->
                         <?php
-						}
-						?>
+                        }
+                        ?>
 
                     </div>
                 </div>
@@ -92,20 +92,110 @@
                                 <input type="submit" value=" ">
                             </form>
                         </div>
-                        <!-- price -->
-                        <div class="range border-bottom py-2">
-                            <h3 class="agileits-sear-head mb-3">Giá</h3>
-                            <div class="w3l-range">
+                        <div class="search-hotel border-bottom py-2">
+                            <h3 class="agileits-sear-head mb-3">Thương hiệu</h3>
+                            <div class="left-side py-2">
                                 <ul>
                                     <li>
-                                        <a href="#">Dưới 1 triệu</a>
+                                        <input type="checkbox" class="checked">
+                                        <span class="span">Orient</span>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checked">
+                                        <span class="span">Seiko</span>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checked">
+                                        <span class="span">Casio</span>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checked">
+                                        <span class="span">Doxa</span>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checked">
+                                        <span class="span">Calvin Klein</span>
                                     </li>
 
                                 </ul>
                             </div>
                         </div>
-                        <!-- //price -->
+                        <!-- Lọc theo giá -->
+                        <div class="left-side border-bottom py-2">
+                            <h3 class="agileits-sear-head mb-3">Lọc theo giá</h3>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" class="checked">
+                                    <span class="span">0₫ - 2000000₫</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="checked">
+                                    <span class="span">2000000₫ - 4000000₫</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="checked">
+                                    <span class="span">4000000₫ - 6000000₫</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="checked">
+                                    <span class="span">6000000₫ - 8000000₫</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="checked">
+                                    <span class="span">8000000₫ - 10000000₫</span>
+                                </li>
+                            </ul>
+                        </div>
+                        <!-- //Lọc theo giá -->
+                        <!-- Chất liệu dây -->
+                        <div class="range border-bottom py-2">
+                            <h3 class="agileits-sear-head mb-3">Chất liệu dây</h3>
+                            <div class="w3l-range">
+                                <ul>
+                                    <li>
+                                        <input type="checkbox" class="checked">
+                                        <a href="#">Dây da</a>
+                                    </li>
+                                    <li class="my-1">
+                                        <input type="checkbox" class="checked">
+                                        <a href="#">Dây kim loại</a>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checked">
+                                        <a href="#">Dây Titanium</a>
+                                    </li>
+                                    <li class="my-1">
+                                        <input type="checkbox" class="checked">
+                                        <a href="#">Dây vải</a>
+                                    </li>
+                                    <li>
+                                        <input type="checkbox" class="checked">
+                                        <a href="#">Dây da cá sấu</a>
+                                    </li>
+                                    <li class="mt-1">
+                                        <input type="checkbox" class="checked">
+                                        <a href="#">Dây nhựa/ Cao su</a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- //Chất liệu dây -->
+                        <!-- Giới tính -->
+                        <div class="left-side border-bottom py-2">
+                            <h3 class="agileits-sear-head mb-3">Giới tính</h3>
+                            <ul>
+                                <li>
+                                    <input type="checkbox" class="checked">
+                                    <span class="span">Nam</span>
+                                </li>
+                                <li>
+                                    <input type="checkbox" class="checked">
+                                    <span class="span">Nữ</span>
+                                </li>
 
+                            </ul>
+                        </div>
+                        <!-- //Giới tính -->
                         <!-- reviews -->
                         <div class="customer-rev border-bottom left-side py-2">
                             <h3 class="agileits-sear-head mb-3">Khách hàng Review</h3>
@@ -130,17 +220,17 @@
                             <h3 class="agileits-sear-head mb-3">Danh mục sản phẩm</h3>
                             <ul>
                                 <?php
-								$sql_category_sidebar = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
-								while ($row_category_sidebar = mysqli_fetch_array($sql_category_sidebar)) {
-								?>
+                                $sql_category_sidebar = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
+                                while ($row_category_sidebar = mysqli_fetch_array($sql_category_sidebar)) {
+                                ?>
                                 <li>
                                     <!-- <input type="checkbox" class="checked"> -->
                                     <span class="span"><a
                                             href="danhmucsanpham.php?id=<?php echo $row_category_sidebar['category_id'] ?>"><?php echo $row_category_sidebar['category_name'] ?></a></span>
                                 </li>
                                 <?php
-								}
-								?>
+                                }
+                                ?>
                             </ul>
                         </div>
                         <!-- //electronics -->
@@ -152,9 +242,9 @@
                             <div class="box-scroll">
                                 <div class="scroll">
                                     <?php
-									$sql_product_sidebar = mysqli_query($con, "SELECT * FROM tbl_sanpham WHERE sanpham_hot='0' ORDER BY sanpham_id DESC");
-									while ($row_sanpham_sidebar = mysqli_fetch_array($sql_product_sidebar)) {
-									?>
+                                    $sql_product_sidebar = mysqli_query($con, "SELECT * FROM tbl_sanpham WHERE sanpham_hot='0' ORDER BY sanpham_id DESC");
+                                    while ($row_sanpham_sidebar = mysqli_fetch_array($sql_product_sidebar)) {
+                                    ?>
                                     <div class="row">
                                         <div class="col-lg-3 col-sm-2 col-3 left-mar">
                                             <img src="images/<?php echo $row_sanpham_sidebar['sanpham_image'] ?>" alt=""
@@ -168,8 +258,8 @@
                                         </div>
                                     </div>
                                     <?php
-									}
-									?>
+                                    }
+                                    ?>
 
 
                                 </div>
