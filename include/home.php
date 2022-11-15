@@ -201,7 +201,7 @@
                             <h3 class="agileits-sear-head mb-3">Khách hàng Review</h3>
                             <ul>
                                 <li>
-                                    <a href="#">
+                                    <a href="#" style="color: #fdbc2c;">
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>
                                         <i class="fas fa-star"></i>

@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="T-P Watch" />
 	<script>
-		addEventListener("load", function () {
+		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
 		}, false);
 
@@ -38,12 +38,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //Custom-Files -->
 
 	<!-- web fonts -->
-	<link
-		href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
-		rel="stylesheet">
-	<link
-		href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-		rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 	<!-- //web fonts -->
 
 </head>
@@ -62,10 +58,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<!-- header lists -->
 					<ul>
 
-						<li class="text-center border-right text-white">
-							<a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
-								<i class="fas fa-truck mr-2"></i>Track Order</a>
-						</li>
+
 						<li class="text-center border-right text-white">
 							<i class="fas fa-phone mr-2"></i>369369369
 						</li>
@@ -525,13 +518,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Password" id="password1"
-								required="">
+							<input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Confirm Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Confirm Password"
-								id="password2" required="">
+							<input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
 						</div>
 						<div class="right-w3l">
 							<input type="submit" class="form-control" value="Register">
@@ -570,8 +561,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!-- search -->
 						<div class="col-10 agileits_search">
 							<form class="form-inline" action="#" method="post">
-								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm"
-									aria-label="Search" required>
+								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
 								<button class="btn my-2 my-sm-0" type="submit">Tìm kiếm</button>
 							</form>
 						</div>
@@ -604,198 +594,72 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<form action="#" method="post">
 						<select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
 							<option value="">Danh mục sản phẩm</option>
-							<option value="Televisions">Televisions</option>
-							<option value="Headphones">Headphones</option>
-							<option value="Computers">Computers</option>
-							<option value="Appliances">Appliances</option>
-							<option value="Mobiles">Mobiles</option>
-							<option value="Fruits &amp; Vegetables">Tv &amp; Video</option>
-							<option value="iPad & Tablets">iPad & Tablets</option>
-							<option value="Cameras & Camcorders">Cameras & Camcorders</option>
-							<option value="Home Audio & Theater">Home Audio & Theater</option>
+							<option value="Televisions">Nam</option>
+							<option value="Headphones">Nữ</option>
+							<option value="Computers">Cặp đôi</option>
 						</select>
 					</form>
 				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul class="navbar-nav ml-auto text-center mr-xl-5">
 						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="index.php">Home
+							<a class="nav-link" href="index.php">Trang chủ
 								<span class="sr-only">(current)</span>
 							</a>
 						</li>
+						<?php
+						include('./db/connect.php');
+						$sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
+						while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
+						?>
+							<li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
+								<a class="nav-link " href="index.php?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>" role="button" aria-haspopup="true" aria-expanded="false">
+									<?php echo $row_category_danhmuc['category_name'] ?>
+								</a>
+
+							</li>
+						<?php
+						}
+						?>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								Electronics
+							<?php
+							$sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
+
+							?>
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Tin tức
 							</a>
 							<div class="dropdown-menu">
-								<div class="agile_inner_drop_nav_info p-4">
-									<h5 class="mb-3">Mobiles, Computers</h5>
-									<div class="row">
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.html">All Mobile Phones</a>
-												</li>
-												<li>
-													<a href="product.html">All Mobile Accessories</a>
-												</li>
-												<li>
-													<a href="product.html">Cases & Covers</a>
-												</li>
-												<li>
-													<a href="product.html">Screen Protectors</a>
-												</li>
-												<li>
-													<a href="product.html">Power Banks</a>
-												</li>
-												<li>
-													<a href="product.html">All Certified Refurbished</a>
-												</li>
-												<li>
-													<a href="product.html">Tablets</a>
-												</li>
-												<li>
-													<a href="product.html">Wearable Devices</a>
-												</li>
-												<li>
-													<a href="product.html">Smart Home</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product.html">Laptops</a>
-												</li>
-												<li>
-													<a href="product.html">Drives & Storage</a>
-												</li>
-												<li>
-													<a href="product.html">Printers & Ink</a>
-												</li>
-												<li>
-													<a href="product.html">Networking Devices</a>
-												</li>
-												<li>
-													<a href="product.html">Computer Accessories</a>
-												</li>
-												<li>
-													<a href="product.html">Game Zone</a>
-												</li>
-												<li>
-													<a href="product.html">Software</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
+								<?php
+								while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
+								?>
+									<a class="dropdown-item" href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
+										<?php echo $row_danhmuctin['tendanhmuc'] ?>
+									</a>
+								<?php
+								}
+								?>
 							</div>
 						</li>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								Appliances
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+								Trang
 							</a>
 							<div class="dropdown-menu">
-								<div class="agile_inner_drop_nav_info p-4">
-									<h5 class="mb-3">TV, Appliances, Electronics</h5>
-									<div class="row">
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product2.html">Televisions</a>
-												</li>
-												<li>
-													<a href="product2.html">Home Entertainment Systems</a>
-												</li>
-												<li>
-													<a href="product2.html">Headphones</a>
-												</li>
-												<li>
-													<a href="product2.html">Speakers</a>
-												</li>
-												<li>
-													<a href="product2.html">MP3, Media Players & Accessories</a>
-												</li>
-												<li>
-													<a href="product2.html">Audio & Video Accessories</a>
-												</li>
-												<li>
-													<a href="product2.html">Cameras</a>
-												</li>
-												<li>
-													<a href="product2.html">DSLR Cameras</a>
-												</li>
-												<li>
-													<a href="product2.html">Camera Accessories</a>
-												</li>
-											</ul>
-										</div>
-										<div class="col-sm-6 multi-gd-img">
-											<ul class="multi-column-dropdown">
-												<li>
-													<a href="product2.html">Musical Instruments</a>
-												</li>
-												<li>
-													<a href="product2.html">Gaming Consoles</a>
-												</li>
-												<li>
-													<a href="product2.html">All Electronics</a>
-												</li>
-												<li>
-													<a href="product2.html">Air Conditioners</a>
-												</li>
-												<li>
-													<a href="product2.html">Refrigerators</a>
-												</li>
-												<li>
-													<a href="product2.html">Washing Machines</a>
-												</li>
-												<li>
-													<a href="product2.html">Kitchen & Home Appliances</a>
-												</li>
-												<li>
-													<a href="product2.html">Heating & Cooling Appliances</a>
-												</li>
-												<li>
-													<a href="product2.html">All Appliances</a>
-												</li>
-											</ul>
-										</div>
-									</div>
-								</div>
-							</div>
-						</li>
-						<li class="nav-item active mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="about.html">About Us</a>
-						</li>
-						<li class="nav-item mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link" href="product.html">New Arrivals</a>
-						</li>
-						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
-								Pages
-							</a>
-							<div class="dropdown-menu">
-								<a class="dropdown-item" href="product.html">Product 1</a>
-								<a class="dropdown-item" href="product2.html">Product 2</a>
+								<a class="dropdown-item" href="product.php">Sản phẩm mới</a>
+
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="single.html">Single Product 1</a>
-								<a class="dropdown-item" href="single2.html">Single Product 2</a>
-								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="checkout.html">Checkout Page</a>
-								<a class="dropdown-item" href="payment.html">Payment Page</a>
+								<a class="dropdown-item" href="checkout.html">Kiểm tra hàng</a>
+								<a class="dropdown-item" href="payment.html">Thanh toán</a>
 							</div>
 						</li>
-						<li class="nav-item">
-							<a class="nav-link" href="contact.php">Liên hệ</a>
+						<a class="nav-link" href="contact.php">Liên hệ</a>
+						</li>
+						<li class="nav-item active">
+							<a class="nav-link" href="about.php">Về chúng tôi</a>
 						</li>
 					</ul>
 				</div>
@@ -987,35 +851,26 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 				<div class="row footer-info w3-agileits-info">
 					<!-- footer categories -->
 					<div class="col-md-3 col-sm-6 footer-grids">
-						<h3 class="text-white font-weight-bold mb-3">Categories</h3>
+						<h3 class="text-white font-weight-bold mb-3">Danh mục</h3>
 						<ul>
 							<li class="mb-3">
-								<a href="product.html">Mobiles </a>
+								<a href="product.php">Nam</a>
 							</li>
 							<li class="mb-3">
-								<a href="product.html">Computers</a>
+								<a href="product.php">Nữ</a>
 							</li>
 							<li class="mb-3">
-								<a href="product.html">TV, Audio</a>
-							</li>
-							<li class="mb-3">
-								<a href="product2.html">Smartphones</a>
-							</li>
-							<li class="mb-3">
-								<a href="product.html">Washing Machines</a>
-							</li>
-							<li>
-								<a href="product2.html">Refrigerators</a>
+								<a href="product.php">Cặp đôi</a>
 							</li>
 						</ul>
 					</div>
 					<!-- //footer categories -->
 					<!-- quick links -->
 					<div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
-						<h3 class="text-white font-weight-bold mb-3">Quick Links</h3>
+						<h3 class="text-white font-weight-bold mb-3">Menu</h3>
 						<ul>
 							<li class="mb-3">
-								<a href="about.html">About Us</a>
+								<a href="about.php">About Us</a>
 							</li>
 							<li class="mb-3">
 								<a href="contact.php">Liên hệ</a>
@@ -1106,34 +961,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h5 class="font-weight-bold mb-2">Mobile & Tablets :</h5>
 					<ul>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Android Phones</a>
+							<a href="product.php" class="border-right pr-2">Android Phones</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Smartphones</a>
+							<a href="product.php" class="border-right pr-2">Smartphones</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Feature Phones</a>
+							<a href="product.php" class="border-right pr-2">Feature Phones</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Unboxed Phones</a>
+							<a href="product.php" class="border-right pr-2">Unboxed Phones</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Refurbished Phones</a>
+							<a href="product.php" class="border-right pr-2">Refurbished Phones</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2"> Tablets</a>
+							<a href="product.php" class="border-right pr-2"> Tablets</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">CDMA Phones</a>
+							<a href="product.php" class="border-right pr-2">CDMA Phones</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Value Added Services</a>
+							<a href="product.php" class="border-right pr-2">Value Added Services</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Sell Old</a>
+							<a href="product.php" class="border-right pr-2">Sell Old</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Used Mobiles</a>
+							<a href="product.php" class="border-right pr-2">Used Mobiles</a>
 						</li>
 					</ul>
 				</div>
@@ -1141,28 +996,28 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h5 class="font-weight-bold mb-2">Computers :</h5>
 					<ul>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Laptops </a>
+							<a href="product.php" class="border-right pr-2">Laptops </a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Printers</a>
+							<a href="product.php" class="border-right pr-2">Printers</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Routers</a>
+							<a href="product.php" class="border-right pr-2">Routers</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Ink & Toner Cartridges</a>
+							<a href="product.php" class="border-right pr-2">Ink & Toner Cartridges</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Monitors</a>
+							<a href="product.php" class="border-right pr-2">Monitors</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Video Games</a>
+							<a href="product.php" class="border-right pr-2">Video Games</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Unboxed & Refurbished Laptops</a>
+							<a href="product.php" class="border-right pr-2">Unboxed & Refurbished Laptops</a>
 						</li>
 						<li>
-							<a href="product.html" class="border-right pr-2">Assembled Desktops</a>
+							<a href="product.php" class="border-right pr-2">Assembled Desktops</a>
 						</li>
 						<li class="m-sm-1">
 							<a href="product2.html" class="border-right pr-2">Data Cards</a>
@@ -1205,16 +1060,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<a href="product2.html" class="border-right pr-2">Headphones</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Power Banks </a>
+							<a href="product.php" class="border-right pr-2">Power Banks </a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Backpacks</a>
+							<a href="product.php" class="border-right pr-2">Backpacks</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Mobile Cases & Covers</a>
+							<a href="product.php" class="border-right pr-2">Mobile Cases & Covers</a>
 						</li>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Pen Drives</a>
+							<a href="product.php" class="border-right pr-2">Pen Drives</a>
 						</li>
 						<li class="m-sm-1">
 							<a href="product2.html" class="border-right pr-2">External Hard Disks</a>
@@ -1266,7 +1121,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<h5 class="font-weight-bold mb-2">Popular on T-P Watch</h5>
 					<ul>
 						<li class="m-sm-1">
-							<a href="product.html" class="border-right pr-2">Offers & Coupons</a>
+							<a href="product.php" class="border-right pr-2">Offers & Coupons</a>
 						</li>
 						<li class="m-sm-1">
 							<a href="product2.html" class="border-right pr-2">Couple Watches</a>
@@ -1363,13 +1218,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- nav smooth scroll -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$(".dropdown").hover(
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
 					$(this).toggleClass('open');
 				},
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
 					$(this).toggleClass('open');
 				}
@@ -1381,7 +1236,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- popup modal (for location)-->
 	<script src="js/jquery.magnific-popup.js"></script>
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$('.popup-with-zoom-anim').magnificPopup({
 				type: 'inline',
 				fixedContentPos: false,
@@ -1403,7 +1258,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script>
 		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
-		paypals.minicarts.cart.on('checkout', function (evt) {
+		paypals.minicarts.cart.on('checkout', function(evt) {
 			var items = this.items(),
 				len = items.length,
 				total = 0,
@@ -1424,7 +1279,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- password-script -->
 	<script>
-		window.onload = function () {
+		window.onload = function() {
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
 		}
@@ -1449,8 +1304,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="js/move-top.js"></script>
 	<script src="js/easing.js"></script>
 	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
 				event.preventDefault();
 
 				$('html,body').animate({
@@ -1463,7 +1318,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- smooth-scrolling-of-move-up -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			/*
 			var defaults = {
 				containerID: 'toTop', // fading element id

@@ -11,16 +11,15 @@ $sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category
                         <?php
                         while ($row_category = mysqli_fetch_array($sql_category)) {
                         ?>
-                        <option value="<?php echo $row_category['category_id'] ?>">
-                            <?php echo $row_category['category_name'] ?></option>
+                            <option value="<?php echo $row_category['category_id'] ?>">
+                                <?php echo $row_category['category_name'] ?></option>
                         <?php
                         }
                         ?>
                     </select>
                 </form>
             </div>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -34,15 +33,13 @@ $sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category
                     $sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
                     while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
                     ?>
-                    <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
+                        <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
 
-                        <a class="nav-link "
-                            href="?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>" role="button"
-                            aria-haspopup="true" aria-expanded="false">
-                            <?php echo $row_category_danhmuc['category_name'] ?>
-                        </a>
+                            <a class="nav-link " href="?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>" role="button" aria-haspopup="true" aria-expanded="false">
+                                <?php echo $row_category_danhmuc['category_name'] ?>
+                            </a>
 
-                    </li>
+                        </li>
                     <?php
                     }
                     ?>
@@ -51,28 +48,25 @@ $sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category
                         $sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
 
                         ?>
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Tin tức
                         </a>
                         <div class="dropdown-menu">
                             <?php
                             while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
                             ?>
-                            <a class="dropdown-item"
-                                href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>"><?php echo $row_danhmuctin['tendanhmuc'] ?></a>
+                                <a class="dropdown-item" href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>"><?php echo $row_danhmuctin['tendanhmuc'] ?></a>
                             <?php
                             }
                             ?>
                         </div>
                     </li>
                     <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                            aria-haspopup="true" aria-expanded="false">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Trang
                         </a>
                         <div class="dropdown-menu">
-                            <a class="dropdown-item" href="product.html">Sản phẩm mới</a>
+                            <a class="dropdown-item" href="product.php">Sản phẩm mới</a>
 
                             <div class="dropdown-divider"></div>
                             <a class="dropdown-item" href="checkout.html">Kiểm tra hàng</a>
@@ -82,6 +76,10 @@ $sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Liên hệ</a>
                     </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="about.php">Về chúng tôi</a>
+                    </li>
+
                 </ul>
             </div>
         </nav>

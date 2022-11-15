@@ -164,7 +164,7 @@ a.play-icon.popup-with-zoom-anim img:hover {
 }
 
 .mfp-container:before {
-  content: '';
+  content: "";
   display: inline-block;
   height: 100%;
   vertical-align: middle;
@@ -266,7 +266,7 @@ button.mfp-arrow {
   overflow: visible;
   cursor: pointer;
   border: 0;
-  background: #FFF;
+  background: #fff;
   -webkit-appearance: none;
   display: block;
   padding: 0;
@@ -315,7 +315,7 @@ button::-moz-focus-inner {
 .login h3,
 .select-city h3 {
   margin: 20px;
-  color: #F45C5D;
+  color: #f45c5d;
   font-size: 25px;
   letter-spacing: 1px;
 }
@@ -330,17 +330,17 @@ button::-moz-focus-inner {
 .confirmation input.email[type="text"] {
   width: 90%;
   padding: 10px;
-  background: #FFF;
+  background: #fff;
   margin: 10px 0;
   outline: none;
-  color: #817F7F;
-  border: solid 1px #817F7F;
-  font-family: 'Open Sans', sans-serif;
+  color: #817f7f;
+  border: solid 1px #817f7f;
+  font-family: "Open Sans", sans-serif;
 }
 
 .confirmation input[type="submit"] {
   border: 0px;
-  padding: .5em 2em;
+  padding: 0.5em 2em;
   background: #003b64;
   margin: 1em 0 0 0;
   outline: none;
@@ -349,7 +349,7 @@ button::-moz-focus-inner {
   text-transform: uppercase;
   -webkit-appearance: none;
   position: relative;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
 }
 
 .confirmation input[type="submit"]:hover {
@@ -362,7 +362,7 @@ button::-moz-focus-inner {
   width: 90%;
   padding: 5px;
   margin: 3px 0;
-  x border: 1px solid #a63d56;
+  border: 1px solid #a63d56;
   outline: none !important;
 }
 
@@ -394,7 +394,7 @@ button::-moz-focus-inner {
   transition: all 0.5s ease-in-out;
 }
 
-@media all and (max-width:667px) {
+@media all and (max-width: 667px) {
   #small-dialog,
   #small-dialog1 {
     max-width: 566px;
@@ -405,13 +405,13 @@ button::-moz-focus-inner {
   }
 }
 
-@media all and (max-width:480px) {
+@media all and (max-width: 480px) {
   .comments-area textarea {
     height: 100px;
   }
 }
 
-@media all and (max-width:414px) {
+@media all and (max-width: 414px) {
   .login h3,
   .select-city h3 {
     font-size: 20px;
@@ -419,7 +419,7 @@ button::-moz-focus-inner {
   }
 }
 
-@media all and (max-width:320px) {
+@media all and (max-width: 320px) {
   .comments-area span.label,
   .comments-area span.text-field {
     float: none;

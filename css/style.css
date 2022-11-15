@@ -613,7 +613,7 @@ h3.tittle-w3l span {
 }
 
 .product-men:nth-child(3) .product-new-top {
-  background: #ffc107;
+  background: var(--primary-color);
 }
 
 .product-men:nth-child(4) .product-new-top {
@@ -621,7 +621,7 @@ h3.tittle-w3l span {
 }
 
 .product-new-top {
-  background: #ff2978;
+  background: var(--primary-color);
   color: var(--white-color);
   position: absolute;
   top: 0;
@@ -905,7 +905,7 @@ input.checked {
 /*-- customer --*/
 
 .customer-rev ul li i {
-  color: #ffc107;
+  background: #f9f9f9;
 }
 
 .customer-rev ul li {

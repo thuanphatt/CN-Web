@@ -52,10 +52,7 @@
                     <!-- header lists -->
                     <ul>
 
-                        <li class="text-center border-right text-white">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
-                                <i class="fas fa-truck mr-2"></i>Track Order</a>
-                        </li>
+
                         <li class="text-center border-right text-white">
                             <i class="fas fa-phone mr-2"></i>369369369
                         </li>
@@ -211,15 +208,10 @@
                     <form action="#" method="post">
                         <select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
                             <option value="">Danh mục sản phẩm</option>
-                            <option value="Televisions">Televisions</option>
-                            <option value="Headphones">Headphones</option>
-                            <option value="Computers">Computers</option>
-                            <option value="Appliances">Appliances</option>
-                            <option value="Mobiles">Mobiles</option>
-                            <option value="Fruits &amp; Vegetables">Tv &amp; Video</option>
-                            <option value="iPad & Tablets">iPad & Tablets</option>
-                            <option value="Cameras & Camcorders">Cameras & Camcorders</option>
-                            <option value="Home Audio & Theater">Home Audio & Theater</option>
+                            <option value="Televisions">Nam</option>
+                            <option value="Headphones">Nữ</option>
+                            <option value="Computers">Cặp đôi</option>
+
                         </select>
                     </form>
                 </div>
@@ -270,7 +262,7 @@
                                 Trang
                             </a>
                             <div class="dropdown-menu">
-                                <a class="dropdown-item" href="product.html">Sản phẩm mới</a>
+                                <a class="dropdown-item" href="product.php">Sản phẩm mới</a>
 
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="checkout.html">Kiểm tra hàng</a>
@@ -279,6 +271,9 @@
                         </li>
                         <li class="nav-item active">
                             <a class="nav-link" href="contact.php">Liên hệ</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="about.php">Về chúng tôi</a>
                         </li>
                     </ul>
                 </div>
@@ -444,38 +439,30 @@
                 <div class="row footer-info w3-agileits-info">
                     <!-- footer categories -->
                     <div class="col-md-3 col-sm-6 footer-grids">
-                        <h3 class="text-white font-weight-bold mb-3">Categories</h3>
+                        <h3 class="text-white font-weight-bold mb-3">Danh mục</h3>
                         <ul>
                             <li class="mb-3">
-                                <a href="product.html">Mobiles </a>
+                                <a href="product.php">Nam</a>
                             </li>
                             <li class="mb-3">
-                                <a href="product.html">Computers</a>
+                                <a href="product.php">Nữ</a>
                             </li>
                             <li class="mb-3">
-                                <a href="product.html">TV, Audio</a>
+                                <a href="product.php">Cặp đôi</a>
                             </li>
-                            <li class="mb-3">
-                                <a href="product2.html">Smartphones</a>
-                            </li>
-                            <li class="mb-3">
-                                <a href="product.html">Washing Machines</a>
-                            </li>
-                            <li>
-                                <a href="product2.html">Refrigerators</a>
-                            </li>
+
                         </ul>
                     </div>
                     <!-- //footer categories -->
                     <!-- quick links -->
                     <div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
-                        <h3 class="text-white font-weight-bold mb-3">Quick Links</h3>
+                        <h3 class="text-white font-weight-bold mb-3">Menu</h3>
                         <ul>
                             <li class="mb-3">
-                                <a href="about.html">About Us</a>
+                                <a href="about.php">About Us</a>
                             </li>
                             <li class="mb-3">
-                                <a href="contact.html">Liên hệ</a>
+                                <a href="contact.php">Liên hệ</a>
                             </li>
                             <li class="mb-3">
                                 <a href="help.html">Help</a>
@@ -563,34 +550,34 @@
                     <h5 class="font-weight-bold mb-2">Mobile & Tablets :</h5>
                     <ul>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Android Phones</a>
+                            <a href="product.php" class="border-right pr-2">Android Phones</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Smartphones</a>
+                            <a href="product.php" class="border-right pr-2">Smartphones</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Feature Phones</a>
+                            <a href="product.php" class="border-right pr-2">Feature Phones</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Unboxed Phones</a>
+                            <a href="product.php" class="border-right pr-2">Unboxed Phones</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Refurbished Phones</a>
+                            <a href="product.php" class="border-right pr-2">Refurbished Phones</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2"> Tablets</a>
+                            <a href="product.php" class="border-right pr-2"> Tablets</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">CDMA Phones</a>
+                            <a href="product.php" class="border-right pr-2">CDMA Phones</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Value Added Services</a>
+                            <a href="product.php" class="border-right pr-2">Value Added Services</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Sell Old</a>
+                            <a href="product.php" class="border-right pr-2">Sell Old</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Used Mobiles</a>
+                            <a href="product.php" class="border-right pr-2">Used Mobiles</a>
                         </li>
                     </ul>
                 </div>
@@ -598,28 +585,28 @@
                     <h5 class="font-weight-bold mb-2">Computers :</h5>
                     <ul>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Laptops </a>
+                            <a href="product.php" class="border-right pr-2">Laptops </a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Printers</a>
+                            <a href="product.php" class="border-right pr-2">Printers</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Routers</a>
+                            <a href="product.php" class="border-right pr-2">Routers</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Ink & Toner Cartridges</a>
+                            <a href="product.php" class="border-right pr-2">Ink & Toner Cartridges</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Monitors</a>
+                            <a href="product.php" class="border-right pr-2">Monitors</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Video Games</a>
+                            <a href="product.php" class="border-right pr-2">Video Games</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Unboxed & Refurbished Laptops</a>
+                            <a href="product.php" class="border-right pr-2">Unboxed & Refurbished Laptops</a>
                         </li>
                         <li>
-                            <a href="product.html" class="border-right pr-2">Assembled Desktops</a>
+                            <a href="product.php" class="border-right pr-2">Assembled Desktops</a>
                         </li>
                         <li class="m-sm-1">
                             <a href="product2.html" class="border-right pr-2">Data Cards</a>
@@ -662,16 +649,16 @@
                             <a href="product2.html" class="border-right pr-2">Headphones</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Power Banks </a>
+                            <a href="product.php" class="border-right pr-2">Power Banks </a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Backpacks</a>
+                            <a href="product.php" class="border-right pr-2">Backpacks</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Mobile Cases & Covers</a>
+                            <a href="product.php" class="border-right pr-2">Mobile Cases & Covers</a>
                         </li>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Pen Drives</a>
+                            <a href="product.php" class="border-right pr-2">Pen Drives</a>
                         </li>
                         <li class="m-sm-1">
                             <a href="product2.html" class="border-right pr-2">External Hard Disks</a>
@@ -723,7 +710,7 @@
                     <h5 class="font-weight-bold mb-2">Popular on T-P Watch</h5>
                     <ul>
                         <li class="m-sm-1">
-                            <a href="product.html" class="border-right pr-2">Offers & Coupons</a>
+                            <a href="product.php" class="border-right pr-2">Offers & Coupons</a>
                         </li>
                         <li class="m-sm-1">
                             <a href="product2.html" class="border-right pr-2">Couple Watches</a>
