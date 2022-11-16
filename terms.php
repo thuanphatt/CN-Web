@@ -796,7 +796,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="col-sm-7 offer-name">
 								<h6>MINIMAL</h6>
 								<h4 class="mt-2 mb-3">Branded Watch</h4>
-								<p>Sale up to 25% off all in store</p>
+								<p>Giảm tới 25% tất cả trong cửa hàng</p>
 							</div>
 							<div class="col-sm-5 offerimg-w3l">
 								<img src="images/banner1.png" alt="" class="img-fluid">
@@ -809,8 +809,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="row ">
 							<div class="col-sm-7 offer-name">
 								<h6>ESSENTIAL</h6>
-								<h4 class="mt-2 mb-3">Smart Phones 5</h4>
-								<p>Free shipping order over $100</p>
+								<h4 class="mt-2 mb-3">Vintage Watch</h4>
+								<p>Miễn phí vận chuyển cho đơn hàng trên 1,000,000₫</p>
 							</div>
 							<div class="col-sm-5 offerimg-w3l">
 								<img src="images/banner2.png" alt="" class="img-fluid">
@@ -841,8 +841,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<i class="fas fa-dolly"></i>
 							</div>
 							<div class="col-8 text-form-footer">
-								<h3>Free Shipping</h3>
-								<p>on orders over $100</p>
+								<h3>Miễn phí vận chuyển</h3>
+								<p>Đơn hàng trên 100$</p>
 							</div>
 						</div>
 					</div>
@@ -852,8 +852,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<i class="fas fa-shipping-fast"></i>
 							</div>
 							<div class="col-8 text-form-footer">
-								<h3>Fast Delivery</h3>
-								<p>World Wide</p>
+								<h3>Vận chuyển nhanh</h3>
+								<p>Toàn quốc</p>
 							</div>
 						</div>
 					</div>
@@ -863,8 +863,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<i class="far fa-thumbs-up"></i>
 							</div>
 							<div class="col-8 text-form-footer">
-								<h3>Big Choice</h3>
-								<p>of Products</p>
+								<h3>Tin cậy</h3>
+								<p>Sự đảm bảo</p>
 							</div>
 						</div>
 					</div>
@@ -895,7 +895,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<!-- //footer categories -->
 					<!-- quick links -->
 					<div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
-						<h3 class="text-white font-weight-bold mb-3">Menu</h3>
+						<h3 class="text-white font-weight-bold mb-3">Dịch vụ</h3>
 						<ul>
 							<li class="mb-3">
 								<a href="about.php">Về chúng tôi</a>
@@ -904,45 +904,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<a href="contact.php">Liên hệ</a>
 							</li>
 							<li class="mb-3">
-								<a href="help.php">Help</a>
+								<a href="help.php">Hỗ trợ</a>
 							</li>
 							<li class="mb-3">
-								<a href="faqs.php">Faqs</a>
+								<a href="faqs.php">FAQs</a>
 							</li>
 							<li class="mb-3">
-								<a href="terms.php">Terms of use</a>
+								<a href="terms.php">Điều khoản sử dụng</a>
 							</li>
 							<li>
-								<a href="privacy.php">Privacy Policy</a>
+								<a href="privacy.php">Chính sách bảo mật</a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
-						<h3 class="text-white font-weight-bold mb-3">Get in Touch</h3>
+						<h3 class="text-white font-weight-bold mb-3">Liên hệ</h3>
 						<ul>
 							<li class="mb-3">
-								<i class="fas fa-map-marker"></i> 123 Sebastian, USA.
+								<i class="fas fa-map-marker"></i> Can Tho, Viet Nam.
 							</li>
 							<li class="mb-3">
-								<i class="fas fa-mobile"></i> 333 222 3333
+								<i class="fas fa-mobile"></i> 369 369 369
 							</li>
 							<li class="mb-3">
-								<i class="fas fa-phone"></i> +222 11 4444
+								<i class="fas fa-phone"></i> +099 999 999
 							</li>
 							<li class="mb-3">
 								<i class="fas fa-envelope-open"></i>
-								<a href="mailto:example@mail.com"> mail 1@example.com</a>
+								<a href="mailto:zelorntp@gmail.com"> zelorntp@gmail.com</a>
 							</li>
-							<li>
-								<i class="fas fa-envelope-open"></i>
-								<a href="mailto:example@mail.com"> mail 2@example.com</a>
-							</li>
+
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
 						<!-- newsletter -->
 						<h3 class="text-white font-weight-bold mb-3">Newsletter</h3>
-						<p class="mb-3">Free Delivery on your first order!</p>
+						<p class="mb-3">Giao hàng miễn phí trên đơn đặt hàng đầu tiên của bạn!</p>
 						<form action="#" method="post">
 							<div class="form-group">
 								<input type="email" class="form-control" placeholder="Email" name="email" required="">
@@ -952,22 +949,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!-- //newsletter -->
 						<!-- social icons -->
 						<div class="footer-grids  w3l-socialmk mt-3">
-							<h3 class="text-white font-weight-bold mb-3">Follow Us on</h3>
+							<h3 class="text-white font-weight-bold mb-3">Theo dõi</h3>
 							<div class="social">
 								<ul>
 									<li>
-										<a class="icon fb" href="#">
+										<a class="icon fb" href="https://www.facebook.com/nthuanphatt/">
 											<i class="fab fa-facebook-f"></i>
 										</a>
 									</li>
 									<li>
-										<a class="icon tw" href="#">
+										<a class="icon tw" href="https://twitter.com/callme_thphat">
 											<i class="fab fa-twitter"></i>
 										</a>
 									</li>
 									<li>
-										<a class="icon gp" href="#">
-											<i class="fab fa-google-plus-g"></i>
+										<a class="icon gp" href="https://www.instagram.com/thuan.phatt/">
+											<i class="fab fa-instagram" style="background: url(./images/bg-instagram.jpg);"></i>
 										</a>
 									</li>
 								</ul>
@@ -987,8 +984,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-			<p class="text-center text-white">© 2018 T-P Watch. All rights reserved | Design by
-				<a href="https://www.facebook.com/nthuanphatt/"> W3layouts.</a>
+			<p class="text-center text-white">© 2022 T-P Watch. All rights reserved | Design by
+				<a href="https://www.facebook.com/nthuanphatt/"> T-P Watch.</a>
 			</p>
 		</div>
 	</div>

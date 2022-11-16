@@ -14,7 +14,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="T-P Watch " />
 	<script>
-		addEventListener("load", function () {
+		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
 		}, false);
 
@@ -38,12 +38,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //Custom-Files -->
 
 	<!-- web fonts -->
-	<link
-		href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
-		rel="stylesheet">
-	<link
-		href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-		rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 	<!-- //web fonts -->
 
 </head>
@@ -522,13 +518,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Password" id="password1"
-								required="">
+							<input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Confirm Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Confirm Password"
-								id="password2" required="">
+							<input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
 						</div>
 						<div class="right-w3l">
 							<input type="submit" class="form-control" value="Register">
@@ -567,8 +561,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!-- search -->
 						<div class="col-10 agileits_search">
 							<form class="form-inline" action="#" method="post">
-								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm"
-									aria-label="Search" required>
+								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
 								<button class="btn my-2 my-sm-0" type="submit">Tìm kiếm</button>
 							</form>
 						</div>
@@ -607,9 +600,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</select>
 					</form>
 				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -620,46 +611,41 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</a>
 						</li>
 						<?php
-                        include('./db/connect.php');
-                        $sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
-                        while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
-                        ?>
-						<li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link "
-								href="index.php?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>"
-								role="button" aria-haspopup="true" aria-expanded="false">
-								<?php echo $row_category_danhmuc['category_name'] ?>
-							</a>
+						include('./db/connect.php');
+						$sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
+						while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
+						?>
+							<li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
+								<a class="nav-link " href="index.php?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>" role="button" aria-haspopup="true" aria-expanded="false">
+									<?php echo $row_category_danhmuc['category_name'] ?>
+								</a>
 
-						</li>
+							</li>
 						<?php
-                        }
-                        ?>
+						}
+						?>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
 							<?php
-                            $sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
+							$sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
 
-                            ?>
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+							?>
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Tin tức
 							</a>
 							<div class="dropdown-menu">
 								<?php
-                                while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
-                                ?>
-								<a class="dropdown-item"
-									href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
-									<?php echo $row_danhmuctin['tendanhmuc'] ?>
-								</a>
+								while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
+								?>
+									<a class="dropdown-item" href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
+										<?php echo $row_danhmuctin['tendanhmuc'] ?>
+									</a>
 								<?php
-                                }
-                                ?>
+								}
+								?>
 							</div>
 						</li>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Trang
 							</a>
 							<div class="dropdown-menu">
@@ -804,7 +790,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<div class="col-sm-7 offer-name">
 								<h6>MINIMAL</h6>
 								<h4 class="mt-2 mb-3">Branded Watch</h4>
-								<p>Sale up to 25% off all in store</p>
+								<p>Giảm tới 25% tất cả trong cửa hàng</p>
 							</div>
 							<div class="col-sm-5 offerimg-w3l">
 								<img src="images/banner1.png" alt="" class="img-fluid">
@@ -817,8 +803,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<div class="row ">
 							<div class="col-sm-7 offer-name">
 								<h6>ESSENTIAL</h6>
-								<h4 class="mt-2 mb-3">Smart Phones 5</h4>
-								<p>Free shipping order over $100</p>
+								<h4 class="mt-2 mb-3">Vintage Watch</h4>
+								<p>Miễn phí vận chuyển cho đơn hàng trên 1,000,000₫</p>
 							</div>
 							<div class="col-sm-5 offerimg-w3l">
 								<img src="images/banner2.png" alt="" class="img-fluid">
@@ -849,8 +835,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<i class="fas fa-dolly"></i>
 							</div>
 							<div class="col-8 text-form-footer">
-								<h3>Free Shipping</h3>
-								<p>on orders over $100</p>
+								<h3>Miễn phí vận chuyển</h3>
+								<p>Đơn hàng trên 100$</p>
 							</div>
 						</div>
 					</div>
@@ -860,8 +846,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<i class="fas fa-shipping-fast"></i>
 							</div>
 							<div class="col-8 text-form-footer">
-								<h3>Fast Delivery</h3>
-								<p>World Wide</p>
+								<h3>Vận chuyển nhanh</h3>
+								<p>Toàn quốc</p>
 							</div>
 						</div>
 					</div>
@@ -871,8 +857,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<i class="far fa-thumbs-up"></i>
 							</div>
 							<div class="col-8 text-form-footer">
-								<h3>Big Choice</h3>
-								<p>of Products</p>
+								<h3>Tin cậy</h3>
+								<p>Sự đảm bảo</p>
 							</div>
 						</div>
 					</div>
@@ -903,7 +889,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<!-- //footer categories -->
 					<!-- quick links -->
 					<div class="col-md-3 col-sm-6 footer-grids mt-sm-0 mt-4">
-						<h3 class="text-white font-weight-bold mb-3">Menu</h3>
+						<h3 class="text-white font-weight-bold mb-3">Dịch vụ</h3>
 						<ul>
 							<li class="mb-3">
 								<a href="about.php">Về chúng tôi</a>
@@ -912,45 +898,42 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<a href="contact.php">Liên hệ</a>
 							</li>
 							<li class="mb-3">
-								<a href="help.php">Help</a>
+								<a href="help.php">Hỗ trợ</a>
 							</li>
 							<li class="mb-3">
-								<a href="faqs.php">Faqs</a>
+								<a href="faqs.php">FAQs</a>
 							</li>
 							<li class="mb-3">
-								<a href="terms.php">Terms of use</a>
+								<a href="terms.php">Điều khoản sử dụng</a>
 							</li>
 							<li>
-								<a href="privacy.php">Privacy Policy</a>
+								<a href="privacy.php">Chính sách bảo mật</a>
 							</li>
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grids mt-md-0 mt-4">
-						<h3 class="text-white font-weight-bold mb-3">Get in Touch</h3>
+						<h3 class="text-white font-weight-bold mb-3">Liên hệ</h3>
 						<ul>
 							<li class="mb-3">
-								<i class="fas fa-map-marker"></i> 123 Sebastian, USA.
+								<i class="fas fa-map-marker"></i> Can Tho, Viet Nam.
 							</li>
 							<li class="mb-3">
-								<i class="fas fa-mobile"></i> 333 222 3333
+								<i class="fas fa-mobile"></i> 369 369 369
 							</li>
 							<li class="mb-3">
-								<i class="fas fa-phone"></i> +222 11 4444
+								<i class="fas fa-phone"></i> +099 999 999
 							</li>
 							<li class="mb-3">
 								<i class="fas fa-envelope-open"></i>
-								<a href="mailto:example@mail.com"> mail 1@example.com</a>
+								<a href="mailto:zelorntp@gmail.com"> zelorntp@gmail.com</a>
 							</li>
-							<li>
-								<i class="fas fa-envelope-open"></i>
-								<a href="mailto:example@mail.com"> mail 2@example.com</a>
-							</li>
+
 						</ul>
 					</div>
 					<div class="col-md-3 col-sm-6 footer-grids w3l-agileits mt-md-0 mt-4">
 						<!-- newsletter -->
 						<h3 class="text-white font-weight-bold mb-3">Newsletter</h3>
-						<p class="mb-3">Free Delivery on your first order!</p>
+						<p class="mb-3">Giao hàng miễn phí trên đơn đặt hàng đầu tiên của bạn!</p>
 						<form action="#" method="post">
 							<div class="form-group">
 								<input type="email" class="form-control" placeholder="Email" name="email" required="">
@@ -960,22 +943,22 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!-- //newsletter -->
 						<!-- social icons -->
 						<div class="footer-grids  w3l-socialmk mt-3">
-							<h3 class="text-white font-weight-bold mb-3">Follow Us on</h3>
+							<h3 class="text-white font-weight-bold mb-3">Theo dõi</h3>
 							<div class="social">
 								<ul>
 									<li>
-										<a class="icon fb" href="#">
+										<a class="icon fb" href="https://www.facebook.com/nthuanphatt/">
 											<i class="fab fa-facebook-f"></i>
 										</a>
 									</li>
 									<li>
-										<a class="icon tw" href="#">
+										<a class="icon tw" href="https://twitter.com/callme_thphat">
 											<i class="fab fa-twitter"></i>
 										</a>
 									</li>
 									<li>
-										<a class="icon gp" href="#">
-											<i class="fab fa-google-plus-g"></i>
+										<a class="icon gp" href="https://www.instagram.com/thuan.phatt/">
+											<i class="fab fa-instagram" style="background: url(./images/bg-instagram.jpg);"></i>
 										</a>
 									</li>
 								</ul>
@@ -994,8 +977,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- copyright -->
 	<div class="copy-right py-3">
 		<div class="container">
-			<p class="text-center text-white">© 2018 T-P Watch. All rights reserved | Design by
-				<a href="https://www.facebook.com/nthuanphatt/"> W3layouts.</a>
+			<p class="text-center text-white">© 2022 T-P Watch. All rights reserved | Design by
+				<a href="https://www.facebook.com/nthuanphatt/"> T-P Watch.</a>
 			</p>
 		</div>
 	</div>
@@ -1008,13 +991,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- nav smooth scroll -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$(".dropdown").hover(
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
 					$(this).toggleClass('open');
 				},
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
 					$(this).toggleClass('open');
 				}
@@ -1026,7 +1009,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- popup modal (for location)-->
 	<script src="js/jquery.magnific-popup.js"></script>
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$('.popup-with-zoom-anim').magnificPopup({
 				type: 'inline',
 				fixedContentPos: false,
@@ -1048,7 +1031,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script>
 		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
-		paypals.minicarts.cart.on('checkout', function (evt) {
+		paypals.minicarts.cart.on('checkout', function(evt) {
 			var items = this.items(),
 				len = items.length,
 				total = 0,
@@ -1069,7 +1052,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- password-script -->
 	<script>
-		window.onload = function () {
+		window.onload = function() {
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
 		}
@@ -1094,8 +1077,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="js/move-top.js"></script>
 	<script src="js/easing.js"></script>
 	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
 				event.preventDefault();
 
 				$('html,body').animate({
@@ -1108,7 +1091,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- smooth-scrolling-of-move-up -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			/*
 			var defaults = {
 				containerID: 'toTop', // fading element id
