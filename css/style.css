@@ -1390,7 +1390,8 @@ h3.w3-head {
 }
 
 .faq-w3agile .faq > li > a {
-  color: #025061;
+  font-weight: bold;
+  color: var(--black-color);
   font-size: 17px;
   letter-spacing: 0.5px;
 }
@@ -1424,13 +1425,14 @@ li.subitem1 p {
 }
 
 .wthree-help form input[type="submit"] {
+  display: block;
   font-size: 16px;
   color: var(--white-color);
   background: var(--primary-color);
   outline: none;
   border: none;
   cursor: pointer;
-  padding: 12px 45px;
+  padding: 8px 34px;
   -webkit-appearance: none;
   -webkit-transition: 0.5s all;
   -moz-transition: 0.5s all;
@@ -3122,7 +3124,7 @@ div#testimonials h4.m-title {
   }
   .wthree-help form input[type="submit"] {
     font-size: 15px;
-    padding: 10px 31px;
+    padding: 8px 34px;
   }
   .wthree-help a {
     padding: 10px 18px;

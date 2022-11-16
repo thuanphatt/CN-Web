@@ -237,10 +237,10 @@
                             </a>
                         </li>
                         <?php
-						include('./db/connect.php');
-						$sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
-						while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
-						?>
+                        include('./db/connect.php');
+                        $sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
+                        while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
+                        ?>
                         <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
                             <a class="nav-link "
                                 href="index.php?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>"
@@ -250,28 +250,28 @@
 
                         </li>
                         <?php
-						}
-						?>
+                        }
+                        ?>
                         <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
                             <?php
-							$sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
+                            $sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
 
-							?>
+                            ?>
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
                                 aria-haspopup="true" aria-expanded="false">
                                 Tin tức
                             </a>
                             <div class="dropdown-menu">
                                 <?php
-								while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
-								?>
+                                while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
+                                ?>
                                 <a class="dropdown-item"
-                                    href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
+                                    href="index.php?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
                                     <?php echo $row_danhmuctin['tendanhmuc'] ?>
                                 </a>
                                 <?php
-								}
-								?>
+                                }
+                                ?>
                             </div>
                         </li>
                         <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
