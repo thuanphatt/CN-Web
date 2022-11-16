@@ -294,7 +294,7 @@
             <div class="container">
                 <ul class="w3_short">
                     <li>
-                        <a href="index.php">Home</a>
+                        <a href="index.php">Trang chủ</a>
                         <i>|</i>
                     </li>
                     <li>Liên hệ</li>
@@ -309,8 +309,8 @@
         <div class="container py-xl-4 py-lg-2">
             <!-- tittle heading -->
             <h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-                <span>C</span>ontact
-                <span>U</span>s
+                <span>L</span>iên
+                <span>H</span>ệ
             </h3>
             <!-- //tittle heading -->
             <div class="row contact-grids agile-1 mb-5">
@@ -319,9 +319,9 @@
                         <div class="con-ic">
                             <i class="fas fa-map-marker-alt rounded-circle"></i>
                         </div>
-                        <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Address</h4>
-                        <p>1PO Box 8568954 Melbourne
-                            <label>Australia.</label>
+                        <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Địa chỉ</h4>
+                        <p>Ninh Kieu,Can Tho
+                            <label>Viet Nam.</label>
                         </p>
                     </div>
                 </div>
@@ -330,9 +330,9 @@
                         <div class="con-ic">
                             <i class="fas fa-phone rounded-circle"></i>
                         </div>
-                        <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Call Us</h4>
-                        <p>+(0121) 121 121
-                            <label>+(0121) 121 122</label>
+                        <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Điện thoại</h4>
+                        <p>+(09777) 999 999
+                            <label>+(09777) 999 999</label>
                         </p>
                     </div>
                 </div>
@@ -343,9 +343,9 @@
                         </div>
                         <h4 class="font-weight-bold mt-sm-4 mt-3 mb-3">Email</h4>
                         <p>
-                            <a href="mailto:info@example.com">info@example1.com</a>
+                            <a href="mailto:info@example.com">zelorntp@gmail.com</a>
                             <label>
-                                <a href="mailto:info@example.com">info@example2.com</a>
+                                <a href="mailto:info@example.com">nhutruong61@gmail.com</a>
                             </label>
                         </p>
                     </div>
@@ -356,8 +356,8 @@
                 <div class="contact-grids1 w3agile-6">
                     <div class="row">
                         <div class="col-md-6 col-sm-6 contact-form1 form-group">
-                            <label class="col-form-label">Name</label>
-                            <input type="text" class="form-control" name="Name" placeholder="" required="">
+                            <label class="col-form-label">Tên</label>
+                            <input type="text" class="form-control" name="Tên" placeholder="" required="">
                         </div>
                         <div class="col-md-6 col-sm-6 contact-form1 form-group">
                             <label class="col-form-label">E-mail</label>
@@ -365,11 +365,11 @@
                         </div>
                     </div>
                     <div class="contact-me animated wow slideInUp form-group">
-                        <label class="col-form-label">Message</label>
-                        <textarea name="Message" class="form-control" placeholder="" required=""> </textarea>
+                        <label class="col-form-label">Ghi chú</label>
+                        <textarea name="Ghi chú" class="form-control" placeholder="" required=""> </textarea>
                     </div>
                     <div class="contact-form">
-                        <input type="submit" value="Submit">
+                        <input type="submit" value="Gửi">
                     </div>
                 </div>
             </form>

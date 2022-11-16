@@ -681,7 +681,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="container">
 				<ul class="w3_short">
 					<li>
-						<a href="index.php">Home</a>
+						<a href="index.php">Trang chủ</a>
 						<i>|</i>
 					</li>
 					<li>Privacy Policy</li>

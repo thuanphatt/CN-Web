@@ -1,9 +1,3 @@
-<!--
-Author: W3layouts
-Author URL: http://w3layouts.com
-License: Creative Commons Attribution 3.0 Unported
-License URL: http://creativecommons.org/licenses/by/3.0/
--->
 <!DOCTYPE html>
 <html lang="en">
 
@@ -13,6 +7,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="T-P Watch" />
+	<link rel="icon" type="image/x-icon" href="./images/icon.png">
 	<script>
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -679,7 +674,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="container">
 				<ul class="w3_short">
 					<li>
-						<a href="index.php">Home</a>
+						<a href="index.php">Trang chủ</a>
 						<i>|</i>
 					</li>
 					<li>Về chúng tôi</li>

@@ -8,7 +8,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 <html lang="en">
 
 <head>
-	<title>Help Page</title>
+	<title>Hỗ trợ</title>
 	<!-- Meta tag Keywords -->
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
@@ -78,385 +78,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		</div>
 	</div>
 
-	<!-- Button trigger modal(select-location) -->
-	<div id="small-dialog1" class="mfp-hide">
-		<div class="select-city">
-			<h3>
-				<i class="fas fa-map-marker"></i> Please Select Your Location
-			</h3>
-			<select class="list_of_cities">
-				<optgroup label="Popular Cities">
-					<option selected style="display:none;color:#eee;">Select City</option>
-					<option>Birmingham</option>
-					<option>Anchorage</option>
-					<option>Phoenix</option>
-					<option>Little Rock</option>
-					<option>Los Angeles</option>
-					<option>Denver</option>
-					<option>Bridgeport</option>
-					<option>Wilmington</option>
-					<option>Jacksonville</option>
-					<option>Atlanta</option>
-					<option>Honolulu</option>
-					<option>Boise</option>
-					<option>Chicago</option>
-					<option>Indianapolis</option>
-				</optgroup>
-				<optgroup label="Alabama">
-					<option>Birmingham</option>
-					<option>Montgomery</option>
-					<option>Mobile</option>
-					<option>Huntsville</option>
-					<option>Tuscaloosa</option>
-				</optgroup>
-				<optgroup label="Alaska">
-					<option>Anchorage</option>
-					<option>Fairbanks</option>
-					<option>Juneau</option>
-					<option>Sitka</option>
-					<option>Ketchikan</option>
-				</optgroup>
-				<optgroup label="Arizona">
-					<option>Phoenix</option>
-					<option>Tucson</option>
-					<option>Mesa</option>
-					<option>Chandler</option>
-					<option>Glendale</option>
-				</optgroup>
-				<optgroup label="Arkansas">
-					<option>Little Rock</option>
-					<option>Fort Smith</option>
-					<option>Fayetteville</option>
-					<option>Springdale</option>
-					<option>Jonesboro</option>
-				</optgroup>
-				<optgroup label="California">
-					<option>Los Angeles</option>
-					<option>San Diego</option>
-					<option>San Jose</option>
-					<option>San Francisco</option>
-					<option>Fresno</option>
-				</optgroup>
-				<optgroup label="Colorado">
-					<option>Denver</option>
-					<option>Colorado</option>
-					<option>Aurora</option>
-					<option>Fort Collins</option>
-					<option>Lakewood</option>
-				</optgroup>
-				<optgroup label="Connecticut">
-					<option>Bridgeport</option>
-					<option>New Haven</option>
-					<option>Hartford</option>
-					<option>Stamford</option>
-					<option>Waterbury</option>
-				</optgroup>
-				<optgroup label="Delaware">
-					<option>Wilmington</option>
-					<option>Dover</option>
-					<option>Newark</option>
-					<option>Bear</option>
-					<option>Middletown</option>
-				</optgroup>
-				<optgroup label="Florida">
-					<option>Jacksonville</option>
-					<option>Miami</option>
-					<option>Tampa</option>
-					<option>St. Petersburg</option>
-					<option>Orlando</option>
-				</optgroup>
-				<optgroup label="Georgia">
-					<option>Atlanta</option>
-					<option>Augusta</option>
-					<option>Columbus</option>
-					<option>Savannah</option>
-					<option>Athens</option>
-				</optgroup>
-				<optgroup label="Hawaii">
-					<option>Honolulu</option>
-					<option>Pearl City</option>
-					<option>Hilo</option>
-					<option>Kailua</option>
-					<option>Waipahu</option>
-				</optgroup>
-				<optgroup label="Idaho">
-					<option>Boise</option>
-					<option>Nampa</option>
-					<option>Meridian</option>
-					<option>Idaho Falls</option>
-					<option>Pocatello</option>
-				</optgroup>
-				<optgroup label="Illinois">
-					<option>Chicago</option>
-					<option>Aurora</option>
-					<option>Rockford</option>
-					<option>Joliet</option>
-					<option>Naperville</option>
-				</optgroup>
-				<optgroup label="Indiana">
-					<option>Indianapolis</option>
-					<option>Fort Wayne</option>
-					<option>Evansville</option>
-					<option>South Bend</option>
-					<option>Hammond</option>
-				</optgroup>
-				<optgroup label="Iowa">
-					<option>Des Moines</option>
-					<option>Cedar Rapids</option>
-					<option>Davenport</option>
-					<option>Sioux City</option>
-					<option>Waterloo</option>
-				</optgroup>
-				<optgroup label="Kansas">
-					<option>Wichita</option>
-					<option>Overland Park</option>
-					<option>Kansas City</option>
-					<option>Topeka</option>
-					<option>Olathe </option>
-				</optgroup>
-				<optgroup label="Kentucky">
-					<option>Louisville</option>
-					<option>Lexington</option>
-					<option>Bowling Green</option>
-					<option>Owensboro</option>
-					<option>Covington</option>
-				</optgroup>
-				<optgroup label="Louisiana">
-					<option>New Orleans</option>
-					<option>Baton Rouge</option>
-					<option>Shreveport</option>
-					<option>Metairie</option>
-					<option>Lafayette</option>
-				</optgroup>
-				<optgroup label="Maine">
-					<option>Portland</option>
-					<option>Lewiston</option>
-					<option>Bangor</option>
-					<option>South Portland</option>
-					<option>Auburn</option>
-				</optgroup>
-				<optgroup label="Maryland">
-					<option>Baltimore</option>
-					<option>Frederick</option>
-					<option>Rockville</option>
-					<option>Gaithersburg</option>
-					<option>Bowie</option>
-				</optgroup>
-				<optgroup label="Massachusetts">
-					<option>Boston</option>
-					<option>Worcester</option>
-					<option>Springfield</option>
-					<option>Lowell</option>
-					<option>Cambridge</option>
-				</optgroup>
-				<optgroup label="Michigan">
-					<option>Detroit</option>
-					<option>Grand Rapids</option>
-					<option>Warren</option>
-					<option>Sterling Heights</option>
-					<option>Lansing</option>
-				</optgroup>
-				<optgroup label="Minnesota">
-					<option>Minneapolis</option>
-					<option>St. Paul</option>
-					<option>Rochester</option>
-					<option>Duluth</option>
-					<option>Bloomington</option>
-				</optgroup>
-				<optgroup label="Mississippi">
-					<option>Jackson</option>
-					<option>Gulfport</option>
-					<option>Southaven</option>
-					<option>Hattiesburg</option>
-					<option>Biloxi</option>
-				</optgroup>
-				<optgroup label="Missouri">
-					<option>Kansas City</option>
-					<option>St. Louis</option>
-					<option>Springfield</option>
-					<option>Independence</option>
-					<option>Columbia</option>
-				</optgroup>
-				<optgroup label="Montana">
-					<option>Billings</option>
-					<option>Missoula</option>
-					<option>Great Falls</option>
-					<option>Bozeman</option>
-					<option>Butte-Silver Bow</option>
-				</optgroup>
-				<optgroup label="Nebraska">
-					<option>Omaha</option>
-					<option>Lincoln</option>
-					<option>Bellevue</option>
-					<option>Grand Island</option>
-					<option>Kearney</option>
-				</optgroup>
-				<optgroup label="Nevada">
-					<option>Las Vegas</option>
-					<option>Henderson</option>
-					<option>North Las Vegas</option>
-					<option>Reno</option>
-					<option>Sunrise Manor</option>
-				</optgroup>
-				<optgroup label="New Hampshire">
-					<option>Manchesters</option>
-					<option>Nashua</option>
-					<option>Concord</option>
-					<option>Dover</option>
-					<option>Rochester</option>
-				</optgroup>
-				<optgroup label="New Jersey">
-					<option>Newark</option>
-					<option>Jersey City</option>
-					<option>Paterson</option>
-					<option>Elizabeth</option>
-					<option>Edison</option>
-				</optgroup>
-				<optgroup label="New Mexico">
-					<option>Albuquerque</option>
-					<option>Las Cruces</option>
-					<option>Rio Rancho</option>
-					<option>Santa Fe</option>
-					<option>Roswell</option>
-				</optgroup>
-				<optgroup label="New York">
-					<option>New York</option>
-					<option>Buffalo</option>
-					<option>Rochester</option>
-					<option>Yonkers</option>
-					<option>Syracuse</option>
-				</optgroup>
-				<optgroup label="North Carolina">
-					<option>Charlotte</option>
-					<option>Raleigh</option>
-					<option>Greensboro</option>
-					<option>Winston-Salem</option>
-					<option>Durham</option>
-				</optgroup>
-				<optgroup label="North Dakota">
-					<option>Fargo</option>
-					<option>Bismarck</option>
-					<option>Grand Forks</option>
-					<option>Minot</option>
-					<option>West Fargo</option>
-				</optgroup>
-				<optgroup label="Ohio">
-					<option>Columbus</option>
-					<option>Cleveland</option>
-					<option>Cincinnati</option>
-					<option>Toledo</option>
-					<option>Akron</option>
-				</optgroup>
-				<optgroup label="Oklahoma">
-					<option>Oklahoma City</option>
-					<option>Tulsa</option>
-					<option>Norman</option>
-					<option>Broken Arrow</option>
-					<option>Lawton</option>
-				</optgroup>
-				<optgroup label="Oregon">
-					<option>Portland</option>
-					<option>Eugene</option>
-					<option>Salem</option>
-					<option>Gresham</option>
-					<option>Hillsboro</option>
-				</optgroup>
-				<optgroup label="Pennsylvania">
-					<option>Philadelphia</option>
-					<option>Pittsburgh</option>
-					<option>Allentown</option>
-					<option>Erie</option>
-					<option>Reading</option>
-				</optgroup>
-				<optgroup label="Rhode Island">
-					<option>Providence</option>
-					<option>Warwick</option>
-					<option>Cranston</option>
-					<option>Pawtucket</option>
-					<option>East Providence</option>
-				</optgroup>
-				<optgroup label="South Carolina">
-					<option>Columbia</option>
-					<option>Charleston</option>
-					<option>North Charleston</option>
-					<option>Mount Pleasant</option>
-					<option>Rock Hill</option>
-				</optgroup>
-				<optgroup label="South Dakota">
-					<option>Sioux Falls</option>
-					<option>Rapid City</option>
-					<option>Aberdeen</option>
-					<option>Brookings</option>
-					<option>Watertown</option>
-				</optgroup>
-				<optgroup label="Tennessee">
-					<option>Memphis</option>
-					<option>Nashville</option>
-					<option>Knoxville</option>
-					<option>Chattanooga</option>
-					<option>Clarksville</option>
-				</optgroup>
-				<optgroup label="Texas">
-					<option>Houston</option>
-					<option>San Antonio</option>
-					<option>Dallas</option>
-					<option>Austin</option>
-					<option>Fort Worth</option>
-				</optgroup>
-				<optgroup label="Utah">
-					<option>Salt Lake City</option>
-					<option>West Valley City</option>
-					<option>Provo</option>
-					<option>West Jordan</option>
-					<option>Orem</option>
-				</optgroup>
-				<optgroup label="Vermont">
-					<option>Burlington</option>
-					<option>Essex</option>
-					<option>South Burlington</option>
-					<option>Colchester</option>
-					<option>Rutland</option>
-				</optgroup>
-				<optgroup label="Virginia">
-					<option>Virginia Beach</option>
-					<option>Norfolk</option>
-					<option>Chesapeake</option>
-					<option>Arlington</option>
-					<option>Richmond</option>
-				</optgroup>
-				<optgroup label="Washington">
-					<option>Seattle</option>
-					<option>Spokane</option>
-					<option>Tacoma</option>
-					<option>Vancouver</option>
-					<option>Bellevue</option>
-				</optgroup>
-				<optgroup label="West Virginia">
-					<option>Charleston</option>
-					<option>Huntington</option>
-					<option>Parkersburg</option>
-					<option>Morgantown</option>
-					<option>Wheeling</option>
-				</optgroup>
-				<optgroup label="Wisconsin">
-					<option>Milwaukee</option>
-					<option>Madison</option>
-					<option>Green Bay</option>
-					<option>Kenosha</option>
-					<option>Racine</option>
-				</optgroup>
-				<optgroup label="Wyoming">
-					<option>Cheyenne</option>
-					<option>Casper</option>
-					<option>Laramie</option>
-					<option>Gillette</option>
-					<option>Rock Springs</option>
-				</optgroup>
-			</select>
-			<div class="clearfix"></div>
-		</div>
-	</div>
-	<!-- //shop locator (popup) -->
+
 
 	<!-- modals -->
 	<!-- log in -->
@@ -681,10 +303,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 			<div class="container">
 				<ul class="w3_short">
 					<li>
-						<a href="index.php">Home</a>
+						<a href="index.php">Trang chủ</a>
 						<i>|</i>
 					</li>
-					<li>Help</li>
+					<li>Hỗ trợ</li>
 				</ul>
 			</div>
 		</div>
@@ -696,168 +318,113 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 		<div class="container py-xl-4 py-lg-2">
 			<!-- tittle heading -->
 			<h3 class="tittle-w3l text-center mb-lg-5 mb-sm-4 mb-3">
-				<span>H</span>elp
-				<span>P</span>age
+				<span>H</span>ỗ
+				<span>T</span>rợ
 			</h3>
 			<!-- //tittle heading -->
 			<!-- help content -->
 			<div class="wthree-help mb-sm-5 mb-4">
 				<div class="agile-left-help">
-					<h3 class="w3-head">How Can We help you</h3>
+					<h3 class="w3-head">Chúng tôi có thể giúp gì cho bạn ?</h3>
 					<form action="#" method="get">
-						<textarea placeholder="Your Query" name="Message" required=""></textarea>
-						<input type="submit" value="Submit">
+						<textarea placeholder="Điền vào đây ..." name="Message" required=""></textarea>
+						<input type="submit" value="Gửi">
 					</form>
-					<h5 class="my-sm-4 my-3">OR</h5>
+					<h5 class="my-sm-4 my-3">hoặc</h5>
 					<a href="contact.php">Liên hệ</a>
 				</div>
 			</div>
 			<!-- //help content -->
 			<!-- Faqs -->
-			<h3 class="w3-head mb-2">Top 10 Frequently asked questions</h3>
+			<h3 class="w3-head mb-2">Top 10 câu hỏi thường gặp</h3>
 			<div class="faq-w3agile">
 				<ul class="faq pl-4">
 					<li class="item1 mt-3 pl-2">
-						<a href="#" title="click here">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-							tempor vehicula ipsum nec ?</a>
+						<a href="#" title="click here">Tại sao đồng hồ tôi mới mua và sử dụng, trong thời gian ngắn đã hết pin?</a>
 						<ul>
 							<li class="subitem1">
-								<p> Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh
-									euismod tincidunt ut laoreet dolore.
-									At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis
-									praesentium voluptatum deleniti atque
-									corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non
-									provident.</p>
+								<p> Trong quá trình sản xuất, trưng bày sản phẩm. Đồng hồ được kích pin hoạt động sẽ bị tiêu hao 1 phần năng lượng làm giảm đi tuổi thọ của viên Pin. T-P Watch Watch với chế độ bảo hành máy 10 năm, thay pin MIỄN PHÍ 10 NĂM cho quý khách hàng, tuổi thọ từ pin thứ 2 sẽ dao động từ 1 năm rưỡi- 2 năm.</p>
 							</li>
 						</ul>
 					</li>
 					<li class="item2 mt-3 pl-2">
-						<a href="#" title="click here">The standard Lorem Ipsum passage Etiam faucibus viverra libero
-							vel efficitur. Ut semper nisl ut laoreet ultrices ?
+						<a href="#" title="click here">Chế độ bảo hành đồng hồ như thế nào?
 						</a>
 						<ul>
 							<li class="subitem1">
-								<p> Tincidunt ut laoreet dolore At vero eos et Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy
-									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
-									et iusto odio dignissimos ducimus
-									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-									molestias excepturi sint occaecati
-									cupiditate non provident.</p>
+								<p> Ngoài chế độ bảo hành quốc tế theo hãng quy định, T-P Watch có chế độ bảo hành máy lên đến 10 năm( riêng dòng Diamond D bảo hành trọn đời về máy và đá) , thay pin miễn phí 10 năm, về phần dây, vỏ và mặt kính sản phẩm không nằm trong chế độ bảo hành.</p>
 							</li>
 						</ul>
 					</li>
 					<li class="item3 mt-3 pl-2">
-						<a href="#" title="click here">Consectetuer adipiscing elit Etiam faucibus viverra libero vel
-							efficitur. Ut semper nisl ut laoreet ultrices?</a>
+						<a href="#" title="click here">T-P Watch có dịch vụ giao hàng không, chi phí giao hàng như thế nào?</a>
 						<ul>
 							<li class="subitem1">
-								<p>Dincidunt ut laoreet dolore At vero eos et Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy
-									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
-									et iusto odio dignissimos ducimus
-									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-									molestias excepturi sint occaecati
-									cupiditate non provident.</p>
+								<p>T-P Watch giao hàng theo hình thức COD, miễn phí vận chuyển trên toàn quốc đến địa chỉ quý khách hàng. Nhận hàng, kiểm tra hàng mới thanh toán.</p>
 							</li>
 						</ul>
 					</li>
 					<li class="item4 mt-3 pl-2">
-						<a href="#" title="click here">Sed diam nonummy nibh euismod Etiam faucibus viverra libero vel
-							efficitur. Ut semper nisl ut laoreet ultrices?</a>
+						<a href="#" title="click here">T-P Watch Watch có dịch vụ sửa chữa, bảo dưỡng đồng hồ ngoài ( không mua tại T-P Watch Watch) không?</a>
 						<ul>
 							<li class="subitem1">
-								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-									nonummy nibh euismod consectetuer
-									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
-									ducimus qui blanditiis praesentium
-									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-									occaecati cupiditate non provident.</p>
+								<p>T-P Watch Watch có dịch vụ sửa chữa, đồng hồ ngoài đối với tất cả các thương hiệu sản phẩm không mua tại T-P Watch.</p>
 							</li>
 						</ul>
 					</li>
 					<li class="item5 mt-3 pl-2">
-						<a href="#" title="click here">Euismod tincidunt laoreet Etiam faucibus viverra libero vel
-							efficitur ?</a>
+						<a href="#" title="click here">Mua hàng Online có được kiểm tra hàng trước không và sẽ bao gồm giấy tờ gì khi nhận hàng?</a>
 						<ul>
 							<li class="subitem1">
-								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-									nonummy nibh euismod consectetuer
-									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
-									ducimus qui blanditiis praesentium
-									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-									occaecati cupiditate non provident.</p>
+								<p> T-P Watch Watch với hình thức mua hàng ONLINE đảm bảo thủ tục đơn giản, nhanh gọn:
+									- Nhận hàng, kiểm tra hàng sau đó mới thanh toán cho bưu tá
+									- Giao hàng đảm bảo sản phẩm như hình ảnh đặt hàng, có đầy đủ hóa đơn lẻ bán hàng, thẻ bảo hành quốc tế, hộp hãng và Giấy tờ Hải Quan( nếu quý khách yêu cầu)</p>
 							</li>
 						</ul>
 					</li>
 					<li class="item6 mt-3 pl-2">
-						<a href="#" title="click here">Voluptas sit aspernatur aut Ut semper nisl ut laoreet ultrices
-							?</a>
+						<a href="#" title="click here">Kính cường lực thì có chống xước được không và nếu sau khi bị xước có thể khắc phục không?</a>
 						<ul>
 							<li class="subitem1">
-								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-									nonummy nibh euismod consectetuer
-									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
-									ducimus qui blanditiis praesentium
-									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-									occaecati cupiditate non provident.</p>
+								<p>Với sản phẩm đồng hồ sử dụng mặt kính cường lực, ưu điểm chịu lực chống va đập cao, tuy nhiên về độ chống xước so với kính saphire có kém hơn. Quý khách hàng sử dụng tránh va chạm, va đập mạnh vật cứng nhọn và có độ nhám cao
+									- Có thể sử dụng dịch vụ đánh bóng mặt kính khi bị trầy xước, nếu vết trầy xước khá sâu không đảm bảo đánh bóng sẽ phải thay kính tương đương hoặc sang loại kính khác. Có báo giá cụ thể cho quý khách hàng.</p>
 							</li>
 						</ul>
 					</li>
 					<li class="item7 mt-3 pl-2">
-						<a href="#" title="click here">Donec ut quam ligula feugiat Ut semper nisl ut laoreet ultrices
-							?</a>
+						<a href="#" title="click here">Anh không mua đồng hồ của T-P Watch,nhưng muốn thay dây có được không?</a>
 						<ul>
 							<li class="subitem1">
-								<p>At vero eos et Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam
-									nonummy nibh euismod consectetuer
-									adipiscing elit, sed diam nonummy nibh euismod accusamus et iusto odio dignissimos
-									ducimus qui blanditiis praesentium
-									voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint
-									occaecati cupiditate non provident.</p>
+								<p>T-P Watch Watch phân phối dây da của các hãng, dây da thường T-P Watch. Với đa dạng size dây, thiết kế và màu sắc đảm bảo phù hợp với nhiều thiết kế đồng hồ.
+									-Quý khách có thể lựa chọn dây da tại website, hoặc trực tiếp showroom lựa chọn được hỗ trợ thay dây tại cửa hàng
+									- T-P Watch Watch miễn phí dịch vụ thay dây, đo tay cắt mắt sản phẩm.</p>
 							</li>
 						</ul>
 					</li>
 					<li class="item8 mt-3 pl-2">
-						<a href="#" title="click here">The standard Lorem Ipsum Ut semper nisl ut laoreet ultrices
-							passage ?</a>
+						<a href="#" title="click here">Nếu anh mua đồng hồ dây kim loại nhưng muốn thay sang dây da được không?</a>
 						<ul>
 							<li class="subitem1">
-								<p>Lorem ipsum dolor sit amet At vero eos et Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy
-									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
-									et iusto odio dignissimos ducimus
-									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-									molestias excepturi sint occaecati
-									cupiditate non provident.</p>
+								<p>Với sản phẩm có thiết kế dây kim loại và có thể thay được dây da. Quý khách hàng hoàn toàn lựa chọn mẫu dây da phù hợp với sản phẩm và thay đổi theo ý thích. </p>
 							</li>
 						</ul>
 					</li>
 					<li class="item9 mt-3 pl-2">
-						<a href="#" title="click here">Consectetuer adipiscing Ut semper nisl ut laoreet ultrices elit
-							?</a>
+						<a href="#" title="click here"> Anh mới mua đồng hồ bên em,nhưng giờ đồng hồ anh hết pin,mà anh làm mất thẻ bảo hành rồi thì có được bảo hành miễn phí không em?</a>
 						<ul>
 							<li class="subitem1">
-								<p>Lorem ipsum dolor sit amet At vero eos et Lorem ipsum dolor sit amet, consectetuer
-									adipiscing elit, sed diam nonummy
-									nibh euismod consectetuer adipiscing elit, sed diam nonummy nibh euismod accusamus
-									et iusto odio dignissimos ducimus
-									qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas
-									molestias excepturi sint occaecati
-									cupiditate non provident.</p>
+								<p>Ngoài chế độ bảo hành qua hóa đơn mua hàng, thẻ bảo hành. Quý khách hàng hoàn toàn được bảo hành bằng hệ thống điện tử thông qua chính số điện thoại lúc mua hàng cung cấp cho showroom.
+									- Mua sản phẩm showroom này, hoàn toàn bảo hành tại tất cả các showroom trên toàn hệ thống T-P Watch.</p>
 							</li>
 						</ul>
 					</li>
 					<li class="item10 mt-3 pl-2">
-						<a href="#" title="click here">Sed diam nonummy Ut semper nisl ut laoreet ultrices nibh euismod
-							?</a>
+						<a href="#" title="click here">Đã từng mua sản phẩm tại T-P Watch và sở hữu thẻ member, mình nhận được ưu đãi gì khi mua hàng hay sử dụng dịch vụ tại T-P Watch</a>
 						<ul>
 							<li class="subitem1">
-								<p>Consectetuer adipiscing elit, sed diam nonummy nibh euismod consectetuer adipiscing
-									elit, sed diam nonummy nibh euismod
-									accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum
-									deleniti atque corrupti quos dolores
-									et quas molestias excepturi sint occaecati cupiditate non provident.</p>
+								<p>Khi quý khách hàng đã sở hữu thẻ member- khách hàng thân thiết của T-P Watch :
+									- Tặng thêm 5% khi mua sản phẩm tại hệ thống T-P Watch( áp dụng cả dây da) và được áp dụng đồng thời cùng 1 chương trình giảm giá, khuyến mãi khác( nếu có) tại thời điểm đó
+									- Khi sử dụng dịch vụ bảo dưỡng, thay thế linh phụ kiện mất phí( sản phẩm mua tại T-P Watch), sẽ được giảm giá 10%.</p>
 							</li>
 						</ul>
 					</li>
