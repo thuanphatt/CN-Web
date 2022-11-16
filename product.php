@@ -13,6 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="T-P Watch " />
+	<link rel="icon" type="image/x-icon" href="./images/icon.png">
 	<script>
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
@@ -740,7 +741,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -782,7 +783,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -824,7 +825,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -871,7 +872,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -912,7 +913,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -953,7 +954,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Add to cart" class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>

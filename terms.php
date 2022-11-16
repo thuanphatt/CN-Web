@@ -13,6 +13,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 	<meta charset="UTF-8" />
 	<meta name="keywords" content="T-P Watch " />
+	<link rel="icon" type="image/x-icon" href="./images/icon.png">
 	<script>
 		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
