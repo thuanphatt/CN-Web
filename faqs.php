@@ -595,9 +595,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<form action="#" method="post">
 						<select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
 							<option value="">Danh mục sản phẩm</option>
-							<option value="Televisions">Nam</option>
-							<option value="Headphones">Nữ</option>
-							<option value="Computers">Cặp đôi</option>
+							<option value="Nam">Nam</option>
+							<option value="Nữ">Nữ</option>
+							<option value="Cặp đôi">Cặp đôi</option>
 						</select>
 					</form>
 				</div>
@@ -637,7 +637,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<?php
 								while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
 								?>
-									<a class="dropdown-item" href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
+									<a class="dropdown-item" href="index.php?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
 										<?php echo $row_danhmuctin['tendanhmuc'] ?>
 									</a>
 								<?php
@@ -907,7 +907,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 							<div class="col-8 text-form-footer">
 								<h3>Miễn phí vận chuyển</h3>
-								<p>Đơn hàng trên 100$</p>
+								<p>Đơn hàng trên 1,000,000đ</p>
 							</div>
 						</div>
 					</div>

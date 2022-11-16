@@ -217,9 +217,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 					<form action="#" method="post">
 						<select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
 							<option value="">Danh mục sản phẩm</option>
-							<option value="Televisions">Nam</option>
-							<option value="Headphones">Nữ</option>
-							<option value="Computers">Cặp đôi</option>
+							<option value="Nam">Nam</option>
+							<option value="Nữ">Nữ</option>
+							<option value="Cặp đôi">Cặp đôi</option>
 						</select>
 					</form>
 				</div>
@@ -259,7 +259,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<?php
 								while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
 								?>
-									<a class="dropdown-item" href="?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
+									<a class="dropdown-item" href="index.php?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>">
 										<?php echo $row_danhmuctin['tendanhmuc'] ?>
 									</a>
 								<?php
@@ -365,7 +365,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</ul>
 					</li>
 					<li class="item4 mt-3 pl-2">
-						<a href="#" title="click here">T-P Watch Watch có dịch vụ sửa chữa, bảo dưỡng đồng hồ ngoài ( không mua tại T-P Watch Watch) không?</a>
+						<a href="#" title="click here">T-P Watch Watch có dịch vụ sửa chữa, bảo dưỡng đồng hồ ngoài ( không mua tại T-P Watch) không?</a>
 						<ul>
 							<li class="subitem1">
 								<p>T-P Watch Watch có dịch vụ sửa chữa, đồng hồ ngoài đối với tất cả các thương hiệu sản phẩm không mua tại T-P Watch.</p>
@@ -377,8 +377,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<ul>
 							<li class="subitem1">
 								<p> T-P Watch Watch với hình thức mua hàng ONLINE đảm bảo thủ tục đơn giản, nhanh gọn:
+									<br />
 									- Nhận hàng, kiểm tra hàng sau đó mới thanh toán cho bưu tá
-									- Giao hàng đảm bảo sản phẩm như hình ảnh đặt hàng, có đầy đủ hóa đơn lẻ bán hàng, thẻ bảo hành quốc tế, hộp hãng và Giấy tờ Hải Quan( nếu quý khách yêu cầu)</p>
+									<br />
+									- Giao hàng đảm bảo sản phẩm như hình ảnh đặt hàng, có đầy đủ hóa đơn lẻ bán hàng, thẻ bảo hành quốc tế, hộp hãng và Giấy tờ Hải Quan( nếu quý khách yêu cầu)
+								</p>
 							</li>
 						</ul>
 					</li>
@@ -387,7 +390,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<ul>
 							<li class="subitem1">
 								<p>Với sản phẩm đồng hồ sử dụng mặt kính cường lực, ưu điểm chịu lực chống va đập cao, tuy nhiên về độ chống xước so với kính saphire có kém hơn. Quý khách hàng sử dụng tránh va chạm, va đập mạnh vật cứng nhọn và có độ nhám cao
-									- Có thể sử dụng dịch vụ đánh bóng mặt kính khi bị trầy xước, nếu vết trầy xước khá sâu không đảm bảo đánh bóng sẽ phải thay kính tương đương hoặc sang loại kính khác. Có báo giá cụ thể cho quý khách hàng.</p>
+									<br />
+									- Có thể sử dụng dịch vụ đánh bóng mặt kính khi bị trầy xước, nếu vết trầy xước khá sâu không đảm bảo đánh bóng sẽ phải thay kính tương đương hoặc sang loại kính khác. Có báo giá cụ thể cho quý khách hàng.
+								</p>
 							</li>
 						</ul>
 					</li>
@@ -396,39 +401,47 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<ul>
 							<li class="subitem1">
 								<p>T-P Watch Watch phân phối dây da của các hãng, dây da thường T-P Watch. Với đa dạng size dây, thiết kế và màu sắc đảm bảo phù hợp với nhiều thiết kế đồng hồ.
-									-Quý khách có thể lựa chọn dây da tại website, hoặc trực tiếp showroom lựa chọn được hỗ trợ thay dây tại cửa hàng
-									- T-P Watch Watch miễn phí dịch vụ thay dây, đo tay cắt mắt sản phẩm.</p>
+									<br />
+									- Quý khách có thể lựa chọn dây da tại website, hoặc trực tiếp showroom lựa chọn được hỗ trợ thay dây tại cửa hàng
+									<br />
+									- T-P Watch Watch miễn phí dịch vụ thay dây, đo tay cắt mắt sản phẩm.
+								</p>
 							</li>
-						</ul>
 					</li>
-					<li class="item8 mt-3 pl-2">
-						<a href="#" title="click here">Nếu anh mua đồng hồ dây kim loại nhưng muốn thay sang dây da được không?</a>
-						<ul>
-							<li class="subitem1">
-								<p>Với sản phẩm có thiết kế dây kim loại và có thể thay được dây da. Quý khách hàng hoàn toàn lựa chọn mẫu dây da phù hợp với sản phẩm và thay đổi theo ý thích. </p>
-							</li>
-						</ul>
-					</li>
-					<li class="item9 mt-3 pl-2">
-						<a href="#" title="click here"> Anh mới mua đồng hồ bên em,nhưng giờ đồng hồ anh hết pin,mà anh làm mất thẻ bảo hành rồi thì có được bảo hành miễn phí không em?</a>
-						<ul>
-							<li class="subitem1">
-								<p>Ngoài chế độ bảo hành qua hóa đơn mua hàng, thẻ bảo hành. Quý khách hàng hoàn toàn được bảo hành bằng hệ thống điện tử thông qua chính số điện thoại lúc mua hàng cung cấp cho showroom.
-									- Mua sản phẩm showroom này, hoàn toàn bảo hành tại tất cả các showroom trên toàn hệ thống T-P Watch.</p>
-							</li>
-						</ul>
-					</li>
-					<li class="item10 mt-3 pl-2">
-						<a href="#" title="click here">Đã từng mua sản phẩm tại T-P Watch và sở hữu thẻ member, mình nhận được ưu đãi gì khi mua hàng hay sử dụng dịch vụ tại T-P Watch</a>
-						<ul>
-							<li class="subitem1">
-								<p>Khi quý khách hàng đã sở hữu thẻ member- khách hàng thân thiết của T-P Watch :
-									- Tặng thêm 5% khi mua sản phẩm tại hệ thống T-P Watch( áp dụng cả dây da) và được áp dụng đồng thời cùng 1 chương trình giảm giá, khuyến mãi khác( nếu có) tại thời điểm đó
-									- Khi sử dụng dịch vụ bảo dưỡng, thay thế linh phụ kiện mất phí( sản phẩm mua tại T-P Watch), sẽ được giảm giá 10%.</p>
-							</li>
-						</ul>
-					</li>
+
 				</ul>
+				<li class="item8 mt-3 pl-2">
+					<a href="#" title="click here">Nếu anh mua đồng hồ dây kim loại nhưng muốn thay sang dây da được không?</a>
+					<ul>
+						<li class="subitem1">
+							<p>Với sản phẩm có thiết kế dây kim loại và có thể thay được dây da. Quý khách hàng hoàn toàn lựa chọn mẫu dây da phù hợp với sản phẩm và thay đổi theo ý thích. </p>
+						</li>
+					</ul>
+				</li>
+				<li class="item9 mt-3 pl-2">
+					<a href="#" title="click here"> Anh mới mua đồng hồ bên em,nhưng giờ đồng hồ anh hết pin,mà anh làm mất thẻ bảo hành rồi thì có được bảo hành miễn phí không em?</a>
+					<ul>
+						<li class="subitem1">
+							<p>Ngoài chế độ bảo hành qua hóa đơn mua hàng, thẻ bảo hành. Quý khách hàng hoàn toàn được bảo hành bằng hệ thống điện tử thông qua chính số điện thoại lúc mua hàng cung cấp cho showroom.
+								<br />
+								- Mua sản phẩm showroom này, hoàn toàn bảo hành tại tất cả các showroom trên toàn hệ thống T-P Watch.
+							</p>
+						</li>
+					</ul>
+				</li>
+				<li class="item10 mt-3 pl-2">
+					<a href="#" title="click here">Đã từng mua sản phẩm tại T-P Watch và sở hữu thẻ member, mình nhận được ưu đãi gì khi mua hàng hay sử dụng dịch vụ tại T-P Watch</a>
+					<ul>
+						<li class="subitem1">
+							<p>Khi quý khách hàng đã sở hữu thẻ member- khách hàng thân thiết của T-P Watch :
+								<br />
+								- Tặng thêm 5% khi mua sản phẩm tại hệ thống T-P Watch( áp dụng cả dây da) và được áp dụng đồng thời cùng 1 chương trình giảm giá, khuyến mãi khác( nếu có) tại thời điểm đó
+								<br />
+								- Khi sử dụng dịch vụ bảo dưỡng, thay thế linh phụ kiện mất phí( sản phẩm mua tại T-P Watch), sẽ được giảm giá 10%.
+							</p>
+						</li>
+					</ul>
+				</li>
 			</div>
 			<!-- //Faqs -->
 		</div>
@@ -491,7 +504,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 							<div class="col-8 text-form-footer">
 								<h3>Miễn phí vận chuyển</h3>
-								<p>Đơn hàng trên 100$</p>
+								<p>Đơn hàng trên 1,000,000đ</p>
 							</div>
 						</div>
 					</div>
