@@ -10,26 +10,28 @@
                 <div class="agileinfo-ads-display col-lg-9">
                     <div class="wrapper">
                         <?php
-                        $sql_cate_home = mysqli_query($con, "SELECT * FROM tbl_category ORDER BY category_id DESC");
-                        while ($row_cate_home = mysqli_fetch_array($sql_cate_home)) {
-                            $id_category = $row_cate_home['category_id'];
+                        $sql = "SELECT * FROM tbl_category ORDER BY category_id DESC";
+                        $sql_cate_home = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($sql_cate_home as $cate_home) {
+                            $id_category = $cate_home['category_id'];
                         ?>
                         <!-- first section -->
                         <div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
                             <h3 class="heading-tittle text-center font-italic">
-                                <?php echo $row_cate_home['category_name'] ?></h3>
+                                <?php echo $cate_home['category_name'] ?></h3>
                             <div class="row">
                                 <?php
-                                    $sql_product = mysqli_query($con, "SELECT * FROM tbl_sanpham ORDER BY sanpham_id DESC");
-                                    while ($row_sanpham = mysqli_fetch_array($sql_product)) {
-                                        if ($row_sanpham['category_id'] == $id_category) {
+                                    $sql = "SELECT * FROM tbl_sanpham ORDER BY sanpham_id DESC";
+                                    $sql_product = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                                    foreach ($sql_product as $product) {
+                                        if ($product['category_id'] == $id_category) {
                                     ?>
                                 <div class="col-md-4 product-men mt-5">
                                     <div class="men-pro-item simpleCart_shelfItem">
                                         <div class="men-thumb-item text-center">
-                                            <img src="images/<?php echo $row_sanpham['sanpham_image'] ?>" alt=""
+                                            <img src="images/<?php echo $product['sanpham_image'] ?>" alt=""
                                                 style="height:200px ; width: 200px;">
-                                            <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>"
+                                            <a href="?quanly=chitietsp&id=<?php echo $product['sanpham_id'] ?>"
                                                 class="link-product-add-cart">
                                                 <div class="men-cart-pro">
                                                     <div class="inner-men-cart-pro"> </div>
@@ -39,25 +41,25 @@
                                         <div class="item-info-product text-center border-top mt-4">
                                             <h4 class="pt-1">
                                                 <a
-                                                    href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>"><?php echo $row_sanpham['sanpham_name'] ?></a>
+                                                    href="?quanly=chitietsp&id=<?php echo $product['sanpham_id'] ?>"><?php echo $product['sanpham_name'] ?></a>
                                             </h4>
                                             <div class="info-product-price my-2">
                                                 <span
-                                                    class="item_price"><?php echo number_format($row_sanpham['sanpham_giakhuyenmai']) . 'vnđ' ?></span>
-                                                <del><?php echo number_format($row_sanpham['sanpham_gia']) . 'vnđ' ?></del>
+                                                    class="item_price"><?php echo number_format($product['sanpham_giakhuyenmai']) . 'vnđ' ?></span>
+                                                <del><?php echo number_format($product['sanpham_gia']) . 'vnđ' ?></del>
                                             </div>
                                             <div
                                                 class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                                                 <form action="?quanly=giohang" method="post">
                                                     <fieldset>
                                                         <input type="hidden" name="tensanpham"
-                                                            value="<?php echo $row_sanpham['sanpham_name'] ?>" />
+                                                            value="<?php echo $product['sanpham_name'] ?>" />
                                                         <input type="hidden" name="sanpham_id"
-                                                            value="<?php echo $row_sanpham['sanpham_id'] ?>" />
+                                                            value="<?php echo $product['sanpham_id'] ?>" />
                                                         <input type="hidden" name="giasanpham"
-                                                            value="<?php echo $row_sanpham['sanpham_gia'] ?>" />
+                                                            value="<?php echo $product['sanpham_gia'] ?>" />
                                                         <input type="hidden" name="hinhanh"
-                                                            value="<?php echo $row_sanpham['sanpham_image'] ?>" />
+                                                            value="<?php echo $product['sanpham_image'] ?>" />
                                                         <input type="hidden" name="soluong" value="1" />
                                                         <input type="submit" name="themgiohang" value="Thêm giỏ hàng"
                                                             class="button" />
@@ -220,13 +222,14 @@
                             <h3 class="agileits-sear-head mb-3">Danh mục sản phẩm</h3>
                             <ul>
                                 <?php
-                                $sql_category_sidebar = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
-                                while ($row_category_sidebar = mysqli_fetch_array($sql_category_sidebar)) {
+                                $sql = 'SELECT * FROM tbl_category ORDER BY category_id DESC';
+                                $sql_category_sidebar = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                                foreach ($sql_category_sidebar as $category_sidebar) {
                                 ?>
                                 <li>
                                     <!-- <input type="checkbox" class="checked"> -->
                                     <span class="span"><a
-                                            href="danhmucsanpham.php?id=<?php echo $row_category_sidebar['category_id'] ?>"><?php echo $row_category_sidebar['category_name'] ?></a></span>
+                                            href="danhmucsanpham.php?id=<?php echo $category_sidebar['category_id'] ?>"><?php echo $category_sidebar['category_name'] ?></a></span>
                                 </li>
                                 <?php
                                 }
@@ -242,19 +245,20 @@
                             <div class="box-scroll">
                                 <div class="scroll">
                                     <?php
-                                    $sql_product_sidebar = mysqli_query($con, "SELECT * FROM tbl_sanpham WHERE sanpham_hot='0' ORDER BY sanpham_id DESC");
-                                    while ($row_sanpham_sidebar = mysqli_fetch_array($sql_product_sidebar)) {
+                                    $sql = "SELECT * FROM tbl_sanpham WHERE sanpham_hot='0' ORDER BY sanpham_id DESC";
+                                    $sql_product_sidebar = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                                    foreach ($sql_product_sidebar as $product_sidebar) {
                                     ?>
                                     <div class="row">
                                         <div class="col-lg-3 col-sm-2 col-3 left-mar">
-                                            <img src="images/<?php echo $row_sanpham_sidebar['sanpham_image'] ?>" alt=""
+                                            <img src="images/<?php echo $product_sidebar['sanpham_image'] ?>" alt=""
                                                 class="img-fluid">
                                         </div>
                                         <div class="col-lg-9 col-sm-10 col-9 w3_mvd">
-                                            <a href=""><?php echo $row_sanpham_sidebar['sanpham_name'] ?></a>
+                                            <a href=""><?php echo $product_sidebar['sanpham_name'] ?></a>
                                             <a href=""
-                                                class="price-mar mt-2"><?php echo number_format($row_sanpham_sidebar['sanpham_giakhuyenmai']) . 'vnđ' ?></a>
-                                            <del><?php echo number_format($row_sanpham_sidebar['sanpham_gia']) . 'vnđ' ?></del>
+                                                class="price-mar mt-2"><?php echo number_format($product_sidebar['sanpham_giakhuyenmai']) . 'vnđ' ?></a>
+                                            <del><?php echo number_format($product_sidebar['sanpham_gia']) . 'vnđ' ?></del>
                                         </div>
                                     </div>
                                     <?php

@@ -8,14 +8,16 @@
     </ol>
     <div class="carousel-inner">
         <?php
-        $sqli_slider = mysqli_query($con, "SELECT * FROM tbl_slider WHERE slider_active='1' ORDER BY slider_id");
-        while ($row_slider = mysqli_fetch_array($sqli_slider)) {
+        $sql = "SELECT * FROM tbl_slider WHERE slider_active='1' ORDER BY slider_id";
+        $sql_slider = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+
+        foreach ($sql_slider as $slider) {
         ?>
         <div class="carousel-item item1 active">
             <div class="container">
                 <div class="w3l-space-banner">
                     <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-                        <p><?php echo $row_slider['slider_caption'] ?></p>
+                        <p><?php echo $slider['slider_caption'] ?></p>
                     </div>
                 </div>
             </div>
@@ -24,7 +26,7 @@
             <div class="container">
                 <div class="w3l-space-banner">
                     <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-                        <p><?php echo $row_slider['slider_caption'] ?></p>
+                        <p><?php echo $slider['slider_caption'] ?></p>
                     </div>
                 </div>
             </div>
@@ -33,7 +35,7 @@
             <div class="container">
                 <div class="w3l-space-banner">
                     <div class="carousel-caption p-lg-5 p-sm-4 p-3">
-                        <p><?php echo $row_slider['slider_caption'] ?></p>
+                        <p><?php echo $slider['slider_caption'] ?></p>
                     </div>
                 </div>
             </div>
