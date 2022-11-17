@@ -2060,7 +2060,7 @@ h3.title:before {
 /*-- testimonials --*/
 
 .testimonials {
-  background: url(../images/bg2.jpg) no-repeat center fixed;
+  background: var(--white-color) no-repeat center fixed;
   background-size: cover;
   -webkit-background-size: cover;
   -o-background-size: cover;
@@ -2097,12 +2097,12 @@ div#testimonials h4.m-title {
 
 .med-testi-txt h4 {
   font-size: 20px;
-  color: var(--white-color);
+  color: var(--black-color);
   letter-spacing: 1px;
 }
 
 .med-testi-txt p {
-  color: #fff7f7;
+  color: var(--primary-color);
 }
 
 /*-- //testimonials --*/

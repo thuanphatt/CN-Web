@@ -15,7 +15,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<meta name="keywords" content="T-P Watch " />
 	<link rel="icon" type="image/x-icon" href="./images/icon.png">
 	<script>
-		addEventListener("load", function () {
+		addEventListener("load", function() {
 			setTimeout(hideURLbar, 0);
 		}, false);
 
@@ -39,12 +39,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- //Custom-Files -->
 
 	<!-- web fonts -->
-	<link
-		href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
-		rel="stylesheet">
-	<link
-		href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-		rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+	<link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
 	<!-- //web fonts -->
 
 </head>
@@ -523,13 +519,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Password" id="password1"
-								required="">
+							<input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
 						</div>
 						<div class="form-group">
 							<label class="col-form-label">Confirm Password</label>
-							<input type="password" class="form-control" placeholder=" " name="Confirm Password"
-								id="password2" required="">
+							<input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
 						</div>
 						<div class="right-w3l">
 							<input type="submit" class="form-control" value="Register">
@@ -568,8 +562,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						<!-- search -->
 						<div class="col-10 agileits_search">
 							<form class="form-inline" action="#" method="post">
-								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm"
-									aria-label="Search" required>
+								<input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
 								<button class="btn my-2 my-sm-0" type="submit">Tìm kiếm</button>
 							</form>
 						</div>
@@ -608,9 +601,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 						</select>
 					</form>
 				</div>
-				<button class="navbar-toggler" type="button" data-toggle="collapse"
-					data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-					aria-label="Toggle navigation">
+				<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
 					<span class="navbar-toggler-icon"></span>
 				</button>
 				<div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -621,8 +612,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</a>
 						</li>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Electronics
 							</a>
 							<div class="dropdown-menu">
@@ -690,8 +680,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							</div>
 						</li>
 						<li class="nav-item dropdown active mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Appliances
 							</a>
 							<div class="dropdown-menu">
@@ -701,62 +690,62 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 										<div class="col-sm-6 multi-gd-img">
 											<ul class="multi-column-dropdown">
 												<li>
-													<a href="product2.html">Televisions</a>
+													<a href="product2.php">Televisions</a>
 												</li>
 												<li>
-													<a href="product2.html">Home Entertainment Systems</a>
+													<a href="product2.php">Home Entertainment Systems</a>
 												</li>
 												<li>
-													<a href="product2.html">Headphones</a>
+													<a href="product2.php">Headphones</a>
 												</li>
 												<li>
-													<a href="product2.html">Speakers</a>
+													<a href="product2.php">Speakers</a>
 												</li>
 												<li>
-													<a href="product2.html">MP3, Media Players & Accessories</a>
+													<a href="product2.php">MP3, Media Players & Accessories</a>
 												</li>
 												<li>
-													<a href="product2.html">Audio & Video Accessories</a>
+													<a href="product2.php">Audio & Video Accessories</a>
 												</li>
 												<li>
-													<a href="product2.html">Cameras</a>
+													<a href="product2.php">Cameras</a>
 												</li>
 												<li>
-													<a href="product2.html">DSLR Cameras</a>
+													<a href="product2.php">DSLR Cameras</a>
 												</li>
 												<li>
-													<a href="product2.html">Camera Accessories</a>
+													<a href="product2.php">Camera Accessories</a>
 												</li>
 											</ul>
 										</div>
 										<div class="col-sm-6 multi-gd-img">
 											<ul class="multi-column-dropdown">
 												<li>
-													<a href="product2.html">Musical Instruments</a>
+													<a href="product2.php">Musical Instruments</a>
 												</li>
 												<li>
-													<a href="product2.html">Gaming Consoles</a>
+													<a href="product2.php">Gaming Consoles</a>
 												</li>
 												<li>
-													<a href="product2.html">All Electronics</a>
+													<a href="product2.php">All Electronics</a>
 												</li>
 												<li>
-													<a href="product2.html">Air Conditioners</a>
+													<a href="product2.php">Air Conditioners</a>
 												</li>
 												<li>
-													<a href="product2.html">Refrigerators</a>
+													<a href="product2.php">Refrigerators</a>
 												</li>
 												<li>
-													<a href="product2.html">Washing Machines</a>
+													<a href="product2.php">Washing Machines</a>
 												</li>
 												<li>
-													<a href="product2.html">Kitchen & Home Appliances</a>
+													<a href="product2.php">Kitchen & Home Appliances</a>
 												</li>
 												<li>
-													<a href="product2.html">Heating & Cooling Appliances</a>
+													<a href="product2.php">Heating & Cooling Appliances</a>
 												</li>
 												<li>
-													<a href="product2.html">All Appliances</a>
+													<a href="product2.php">All Appliances</a>
 												</li>
 											</ul>
 										</div>
@@ -771,15 +760,16 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 							<a class="nav-link" href="product.php">New Arrivals</a>
 						</li>
 						<li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-								aria-haspopup="true" aria-expanded="false">
+							<a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
 								Pages
 							</a>
 							<div class="dropdown-menu">
 								<a class="dropdown-item" href="product.php">Product 1</a>
-								<a class="dropdown-item" href="product2.html">Product 2</a>
+								<a class="dropdown-item" href="product2.php">Product 2</a>
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="single.html">Single Product 1</a>
+								<a class="dropdown-item" href="single.html">
+									<?php echo $row_sanpham_sidebar['sanpham_name'] ?>
+								</a>
 								<a class="dropdown-item" href="single2.html">Single Product 2</a>
 								<div class="dropdown-divider"></div>
 								<a class="dropdown-item" href="checkout.php">Checkout Page</a>
@@ -852,22 +842,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<span class="item_price">$320.00</span>
 												<del>$340.00 </del>
 											</div>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
 														<input type="hidden" name="add" value="1" />
 														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name"
-															value="Sony 80 cm (32 inches)" />
+														<input type="hidden" name="item_name" value="Sony 80 cm (32 inches)" />
 														<input type="hidden" name="amount" value="320.00" />
 														<input type="hidden" name="discount_amount" value="1.00" />
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -895,8 +882,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<span class="item_price">$349.00</span>
 												<del>$399.00</del>
 											</div>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
@@ -908,8 +894,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -935,22 +920,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<span class="item_price">$249.00</span>
 												<del>$300.00</del>
 											</div>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
 														<input type="hidden" name="add" value="1" />
 														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name"
-															value="Philips Speakers" />
+														<input type="hidden" name="item_name" value="Philips Speakers" />
 														<input type="hidden" name="amount" value="249.00" />
 														<input type="hidden" name="discount_amount" value="1.00" />
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -982,8 +964,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<span class="item_price">$230.00</span>
 												<del>$280.00</del>
 											</div>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
@@ -995,8 +976,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -1022,22 +1002,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<span class="item_price">$180.00</span>
 												<del>$200.00</del>
 											</div>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
 														<input type="hidden" name="add" value="1" />
 														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name"
-															value="BPL Washing Machine" />
+														<input type="hidden" name="item_name" value="BPL Washing Machine" />
 														<input type="hidden" name="amount" value="180.00" />
 														<input type="hidden" name="discount_amount" value="1.00" />
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -1063,22 +1040,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<span class="item_price">$199.00</span>
 												<del>$299.00</del>
 											</div>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
 														<input type="hidden" name="add" value="1" />
 														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name"
-															value="Whirlpool Microwave Oven" />
+														<input type="hidden" name="item_name" value="Whirlpool Microwave Oven" />
 														<input type="hidden" name="amount" value="199.00" />
 														<input type="hidden" name="discount_amount" value="1.00" />
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -1110,22 +1084,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<del>$350.00</del>
 											</div>
 											<span class="product-new-top">New</span>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
 														<input type="hidden" name="add" value="1" />
 														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name"
-															value="boAt Rockerz Headset" />
+														<input type="hidden" name="item_name" value="boAt Rockerz Headset" />
 														<input type="hidden" name="amount" value="320.00" />
 														<input type="hidden" name="discount_amount" value="1.00" />
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -1152,22 +1123,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<del>$200.00</del>
 											</div>
 											<span class="product-new-top">New</span>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
 														<input type="hidden" name="add" value="1" />
 														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name"
-															value="LG Boom Blast Speaker" />
+														<input type="hidden" name="item_name" value="LG Boom Blast Speaker" />
 														<input type="hidden" name="amount" value="180.00" />
 														<input type="hidden" name="discount_amount" value="1.00" />
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -1193,8 +1161,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<span class="item_price">$230.00</span>
 												<del>$250.00</del>
 											</div>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
@@ -1206,8 +1173,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -1239,8 +1205,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<del>$549.00</del>
 											</div>
 											<span class="product-new-top">New</span>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
@@ -1252,8 +1217,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -1279,22 +1243,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<span class="item_price">$145.00</span>
 												<del>$150.00</del>
 											</div>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
 														<input type="hidden" name="add" value="1" />
 														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name"
-															value="Induction Cooktop" />
+														<input type="hidden" name="item_name" value="Induction Cooktop" />
 														<input type="hidden" name="amount" value="145.00" />
 														<input type="hidden" name="discount_amount" value="1.00" />
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -1320,22 +1281,19 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 												<span class="item_price">$499.00</span>
 												<del>$550.00</del>
 											</div>
-											<div
-												class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
+											<div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
 												<form action="#" method="post">
 													<fieldset>
 														<input type="hidden" name="cmd" value="_cart" />
 														<input type="hidden" name="add" value="1" />
 														<input type="hidden" name="business" value=" " />
-														<input type="hidden" name="item_name"
-															value="Hair Straightener" />
+														<input type="hidden" name="item_name" value="Hair Straightener" />
 														<input type="hidden" name="amount" value="499.00" />
 														<input type="hidden" name="discount_amount" value="1.00" />
 														<input type="hidden" name="currency_code" value="USD" />
 														<input type="hidden" name="return" value=" " />
 														<input type="hidden" name="cancel_return" value=" " />
-														<input type="submit" name="submit" value="Thêm giỏ hàng"
-															class="button btn" />
+														<input type="submit" name="submit" value="Thêm giỏ hàng" class="button btn" />
 													</fieldset>
 												</form>
 											</div>
@@ -1697,8 +1655,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 									</li>
 									<li>
 										<a class="icon gp" href="https://www.instagram.com/thuan.phatt/">
-											<i class="fab fa-instagram"
-												style="background-color: url(./images/bg-instagram.jpg);"></i>
+											<i class="fab fa-instagram" style="background-color: url(./images/bg-instagram.jpg);"></i>
 										</a>
 									</li>
 								</ul>
@@ -1732,13 +1689,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- nav smooth scroll -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$(".dropdown").hover(
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideDown("fast");
 					$(this).toggleClass('open');
 				},
-				function () {
+				function() {
 					$('.dropdown-menu', this).stop(true, true).slideUp("fast");
 					$(this).toggleClass('open');
 				}
@@ -1750,7 +1707,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<!-- popup modal (for location)-->
 	<script src="js/jquery.magnific-popup.js"></script>
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			$('.popup-with-zoom-anim').magnificPopup({
 				type: 'inline',
 				fixedContentPos: false,
@@ -1772,7 +1729,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script>
 		paypals.minicarts.render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
-		paypals.minicarts.cart.on('checkout', function (evt) {
+		paypals.minicarts.cart.on('checkout', function(evt) {
 			var items = this.items(),
 				len = items.length,
 				total = 0,
@@ -1793,7 +1750,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- password-script -->
 	<script>
-		window.onload = function () {
+		window.onload = function() {
 			document.getElementById("password1").onchange = validatePassword;
 			document.getElementById("password2").onchange = validatePassword;
 		}
@@ -1818,8 +1775,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 	<script src="js/move-top.js"></script>
 	<script src="js/easing.js"></script>
 	<script>
-		jQuery(document).ready(function ($) {
-			$(".scroll").click(function (event) {
+		jQuery(document).ready(function($) {
+			$(".scroll").click(function(event) {
 				event.preventDefault();
 
 				$('html,body').animate({
@@ -1832,7 +1789,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
 	<!-- smooth-scrolling-of-move-up -->
 	<script>
-		$(document).ready(function () {
+		$(document).ready(function() {
 			/*
 			var defaults = {
 				containerID: 'toTop', // fading element id
