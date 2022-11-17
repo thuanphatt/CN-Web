@@ -353,12 +353,12 @@
     <div class="testimonials py-sm-5 py-4">
         <div class="container py-xl-4 py-lg-2">
             <!-- tittle heading -->
-            <h3 class="tittle-w3l text-center text-white mb-lg-5 mb-sm-4 mb-3">
-                <span>K</span>ách
+            <h3 class="tittle-w3l text-center text-black mb-lg-5 mb-sm-4 mb-3">
+                <span>K</span>hách
                 <span>H</span>àng
                 <span>N</span>ói
                 <span>V</span>ề
-                <span>T</span>
+                <span>T</span>P
                 <span>-</span>
                 <span>W</span>atch
 
