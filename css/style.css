@@ -356,7 +356,6 @@ ul.multi-column-dropdown li a:hover {
   -ms-background-size: cover;
 }
 
- 
 .carousel-item.item3,
 .carousel-item.item2,
 .carousel-item.item1 {
@@ -1567,7 +1566,7 @@ table.timetable_sub {
 }
 
 td.invert-image a img {
-  width: 100%;
+  width: 70%;
   margin: 0 auto;
 }
 
@@ -2279,7 +2278,7 @@ div#testimonials h4.m-title {
   .w3l-space-banner {
     padding-top: 5em;
   }
-   
+
   .carousel-item.item3,
   .carousel-item.item2,
   .carousel-item.item1 {
@@ -2412,7 +2411,7 @@ div#testimonials h4.m-title {
     padding: 11px 20px;
     font-size: 14px;
   }
-   
+
   .carousel-item.item3,
   .carousel-item.item2,
   .carousel-item.item1 {
@@ -2528,7 +2527,7 @@ div#testimonials h4.m-title {
   .carousel-caption h3 {
     font-size: 41px;
   }
-   
+
   .carousel-item.item3,
   .carousel-item.item2,
   .carousel-item.item1 {
@@ -2548,7 +2547,7 @@ div#testimonials h4.m-title {
     width: 38%;
     top: -8px;
   }
-   
+
   .carousel-item.item3,
   .carousel-item.item2,
   .carousel-item.item1 {
@@ -2798,7 +2797,6 @@ div#testimonials h4.m-title {
 }
 
 @media (max-width: 440px) {
-   
   .carousel-item.item3,
   .carousel-item.item2,
   .carousel-item.item1 {
@@ -2934,7 +2932,7 @@ div#testimonials h4.m-title {
     padding: 10px 16px;
     font-size: 13px;
   }
-   
+
   .carousel-item.item3,
   .carousel-item.item2,
   .carousel-item.item1 {
@@ -3061,7 +3059,7 @@ div#testimonials h4.m-title {
   .button2 {
     font-size: 12px;
   }
-   
+
   .carousel-item.item3,
   .carousel-item.item2,
   .carousel-item.item1 {

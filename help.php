@@ -275,7 +275,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 								<a class="dropdown-item" href="product.php">Sản phẩm mới</a>
 
 								<div class="dropdown-divider"></div>
-								<a class="dropdown-item" href="checkout.php">Kiểm tra hàng</a>
+
 								<a class="dropdown-item" href="payment.php">Thanh toán</a>
 							</div>
 						</li>

@@ -8,9 +8,9 @@
     </ol>
     <div class="carousel-inner">
         <?php
-		$sqli_slider = mysqli_query($con, "SELECT * FROM tbl_slider WHERE slider_active='1' ORDER BY slider_id");
-		while ($row_slider = mysqli_fetch_array($sqli_slider)) {
-		?>
+        $sqli_slider = mysqli_query($con, "SELECT * FROM tbl_slider WHERE slider_active='1' ORDER BY slider_id");
+        while ($row_slider = mysqli_fetch_array($sqli_slider)) {
+        ?>
         <div class="carousel-item item1 active">
             <div class="container">
                 <div class="w3l-space-banner">
@@ -39,8 +39,8 @@
             </div>
         </div>
         <?php
-		}
-		?>
+        }
+        ?>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>

@@ -1,8 +1,8 @@
 <?php
 if (isset($_GET['id'])) {
-	$id = $_GET['id'];
+    $id = $_GET['id'];
 } else {
-	$id = '';
+    $id = '';
 }
 $sql_chitiet = mysqli_query($con, "SELECT * FROM tbl_sanpham WHERE sanpham_id='$id'");
 ?>
@@ -16,18 +16,14 @@ $sql_chitiet = mysqli_query($con, "SELECT * FROM tbl_sanpham WHERE sanpham_id='$
                     <a href="index.php">Trang chủ</a>
                     <i>|</i>
                 </li>
-                <li> <?php
-						$sql_select_sp = mysqli_query($con, "SELECT * FROM tbl_sanpham,tbl_category WHERE tbl_sanpham.category_id=tbl_category.category_id ORDER BY tbl_sanpham.sanpham_id DESC");
-						?>
+                <li>
                     <?php
-					$i = 0;
-					while ($row_sp = mysqli_fetch_array($sql_select_sp)) {
-						$i++;
-					?>
+                    $sql_select_sp = mysqli_query($con, "SELECT * FROM tbl_sanpham,tbl_category WHERE tbl_sanpham.category_id=tbl_category.category_id ORDER BY tbl_sanpham.sanpham_id DESC");
+                    $row_sp = mysqli_fetch_array($sql_select_sp);
+                    ?>
                     <?php echo $row_sp['sanpham_name'] ?>
                     <?php
-					}
-					?>
+                    ?>
                 </li>
             </ul>
         </div>
