@@ -2084,10 +2084,10 @@ div#testimonials h4.m-title {
   content: "";
   position: absolute;
   left: 10%;
-  bottom: -11.5%;
+  bottom: -10.5%;
   border-left: 14px solid transparent;
   border-right: 14px solid transparent;
-  border-bottom: 18px solid var(--primary-color);
+  border-bottom: 18px solid var(--white-color);
   transform: rotate(180deg);
   -webkit-transform: rotate(180deg);
   -moz-transform: rotate(180deg);
