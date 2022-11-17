@@ -342,7 +342,7 @@
                         tin cậy dành cho Quý khách hàng.</p>
                 </div>
                 <div class="col-lg-6 welcome-right-top mt-lg-0 mt-sm-5 mt-4">
-                    <img src="images/about.jpg" class="img-fluid" alt=" ">
+                    <img src="images/logoMain.png" class="img-fluid" alt=" ">
                 </div>
             </div>
         </div>
@@ -383,7 +383,7 @@
                 </div>
                 <div class="col-sm-6 med-testi-grid">
                     <div class="med-testi test-tooltip rounded p-4">
-                        <p>"Tôi thật sự ấn tượng với phong cách phục vục của T-P Watch. Sự chuyên nghiệp của các bạn
+                        <p>"Tôi thật sự ấn tượng với phong cách phục vụ của T-P Watch. Sự chuyên nghiệp của các bạn
                             không chỉ đến từ nhân viên bán hàng mà còn đến từ những hành động và cử chỉ của chú bảo vệ.
                         </p>
                     </div>
