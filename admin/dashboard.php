@@ -1,16 +1,16 @@
 <?php
 session_start();
 if (!isset($_SESSION['dangnhap'])) {
-	header('Location: index.php');
+    header('Location: index.php');
 }
 if (isset($_GET['login'])) {
-	$dangxuat = $_GET['login'];
+    $dangxuat = $_GET['login'];
 } else {
-	$dangxuat = '';
+    $dangxuat = '';
 }
 if ($dangxuat == 'dangxuat') {
-	session_destroy();
-	header('Location: index.php');
+    session_destroy();
+    header('Location: index.php');
 }
 ?>
 
@@ -38,7 +38,7 @@ if ($dangxuat == 'dangxuat') {
                     <a class="nav-link" href="xulysanpham.php">Sản phẩm</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Khách hàng</a>
+                    <a class="nav-link" href="xulykhachhang.php">Khách hàng</a>
                 </li>
 
             </ul>
