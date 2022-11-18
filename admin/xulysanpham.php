@@ -1,5 +1,18 @@
 <?php
+session_start();
 include('../db/connect.php');
+if (!isset($_SESSION['dangnhap'])) {
+    header('Location: index.php');
+}
+if (isset($_GET['login'])) {
+    $dangxuat = $_GET['login'];
+} else {
+    $dangxuat = '';
+}
+if ($dangxuat == 'dangxuat') {
+    session_destroy();
+    header('Location: index.php');
+}
 ?>
 <?php
 if (isset($_POST['themsanpham'])) {
@@ -57,6 +70,7 @@ if (isset($_GET['xoa'])) {
 </head>
 
 <body>
+    <p>Xin chào : <?php echo $_SESSION['dangnhap'] ?> <a href="?login=dangxuat">Đăng xuất</a></p>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">

@@ -1,5 +1,18 @@
 <?php
+session_start();
 include('../db/connect.php');
+if (!isset($_SESSION['dangnhap'])) {
+    header('Location: index.php');
+}
+if (isset($_GET['login'])) {
+    $dangxuat = $_GET['login'];
+} else {
+    $dangxuat = '';
+}
+if ($dangxuat == 'dangxuat') {
+    session_destroy();
+    header('Location: index.php');
+}
 ?>
 <?php
 if (isset($_POST['capnhatdonhang'])) {
@@ -42,6 +55,7 @@ $sql_update_giaodich = $con->query($sql_giaodich)->fetch(PDO::FETCH_ASSOC);
 </head>
 
 <body>
+    <p>Xin chào : <?php echo $_SESSION['dangnhap'] ?> <a href="?login=dangxuat">Đăng xuất</a></p>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
@@ -55,11 +69,10 @@ $sql_update_giaodich = $con->query($sql_giaodich)->fetch(PDO::FETCH_ASSOC);
                     <a class="nav-link" href="xulydanhmucbaiviet.php">Danh mục bài viết</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="xulysanpham.php">Sản phẩm</a>
-                </li>
-
-                <li class="nav-item">
                     <a class="nav-link" href="xulybaiviet.php">Bài viết</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="xulysanpham.php">Sản phẩm</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="xulykhachhang.php">Khách hàng</a>
