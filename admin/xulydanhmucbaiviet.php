@@ -3,17 +3,20 @@ include('../db/connect.php');
 ?>
 <?php
 if (isset($_POST['themdanhmuc'])) {
-	$tendanhmuc = $_POST['danhmuc'];
-	$sql_insert = mysqli_query($con, "INSERT INTO tbl_danhmuc_tin(tendanhmuc) values ('$tendanhmuc')");
+    $tendanhmuc = $_POST['danhmuc'];
+    $sql = "INSERT INTO tbl_danhmuc_tin(tendanhmuc) values ('$tendanhmuc')";
+    $sql_insert = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
 } elseif (isset($_POST['capnhatdanhmuc'])) {
-	$id_post = $_POST['id_danhmuc'];
-	$tendanhmuc = $_POST['danhmuc'];
-	$sql_update = mysqli_query($con, "UPDATE tbl_danhmuc_tin SET tendanhmuc='$tendanhmuc' WHERE danhmuctin_id='$id_post'");
-	header('Location:xulydanhmucbaiviet.php');
+    $id_post = $_POST['id_danhmuc'];
+    $tendanhmuc = $_POST['danhmuc'];
+    $sql = "UPDATE tbl_danhmuc_tin SET tendanhmuc='$tendanhmuc' WHERE danhmuctin_id='$id_post'";
+    $sql_update = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
+    header('Location:xulydanhmucbaiviet.php');
 }
 if (isset($_GET['xoa'])) {
-	$id = $_GET['xoa'];
-	$sql_xoa = mysqli_query($con, "DELETE FROM tbl_danhmuc_tin WHERE danhmuctin_id='$id'");
+    $id = $_GET['xoa'];
+    $sql = "DELETE FROM tbl_danhmuc_tin WHERE danhmuctin_id='$id'";
+    $sql_xoa = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
 }
 ?>
 <!DOCTYPE html>
@@ -54,26 +57,26 @@ if (isset($_GET['xoa'])) {
     <div class="container">
         <div class="row">
             <?php
-			if (isset($_GET['quanly']) == 'capnhat') {
-				$id_capnhat = $_GET['id'];
-				$sql_capnhat = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin WHERE danhmuctin_id='$id_capnhat'");
-				$row_capnhat = mysqli_fetch_array($sql_capnhat);
-			?>
+            if (isset($_GET['quanly']) == 'capnhat') {
+                $id_capnhat = $_GET['id'];
+                $sql = "SELECT * FROM tbl_danhmuc_tin WHERE danhmuctin_id='$id_capnhat'";
+                $sql_capnhat =  $con->query($sql)->fetch(PDO::FETCH_ASSOC);
+            ?>
             <div class="col-md-4">
                 <h4>Cập nhật danh mục</h4>
                 <label>Tên danh mục</label>
                 <form action="" method="POST">
                     <input type="text" class="form-control" name="danhmuc"
-                        value="<?php echo $row_capnhat['tendanhmuc'] ?>"><br>
+                        value="<?php echo $sql_capnhat['tendanhmuc'] ?>"><br>
                     <input type="hidden" class="form-control" name="id_danhmuc"
-                        value="<?php echo $row_capnhat['danhmuctin_id'] ?>">
+                        value="<?php echo $sql_capnhat['danhmuctin_id'] ?>">
 
                     <input type="submit" name="capnhatdanhmuc" value="Cập nhật danh mục" class="btn btn-default">
                 </form>
             </div>
             <?php
-			} else {
-			?>
+            } else {
+            ?>
             <div class="col-md-4">
                 <h4>Thêm danh mục</h4>
                 <label>Tên danh mục</label>
@@ -83,14 +86,15 @@ if (isset($_GET['xoa'])) {
                 </form>
             </div>
             <?php
-			}
+            }
 
-			?>
+            ?>
             <div class="col-md-8">
                 <h4>Liệt kê danh mục</h4>
                 <?php
-				$sql_select = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
-				?>
+                $sql = "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC";
+                $sql_select =  $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                ?>
                 <table class="table table-bordered ">
                     <tr>
                         <th>Thứ tự</th>
@@ -98,19 +102,19 @@ if (isset($_GET['xoa'])) {
                         <th>Quản lý</th>
                     </tr>
                     <?php
-					$i = 0;
-					while ($row_category = mysqli_fetch_array($sql_select)) {
-						$i++;
-					?>
+                    $i = 0;
+                    foreach ($sql_select as $select) {
+                        $i++;
+                    ?>
                     <tr>
                         <td><?php echo $i; ?></td>
-                        <td><?php echo $row_category['tendanhmuc'] ?></td>
-                        <td><a href="?xoa=<?php echo $row_category['danhmuctin_id'] ?>">Xóa</a> || <a
-                                href="?quanly=capnhat&id=<?php echo $row_category['danhmuctin_id'] ?>">Cập nhật</a></td>
+                        <td><?php echo $select['tendanhmuc'] ?></td>
+                        <td><a href="?xoa=<?php echo $select['danhmuctin_id'] ?>">Xóa</a> || <a
+                                href="?quanly=capnhat&id=<?php echo $select['danhmuctin_id'] ?>">Cập nhật</a></td>
                     </tr>
                     <?php
-					}
-					?>
+                    }
+                    ?>
                 </table>
             </div>
         </div>
