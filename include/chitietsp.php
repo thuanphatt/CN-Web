@@ -4,7 +4,8 @@ if (isset($_GET['id'])) {
 } else {
     $id = '';
 }
-$sql_chitiet = mysqli_query($con, "SELECT * FROM tbl_sanpham WHERE sanpham_id='$id'");
+$sql = "SELECT * FROM tbl_sanpham WHERE sanpham_id='$id'";
+$sql_chitiet = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
 ?>
 <!-- page -->
 
@@ -17,13 +18,7 @@ $sql_chitiet = mysqli_query($con, "SELECT * FROM tbl_sanpham WHERE sanpham_id='$
                     <i>|</i>
                 </li>
                 <li>
-                    <?php
-                    $sql_select_sp = mysqli_query($con, "SELECT * FROM tbl_sanpham,tbl_category WHERE tbl_sanpham.category_id=tbl_category.category_id ORDER BY tbl_sanpham.sanpham_id DESC");
-                    $row_sp = mysqli_fetch_array($sql_select_sp);
-                    ?>
-                    <?php echo $row_sp['sanpham_name'] ?>
-                    <?php
-                    ?>
+                    <?php print_r($sql_chitiet['sanpham_name'])  ?>
                 </li>
             </ul>
         </div>
@@ -31,7 +26,6 @@ $sql_chitiet = mysqli_query($con, "SELECT * FROM tbl_sanpham WHERE sanpham_id='$
 </div>
 <!-- //page -->
 <?php
-while ($row_chitiet = mysqli_fetch_array($sql_chitiet)) {
 ?>
 <!-- Single Page -->
 <div class="banner-bootom-w3-agileits py-5">
@@ -44,9 +38,9 @@ while ($row_chitiet = mysqli_fetch_array($sql_chitiet)) {
                 <div class="grid images_3_of_2">
                     <div class="flexslider">
                         <ul class="slides">
-                            <li data-thumb="images/<?php echo $row_chitiet['sanpham_image'] ?>">
+                            <li data-thumb="images/<?php echo $sql_chitiet['sanpham_image'] ?>">
                                 <div class="thumb-image">
-                                    <img src="images/<?php echo $row_chitiet['sanpham_image'] ?>" data-imagezoom="true"
+                                    <img src="images/<?php echo $sql_chitiet['sanpham_image'] ?>" data-imagezoom="true"
                                         class="img-fluid" alt="">
                                 </div>
                             </li>
@@ -59,31 +53,31 @@ while ($row_chitiet = mysqli_fetch_array($sql_chitiet)) {
             </div>
 
             <div class="col-lg-7 single-right-left simpleCart_shelfItem">
-                <h3 class="mb-3"><?php echo $row_chitiet['sanpham_name'] ?></h3>
+                <h3 class="mb-3"><?php echo $sql_chitiet['sanpham_name'] ?></h3>
                 <p class="mb-3">
                     <span
-                        class="item_price"><?php echo number_format($row_chitiet['sanpham_giakhuyenmai']) . 'vnđ' ?></span>
+                        class="item_price"><?php echo number_format($sql_chitiet['sanpham_giakhuyenmai']) . 'vnđ' ?></span>
                     <del
-                        class="mx-2 font-weight-light"><?php echo number_format($row_chitiet['sanpham_gia']) . 'vnđ' ?></del>
+                        class="mx-2 font-weight-light"><?php echo number_format($sql_chitiet['sanpham_gia']) . 'vnđ' ?></del>
                     <label>Miễn phí vận chuyển</label>
                 </p>
 
                 <div class="product-single-w3l">
-                    <p><?php echo $row_chitiet['sanpham_chitiet'] ?></p><br><br>
-                    <p><?php echo $row_chitiet['sanpham_mota'] ?></p>
+                    <p><?php echo $sql_chitiet['sanpham_chitiet'] ?></p><br><br>
+                    <p><?php echo $sql_chitiet['sanpham_mota'] ?></p>
                 </div>
                 <div class="occasion-cart">
                     <div class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                         <form action="?quanly=giohang" method="post">
                             <fieldset>
                                 <input type="hidden" name="tensanpham"
-                                    value="<?php echo $row_chitiet['sanpham_name'] ?>" />
+                                    value="<?php echo $sql_chitiet['sanpham_name'] ?>" />
                                 <input type="hidden" name="sanpham_id"
-                                    value="<?php echo $row_chitiet['sanpham_id'] ?>" />
+                                    value="<?php echo $sql_chitiet['sanpham_id'] ?>" />
                                 <input type="hidden" name="giasanpham"
-                                    value="<?php echo $row_chitiet['sanpham_gia'] ?>" />
+                                    value="<?php echo $sql_chitiet['sanpham_gia'] ?>" />
                                 <input type="hidden" name="hinhanh"
-                                    value="<?php echo $row_chitiet['sanpham_image'] ?>" />
+                                    value="<?php echo $sql_chitiet['sanpham_image'] ?>" />
                                 <input type="hidden" name="soluong" value="1" />
                                 <input type="submit" name="themgiohang" value="Thêm giỏ hàng" class="button" />
                             </fieldset>
@@ -96,5 +90,4 @@ while ($row_chitiet = mysqli_fetch_array($sql_chitiet)) {
 </div>
 <!-- //Single Page -->
 <?php
-}
 ?>
