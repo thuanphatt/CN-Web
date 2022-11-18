@@ -1,6 +1,7 @@
 <?php
 
-require "vendor/autoload.php";
+$root = realpath($_SERVER["DOCUMENT_ROOT"]);
+include_once "$root/vendor/autoload.php";
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
@@ -9,7 +10,7 @@ $db_host = $_ENV['DB_HOST'];
 $db_user = $_ENV['DB_USER'];
 $db_pass = $_ENV['DB_PASS'];
 $db_name = $_ENV['DB_NAME'];
-$db_port = $_ENV['DB_PORT'];
+// $db_port = $_ENV['DB_PORT'];
 
 try {
   $dsn = 'mysql:host=' . $db_host . ';dbname=' . $db_name;

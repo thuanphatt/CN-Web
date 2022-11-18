@@ -243,14 +243,15 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </li>
                         <?php
                         include('./db/connect.php');
-                        $sql_category_danhmuc = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
-                        while ($row_category_danhmuc = mysqli_fetch_array($sql_category_danhmuc)) {
+                        $sql = 'SELECT * FROM tbl_category ORDER BY category_id DESC';
+                        $sql_category_danhmuc = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($sql_category_danhmuc as $category_danhmuc) {
                         ?>
                         <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
                             <a class="nav-link "
-                                href="index.php?quanly=danhmuc&id=<?php echo $row_category_danhmuc['category_id'] ?>"
+                                href="index.php?quanly=danhmuc&id=<?php echo $category_danhmuc['category_id'] ?>"
                                 role="button" aria-haspopup="true" aria-expanded="false">
-                                <?php echo $row_category_danhmuc['category_name'] ?>
+                                <?php echo $category_danhmuc['category_name'] ?>
                             </a>
 
                         </li>
@@ -259,7 +260,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         ?>
                         <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
                             <?php
-                            $sql_danhmuctin = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
+                            $sql = "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC";
+                            $sql_danhmuctin = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
                             ?>
                             <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
@@ -268,10 +270,10 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </a>
                             <div class="dropdown-menu">
                                 <?php
-                                while ($row_danhmuctin = mysqli_fetch_array($sql_danhmuctin)) {
+                                foreach ($sql_danhmuctin as $danhmuctin) {
                                 ?>
                                 <a class="dropdown-item"
-                                    href="index.php?quanly=tintuc&id_tin=<?php echo $row_danhmuctin['danhmuctin_id'] ?>"><?php echo $row_danhmuctin['tendanhmuc'] ?></a>
+                                    href="index.php?quanly=tintuc&id_tin=<?php echo $danhmuctin['danhmuctin_id'] ?>"><?php echo $danhmuctin['tendanhmuc'] ?></a>
                                 <?php
                                 }
                                 ?>
