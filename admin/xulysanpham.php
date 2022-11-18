@@ -15,7 +15,8 @@ if (isset($_POST['themsanpham'])) {
     $path = '../uploads/';
 
     $hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
-    $sql_insert_product = mysqli_query($con, "INSERT INTO tbl_sanpham(sanpham_name,sanpham_chitiet,sanpham_mota,sanpham_gia,sanpham_giakhuyenmai,sanpham_soluong,sanpham_image,category_id) values ('$tensanpham','$chitiet','$mota','$gia','$giakhuyenmai','$soluong','$hinhanh','$danhmuc')");
+    $sql = "INSERT INTO tbl_sanpham(sanpham_name,sanpham_chitiet,sanpham_mota,sanpham_gia,sanpham_giakhuyenmai,sanpham_soluong,sanpham_image,category_id) values ('$tensanpham','$chitiet','$mota','$gia','$giakhuyenmai','$soluong','$hinhanh','$danhmuc')";
+    $sql_insert_product = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
     move_uploaded_file($hinhanh_tmp, $path . $hinhanh);
 } elseif (isset($_POST['capnhatsanpham'])) {
     $id_update = $_POST['id_update'];
@@ -35,14 +36,15 @@ if (isset($_POST['themsanpham'])) {
         move_uploaded_file($hinhanh_tmp, $path . $hinhanh);
         $sql_update_image = "UPDATE tbl_sanpham SET sanpham_name='$tensanpham',sanpham_chitiet='$chitiet',sanpham_mota='$mota',sanpham_gia='$gia',sanpham_giakhuyenmai='$giakhuyenmai',sanpham_soluong='$soluong',sanpham_image='$hinhanh',category_id='$danhmuc' WHERE sanpham_id='$id_update'";
     }
-    mysqli_query($con, $sql_update_image);
+    $con->exec($sql_update_image);
 }
 
 ?>
 <?php
 if (isset($_GET['xoa'])) {
     $id = $_GET['xoa'];
-    $sql_xoa = mysqli_query($con, "DELETE FROM tbl_sanpham WHERE sanpham_id='$id'");
+    $sql = "DELETE FROM tbl_sanpham WHERE sanpham_id='$id'";
+    $sql_xoa = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
 }
 ?>
 <!DOCTYPE html>
@@ -85,9 +87,9 @@ if (isset($_GET['xoa'])) {
             <?php
             if (isset($_GET['quanly']) == 'capnhat') {
                 $id_capnhat = $_GET['capnhat_id'];
-                $sql_capnhat = mysqli_query($con, "SELECT * FROM tbl_sanpham WHERE sanpham_id='$id_capnhat'");
-                $row_capnhat = mysqli_fetch_array($sql_capnhat);
-                $id_category_1 = $row_capnhat['category_id'];
+                $sql = "SELECT * FROM tbl_sanpham WHERE sanpham_id='$id_capnhat'";
+                $sql_capnhat = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
+                $id_category_1 = $sql_capnhat['category_id'];
             ?>
             <div class="col-md-4">
                 <h4>Cập nhật sản phẩm</h4>
@@ -95,50 +97,52 @@ if (isset($_GET['xoa'])) {
                 <form action="" method="POST" enctype="multipart/form-data">
                     <label>Tên sản phẩm</label>
                     <input type="text" class="form-control" name="tensanpham"
-                        value="<?php echo $row_capnhat['sanpham_name'] ?>"><br>
+                        value="<?php echo $sql_capnhat['sanpham_name'] ?>"><br>
                     <input type="hidden" class="form-control" name="id_update"
-                        value="<?php echo $row_capnhat['sanpham_id'] ?>">
+                        value="<?php echo $sql_capnhat['sanpham_id'] ?>">
                     <label>Hình ảnh</label>
                     <input type="file" class="form-control" name="hinhanh"><br>
-                    <img src="../uploads/<?php echo $row_capnhat['sanpham_image'] ?>" height="80" width="80"><br>
+                    <img src="../uploads/<?php echo $sql_capnhat['sanpham_image'] ?>" height="80" width="80"><br>
                     <label>Giá</label>
                     <input type="text" class="form-control" name="giasanpham"
-                        value="<?php echo $row_capnhat['sanpham_gia'] ?>"><br>
+                        value="<?php echo $sql_capnhat['sanpham_gia'] ?>"><br>
                     <label>Giá khuyến mãi</label>
                     <input type="text" class="form-control" name="giakhuyenmai"
-                        value="<?php echo $row_capnhat['sanpham_giakhuyenmai'] ?>"><br>
+                        value="<?php echo $sql_capnhat['sanpham_giakhuyenmai'] ?>"><br>
                     <label>Số lượng</label>
                     <input type="text" class="form-control" name="soluong"
-                        value="<?php echo $row_capnhat['sanpham_soluong'] ?>"><br>
+                        value="<?php echo $sql_capnhat['sanpham_soluong'] ?>"><br>
                     <label>Mô tả</label>
                     <textarea class="form-control" rows="10"
-                        name="mota"><?php echo $row_capnhat['sanpham_mota'] ?></textarea><br>
+                        name="mota"><?php echo $sql_capnhat['sanpham_mota'] ?></textarea><br>
                     <label>Chi tiết</label>
                     <textarea class="form-control" rows="10"
-                        name="chitiet"><?php echo $row_capnhat['sanpham_chitiet'] ?></textarea><br>
+                        name="chitiet"><?php echo $sql_capnhat['sanpham_chitiet'] ?></textarea><br>
                     <label>Danh mục</label>
                     <?php
-                        $sql_danhmuc = mysqli_query($con, "SELECT * FROM tbl_category ORDER BY category_id DESC");
+                        $sql = "SELECT * FROM tbl_category ORDER BY category_id DESC";
+                        $sql_danhmuc = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                         ?>
                     <select name="danhmuc" class="form-control">
                         <option value="0">-----Chọn danh mục-----</option>
                         <?php
-                            while ($row_danhmuc = mysqli_fetch_array($sql_danhmuc)) {
-                                if ($id_category_1 == $row_danhmuc['category_id']) {
+                            foreach ($sql_danhmuc as $danhmuc) {
+                                if ($id_category_1 == $danhmuc['category_id']) {
                             ?>
-                        <option selected value="<?php echo $row_danhmuc['category_id'] ?>">
-                            <?php echo $row_danhmuc['category_name'] ?></option>
+                        <option selected value="<?php echo $danhmuc['category_id'] ?>">
+                            <?php echo $danhmuc['category_name'] ?></option>
                         <?php
                                 } else {
                                 ?>
-                        <option value="<?php echo $row_danhmuc['category_id'] ?>">
-                            <?php echo $row_danhmuc['category_name'] ?></option>
+                        <option value="<?php echo $danhmuc['category_id'] ?>">
+                            <?php echo $danhmuc['category_name'] ?></option>
                         <?php
                                 }
                             }
                             ?>
-                    </select><br>
-                    <input type="submit" name="capnhatsanpham" value="Cập nhật sản phẩm" class="btn btn-default">
+                    </select><br />
+                    <input type="submit" name="capnhatsanpham" value="Cập nhật sản phẩm"
+                        class="btn btn-default"></input>
                 </form>
             </div>
             <?php
@@ -164,20 +168,22 @@ if (isset($_GET['xoa'])) {
                     <textarea class="form-control" name="chitiet"></textarea><br>
                     <label>Danh mục</label>
                     <?php
-                        $sql_danhmuc = mysqli_query($con, "SELECT * FROM tbl_category ORDER BY category_id DESC");
+                        $sql = "SELECT * FROM tbl_category ORDER BY category_id DESC";
+                        $sql_danhmuc = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                         ?>
                     <select name="danhmuc" class="form-control">
                         <option value="0">-----Chọn danh mục-----</option>
                         <?php
-                            while ($row_danhmuc = mysqli_fetch_array($sql_danhmuc)) {
+                            foreach ($sql_danhmuc as $danhmuc) {
                             ?>
-                        <option value="<?php echo $row_danhmuc['category_id'] ?>">
-                            <?php echo $row_danhmuc['category_name'] ?></option>
+                        <option value="<?php echo $danhmuc['category_id'] ?>">
+                            <?php echo $danhmuc['category_name'] ?></option>
                         <?php
                             }
                             ?>
                     </select><br>
-                    <input type="submit" name="themsanpham" value="Thêm sản phẩm" class="btn btn-default">
+                    <button type="submit" name="themsanpham" value="Thêm sản phẩm" class="btn btn-default">Them San
+                        Pham</button>
                 </form>
             </div>
             <?php
@@ -187,7 +193,8 @@ if (isset($_GET['xoa'])) {
             <div class="col-md-8">
                 <h4>Liệt kê sản phẩm</h4>
                 <?php
-                $sql_select_sp = mysqli_query($con, "SELECT * FROM tbl_sanpham,tbl_category WHERE tbl_sanpham.category_id=tbl_category.category_id ORDER BY tbl_sanpham.sanpham_id DESC");
+                $sql = "SELECT * FROM tbl_sanpham,tbl_category WHERE tbl_sanpham.category_id=tbl_category.category_id ORDER BY tbl_sanpham.sanpham_id DESC";
+                $sql_select_sp = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                 ?>
                 <table class="table table-bordered ">
                     <tr>
@@ -202,19 +209,20 @@ if (isset($_GET['xoa'])) {
                     </tr>
                     <?php
                     $i = 0;
-                    while ($row_sp = mysqli_fetch_array($sql_select_sp)) {
+                    foreach ($sql_select_sp as $select_sp) {
                         $i++;
                     ?>
                     <tr>
                         <td><?php echo $i ?></td>
-                        <td><?php echo $row_sp['sanpham_name'] ?></td>
-                        <td><img src="../uploads/<?php echo $row_sp['sanpham_image'] ?>" height="100" width="80"></td>
-                        <td><?php echo $row_sp['sanpham_soluong'] ?></td>
-                        <td><?php echo $row_sp['category_name'] ?></td>
-                        <td><?php echo number_format($row_sp['sanpham_gia']) . 'vnđ' ?></td>
-                        <td><?php echo number_format($row_sp['sanpham_giakhuyenmai']) . 'vnđ' ?></td>
-                        <td><a href="?xoa=<?php echo $row_sp['sanpham_id'] ?>">Xóa</a> || <a
-                                href="xulysanpham.php?quanly=capnhat&capnhat_id=<?php echo $row_sp['sanpham_id'] ?>">Cập
+                        <td><?php echo $select_sp['sanpham_name'] ?></td>
+                        <td><img src="../uploads/<?php echo $select_sp['sanpham_image'] ?>" height="100" width="80">
+                        </td>
+                        <td><?php echo $select_sp['sanpham_soluong'] ?></td>
+                        <td><?php echo $select_sp['category_name'] ?></td>
+                        <td><?php echo number_format($select_sp['sanpham_gia']) . 'vnđ' ?></td>
+                        <td><?php echo number_format($select_sp['sanpham_giakhuyenmai']) . 'vnđ' ?></td>
+                        <td><a href="?xoa=<?php echo $select_sp['sanpham_id'] ?>">Xóa</a> || <a
+                                href="xulysanpham.php?quanly=capnhat&capnhat_id=<?php echo $select_sp['sanpham_id'] ?>">Cập
                                 nhật</a></td>
                     </tr>
                     <?php
