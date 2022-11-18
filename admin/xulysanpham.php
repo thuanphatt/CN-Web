@@ -182,8 +182,7 @@ if (isset($_GET['xoa'])) {
                             }
                             ?>
                     </select><br>
-                    <button type="submit" name="themsanpham" value="Thêm sản phẩm" class="btn btn-default">Them San
-                        Pham</button>
+                    <input type="submit" name="themsanpham" value="Thêm sản phẩm" class="btn btn-default"></input>
                 </form>
             </div>
             <?php
