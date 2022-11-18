@@ -16,6 +16,7 @@ body {
   font-size: 100%;
   background: var(--white-color);
   font-family: "Open Sans", sans-serif;
+  touch-action: none;
 }
 
 body a {
