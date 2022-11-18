@@ -14,8 +14,8 @@ if (isset($_POST['dangnhap'])) {
 		$sql = "SELECT * FROM tbl_admin WHERE email='$taikhoan' AND password='$matkhau' LIMIT 1";
 		$sql_select_admin = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
 		if (isset($sql_select_admin)) {
-			$_SESSION['dangnhap'] = $row_dangnhap['admin_name'];
-			$_SESSION['admin_id'] = $row_dangnhap['admin_id'];
+			$_SESSION['dangnhap'] = $sql_select_admin['admin_name'];
+			$_SESSION['admin_id'] = $sql_select_admin['admin_id'];
 			header('Location: dashboard.php');
 		} else {
 			echo '<p>Tài khoản hoặc mật khẩu sai</p>';
