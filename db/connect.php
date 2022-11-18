@@ -1,7 +1,7 @@
 <?php
 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-include_once "$root/vendor/autoload.php";
+require "$root/CN-Web-main/vendor/autoload.php";
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();

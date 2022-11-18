@@ -11,7 +11,9 @@ if (isset($_POST['thembaiviet'])) {
     $path = '../uploads/';
 
     $hinhanh_tmp = $_FILES['hinhanh']['tmp_name'];
-    $sql_insert_product = mysqli_query($con, "INSERT INTO tbl_baiviet(tenbaiviet,tomtat,noidung,danhmuctin_id,baiviet_image) values ('$tenbaiviet','$mota','$chitiet','$danhmuc','$hinhanh')");
+    $sql =  "INSERT INTO tbl_baiviet(tenbaiviet,tomtat,noidung,danhmuctin_id,baiviet_image) values ('$tenbaiviet','$mota','$chitiet','$danhmuc','$hinhanh')";
+    $sql_insert_product = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+
     move_uploaded_file($hinhanh_tmp, $path . $hinhanh);
 } elseif (isset($_POST['capnhatbaiviet'])) {
     $id_update = $_POST['id_update'];
@@ -23,20 +25,19 @@ if (isset($_POST['thembaiviet'])) {
     $chitiet = $_POST['chitiet'];
     $mota = $_POST['mota'];
     $path = '../uploads/';
-    if ($hinhanh == '') {
-        $sql_update_image = "UPDATE tbl_baiviet SET tenbaiviet='$tenbaiviet',noidung='$chitiet',tomtat='$mota',danhmuctin_id='$danhmuc' WHERE baiviet_id='$id_update'";
-    } else {
-        move_uploaded_file($hinhanh_tmp, $path . $hinhanh);
-        $sql_update_image = "UPDATE tbl_baiviet SET tenbaiviet='$tenbaiviet',noidung='$chitiet',tomtat='$mota',danhmuctin_id='$danhmuc',baiviet_image='$hinhanh' WHERE baiviet_id='$id_update'";
-    }
-    mysqli_query($con, $sql_update_image);
+
+    move_uploaded_file($hinhanh_tmp, $path . $hinhanh);
+    $sql_update_image = "UPDATE tbl_baiviet SET tenbaiviet='$tenbaiviet',noidung='$chitiet',tomtat='$mota',danhmuctin_id='$danhmuc', $hinhanh == '' ?baiviet_image='$hinhanh' WHERE baiviet_id='$id_update' : ''";
+    // mysqli_query($con, $sql_update_image);
+    $con->exec($sql_update_image);
 }
 
 ?>
 <?php
 if (isset($_GET['xoa'])) {
     $id = $_GET['xoa'];
-    $sql_xoa = mysqli_query($con, "DELETE FROM tbl_baiviet WHERE baiviet_id='$id'");
+    $sql  = "DELETE FROM tbl_baiviet WHERE baiviet_id='$id'";
+    $sql_xoa = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 }
 ?>
 <!DOCTYPE html>
@@ -79,9 +80,9 @@ if (isset($_GET['xoa'])) {
             <?php
             if (isset($_GET['quanly']) == 'capnhat') {
                 $id_capnhat = $_GET['capnhat_id'];
-                $sql_capnhat = mysqli_query($con, "SELECT * FROM tbl_baiviet WHERE baiviet_id='$id_capnhat'");
-                $row_capnhat = mysqli_fetch_array($sql_capnhat);
-                $id_category_1 = $row_capnhat['danhmuctin_id'];
+                $sql = "SELECT * FROM tbl_baiviet WHERE baiviet_id='$id_capnhat'";
+                $sql_capnhat = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
+                $id_category_1 = $sql_capnhat['danhmuctin_id'];
             ?>
             <div class="col-md-4">
                 <h4>Cập nhật bài viết</h4>
@@ -89,37 +90,38 @@ if (isset($_GET['xoa'])) {
                 <form action="" method="POST" enctype="multipart/form-data">
                     <label>Tên bài viết</label>
                     <input type="text" class="form-control" name="tenbaiviet"
-                        value="<?php echo $row_capnhat['tenbaiviet'] ?>"><br>
+                        value="<?php echo $sql_capnhat['tenbaiviet'] ?>"><br>
                     <input type="hidden" class="form-control" name="id_update"
-                        value="<?php echo $row_capnhat['baiviet_id'] ?>">
+                        value="<?php echo $sql_capnhat['baiviet_id'] ?>">
                     <label>Hình ảnh</label>
                     <input type="file" class="form-control" name="hinhanh"><br>
-                    <img src="../uploads/<?php echo $row_capnhat['baiviet_image'] ?>" height="80" width="80"><br>
+                    <img src="../uploads/<?php echo $sql_capnhat['baiviet_image'] ?>" height="80" width="80"><br>
 
 
                     <label>Mô tả</label>
                     <textarea class="form-control" rows="10"
-                        name="mota"><?php echo $row_capnhat['tomtat'] ?></textarea><br>
+                        name="mota"><?php echo $sql_capnhat['tomtat'] ?></textarea><br>
                     <label>Chi tiết</label>
                     <textarea class="form-control" rows="10"
-                        name="chitiet"><?php echo $row_capnhat['noidung'] ?></textarea><br>
+                        name="chitiet"><?php echo $sql_capnhat['noidung'] ?></textarea><br>
                     <label>Danh mục</label>
                     <?php
-                        $sql_danhmuc = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
+                        $sql = "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC";
+                        $sql_danhmuc = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                         ?>
                     <select name="danhmuc" class="form-control">
                         <option value="0">-----Chọn danh mục-----</option>
                         <?php
-                            while ($row_danhmuc = mysqli_fetch_array($sql_danhmuc)) {
-                                if ($id_category_1 == $row_danhmuc['danhmuctin_id']) {
+                            foreach ($sql_danhmuc as $danhmuc) {
+                                if ($id_category_1 == $danhmuc['danhmuctin_id']) {
                             ?>
-                        <option selected value="<?php echo $row_danhmuc['danhmuctin_id'] ?>">
-                            <?php echo $row_danhmuc['tendanhmuc'] ?></option>
+                        <option selected value="<?php echo $danhmuc['danhmuctin_id'] ?>">
+                            <?php echo $danhmuc['tendanhmuc'] ?></option>
                         <?php
                                 } else {
                                 ?>
-                        <option value="<?php echo $row_danhmuc['danhmuctin_id'] ?>">
-                            <?php echo $row_danhmuc['tendanhmuc'] ?></option>
+                        <option value="<?php echo $danhmuc['danhmuctin_id'] ?>">
+                            <?php echo $danhmuc['tendanhmuc'] ?></option>
                         <?php
                                 }
                             }
@@ -146,15 +148,16 @@ if (isset($_GET['xoa'])) {
                     <textarea class="form-control" name="chitiet"></textarea><br>
                     <label>Danh mục</label>
                     <?php
-                        $sql_danhmuc = mysqli_query($con, "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC");
+                        $sql = "SELECT * FROM tbl_danhmuc_tin ORDER BY danhmuctin_id DESC";
+                        $sql_danhmuc = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                         ?>
                     <select name="danhmuc" class="form-control">
                         <option value="0">-----Chọn danh mục-----</option>
                         <?php
-                            while ($row_danhmuc = mysqli_fetch_array($sql_danhmuc)) {
+                            foreach ($sql_danhmuc as $danhmuc) {
                             ?>
-                        <option value="<?php echo $row_danhmuc['danhmuctin_id'] ?>">
-                            <?php echo $row_danhmuc['tendanhmuc'] ?></option>
+                        <option value="<?php echo $danhmuc['danhmuctin_id'] ?>">
+                            <?php echo $danhmuc['tendanhmuc'] ?></option>
                         <?php
                             }
                             ?>
@@ -169,7 +172,8 @@ if (isset($_GET['xoa'])) {
             <div class="col-md-8">
                 <h4>Liệt kê bài viết</h4>
                 <?php
-                $sql_select_bv = mysqli_query($con, "SELECT * FROM tbl_baiviet,tbl_danhmuc_tin WHERE tbl_baiviet.danhmuctin_id=tbl_danhmuc_tin.danhmuctin_id ORDER BY tbl_baiviet.baiviet_id DESC");
+                $sql = "SELECT * FROM tbl_baiviet,tbl_danhmuc_tin WHERE tbl_baiviet.danhmuctin_id=tbl_danhmuc_tin.danhmuctin_id ORDER BY tbl_baiviet.baiviet_id DESC";
+                $sql_select_bv = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                 ?>
                 <table class="table table-bordered ">
                     <tr>
@@ -183,18 +187,19 @@ if (isset($_GET['xoa'])) {
                     </tr>
                     <?php
                     $i = 0;
-                    while ($row_bv = mysqli_fetch_array($sql_select_bv)) {
+                    foreach ($sql_select_bv as $select_bv) {
                         $i++;
                     ?>
                     <tr>
                         <td><?php echo $i ?></td>
-                        <td><?php echo $row_bv['tenbaiviet'] ?></td>
-                        <td><img src="../uploads/<?php echo $row_bv['baiviet_image'] ?>" height="100" width="80"></td>
+                        <td><?php echo $select_bv['tenbaiviet'] ?></td>
+                        <td><img src="../uploads/<?php echo $select_bv['baiviet_image'] ?>" height="100" width="80">
+                        </td>
 
-                        <td><?php echo $row_bv['tendanhmuc'] ?></td>
+                        <td><?php echo $select_bv['tendanhmuc'] ?></td>
 
-                        <td><a href="?xoa=<?php echo $row_bv['baiviet_id'] ?>">Xóa</a> || <a
-                                href="xulybaiviet.php?quanly=capnhat&capnhat_id=<?php echo $row_bv['baiviet_id'] ?>">Cập
+                        <td><a href="?xoa=<?php echo $select_bv['baiviet_id'] ?>">Xóa</a> || <a
+                                href="xulybaiviet.php?quanly=capnhat&capnhat_id=<?php echo $select_bv['baiviet_id'] ?>">Cập
                                 nhật</a></td>
                     </tr>
                     <?php
