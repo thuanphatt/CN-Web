@@ -6,21 +6,21 @@ include('../db/connect.php');
 // session_destroy();
 // unset('dangnhap');
 if (isset($_POST['dangnhap'])) {
-	$taikhoan = $_POST['taikhoan'];
-	$matkhau = md5($_POST['matkhau']); //? Đây là chuẩn hoá
-	if ($taikhoan == '' || $matkhau == '') {
-		echo '<p>Xin nhập đủ</p>';
-	} else {
-		$sql = "SELECT * FROM tbl_admin WHERE email='$taikhoan' AND password='$matkhau' LIMIT 1";
-		$sql_select_admin = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
-		if (isset($sql_select_admin)) {
-			$_SESSION['dangnhap'] = $sql_select_admin['admin_name'];
-			$_SESSION['admin_id'] = $sql_select_admin['admin_id'];
-			header('Location: dashboard.php');
-		} else {
-			echo '<p>Tài khoản hoặc mật khẩu sai</p>';
-		}
-	}
+    $taikhoan = $_POST['taikhoan'];
+    $matkhau = md5($_POST['matkhau']); //? Đây là chuẩn hoá
+    if ($taikhoan == '' || $matkhau == '') {
+        echo '<p>Xin nhập đủ</p>';
+    } else {
+        $sql = "SELECT * FROM tbl_admin WHERE email='$taikhoan' AND password='$matkhau' LIMIT 1";
+        $sql_select_admin = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
+        if (isset($sql_select_admin)) {
+            $_SESSION['dangnhap'] = $sql_select_admin['admin_name'];
+            $_SESSION['admin_id'] = $sql_select_admin['admin_id'];
+            header('Location: dashboard.php');
+        } else {
+            echo '<p>Tài khoản hoặc mật khẩu sai</p>';
+        }
+    }
 }
 ?>
 <!DOCTYPE html>

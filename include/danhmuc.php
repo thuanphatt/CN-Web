@@ -1,14 +1,17 @@
 <?php
+// session_start();
+require('db/connect.php');
 if (isset($_GET['id'])) {
-	$id = $_GET['id'];
+    $id = $_GET['id'];
 } else {
-	$id = '';
+    $id = '';
 }
-$sql_cate = mysqli_query($con, "SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id DESC");
-$sql_category = mysqli_query($con, "SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id DESC");
+$sql = "SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id DESC";
+$sql_cate = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
-$row_title = mysqli_fetch_array($sql_category);
-$title = $row_title['category_name'];
+$sql1 = "SELECT * FROM tbl_category,tbl_sanpham WHERE tbl_category.category_id=tbl_sanpham.category_id AND tbl_sanpham.category_id='$id' ORDER BY tbl_sanpham.sanpham_id DESC";
+$sql_category = $con->query($sql1)->fetchAll(PDO::FETCH_ASSOC);
+$title = $sql_category[0]['category_name'];
 ?>
 <!-- top Products -->
 <div class="ads-grid py-sm-5 py-4">
@@ -24,15 +27,15 @@ $title = $row_title['category_name'];
                     <div class="product-sec1 px-sm-4 px-3 py-sm-5  py-3 mb-4">
                         <div class="row">
                             <?php
-							while ($row_sanpham = mysqli_fetch_array($sql_cate)) {
-							?>
+                            foreach ($sql_category as $category) {
+                            ?>
                             <div class="col-md-4 product-men mt-5">
                                 <div class="men-pro-item simpleCart_shelfItem">
                                     <div class="men-thumb-item text-center">
-                                        <img src="images/<?php echo $row_sanpham['sanpham_image'] ?>" alt=""
+                                        <img src="images/<?php echo $category['sanpham_image'] ?>" alt=""
                                             style="height:200px ; width: 200px;">
 
-                                        <a href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>"
+                                        <a href="?quanly=chitietsp&id=<?php echo $category['sanpham_id'] ?>"
                                             class="link-product-add-cart">
                                             <div class="men-cart-pro">
                                                 <div class="inner-men-cart-pro"> </div>
@@ -43,25 +46,25 @@ $title = $row_title['category_name'];
                                     <div class="item-info-product text-center border-top mt-4">
                                         <h4 class="pt-1">
                                             <a
-                                                href="?quanly=chitietsp&id=<?php echo $row_sanpham['sanpham_id'] ?>"><?php echo $row_sanpham['sanpham_name'] ?></a>
+                                                href="?quanly=chitietsp&id=<?php echo $category['sanpham_id'] ?>"><?php echo $category['sanpham_name'] ?></a>
                                         </h4>
                                         <div class="info-product-price my-2">
                                             <span
-                                                class="item_price"><?php echo number_format($row_sanpham['sanpham_giakhuyenmai']) . 'vnđ' ?></span>
-                                            <del><?php echo number_format($row_sanpham['sanpham_gia']) . 'vnđ' ?></del>
+                                                class="item_price"><?php echo number_format($category['sanpham_giakhuyenmai']) . 'vnđ' ?></span>
+                                            <del><?php echo number_format($category['sanpham_gia']) . 'vnđ' ?></del>
                                         </div>
                                         <div
                                             class="snipcart-details top_brand_home_details item_add single-item hvr-outline-out">
                                             <form action="?quanly=giohang" method="post">
                                                 <fieldset>
                                                     <input type="hidden" name="tensanpham"
-                                                        value="<?php echo $row_sanpham['sanpham_name'] ?>" />
+                                                        value="<?php echo $category['sanpham_name'] ?>" />
                                                     <input type="hidden" name="sanpham_id"
-                                                        value="<?php echo $row_sanpham['sanpham_id'] ?>" />
+                                                        value="<?php echo $category['sanpham_id'] ?>" />
                                                     <input type="hidden" name="giasanpham"
-                                                        value="<?php echo $row_sanpham['sanpham_gia'] ?>" />
+                                                        value="<?php echo $category['sanpham_gia'] ?>" />
                                                     <input type="hidden" name="hinhanh"
-                                                        value="<?php echo $row_sanpham['sanpham_image'] ?>" />
+                                                        value="<?php echo $category['sanpham_image'] ?>" />
                                                     <input type="hidden" name="soluong" value="1" />
                                                     <input type="submit" name="themgiohang" value="Thêm giỏ hàng"
                                                         class="button" />
@@ -72,8 +75,8 @@ $title = $row_title['category_name'];
                                 </div>
                             </div>
                             <?php
-							}
-							?>
+                            }
+                            ?>
                         </div>
                     </div>
                     <!-- //first section -->
