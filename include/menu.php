@@ -1,7 +1,6 @@
 <?php
 $sql = "SELECT * FROM tbl_category ORDER BY category_id DESC";
 $sql_category = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
-// $sql_category = mysqli_query($con, 'SELECT * FROM tbl_category ORDER BY category_id DESC');
 ?>
 <div class="navbar-inner">
     <div class="container">
