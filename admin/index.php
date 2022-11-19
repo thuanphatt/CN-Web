@@ -7,7 +7,7 @@ include('../db/connect.php');
 // unset('dangnhap');
 if (isset($_POST['dangnhap'])) {
     $taikhoan = $_POST['taikhoan'];
-    $matkhau = md5($_POST['matkhau']); //? Đây là chuẩn hoá
+    $matkhau = md5($_POST['matkhau']);
     if ($taikhoan == '' || $matkhau == '') {
         echo '<p>Xin nhập đủ</p>';
     } else {
