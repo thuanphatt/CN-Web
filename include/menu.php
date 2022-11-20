@@ -67,10 +67,7 @@ $sql_category = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                             ?>
                         </div>
                     </li>
-                    <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-                        <a class="nav-link" href="payment.php">Thanh toán</a>
 
-                    </li>
                     <li class="nav-item">
                         <a class="nav-link" href="contact.php">Liên hệ</a>
                     </li>

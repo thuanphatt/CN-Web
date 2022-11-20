@@ -266,10 +266,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                 ?>
                             </div>
                         </li>
-                        <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-                            <a class="nav-link" href="payment.php">Thanh toán</a>
 
-                        </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.php">Liên hệ</a>
                         </li>

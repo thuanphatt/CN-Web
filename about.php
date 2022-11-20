@@ -273,10 +273,7 @@
                                 ?>
                             </div>
                         </li>
-                        <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-                            <a class="nav-link" href="payment.php">Thanh toán</a>
 
-                        </li>
                         <a class="nav-link" href="contact.php">Liên hệ</a>
                         </li>
                         <li class="nav-item active">
