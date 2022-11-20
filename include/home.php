@@ -229,7 +229,7 @@
                                 <li>
                                     <!-- <input type="checkbox" class="checked"> -->
                                     <span class="span"><a
-                                            href="danhmucsanpham.php?id=<?php echo $category_sidebar['category_id'] ?>"><?php echo $category_sidebar['category_name'] ?></a></span>
+                                            href="index.php?quanly=danhmuc&id=<?php echo $category_sidebar['category_id'] ?>"><?php echo $category_sidebar['category_name'] ?></a></span>
                                 </li>
                                 <?php
                                 }

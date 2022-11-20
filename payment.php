@@ -198,13 +198,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <!-- cart details -->
                         <div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
                             <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                                <form action="#" method="post" class="last">
-                                    <input type="hidden" name="cmd" value="_cart">
-                                    <input type="hidden" name="display" value="1">
-                                    <button class="btn w3view-cart" type="submit" name="submit" value="">
+                                <button class="btn w3view-cart" type="submit" name="submit" value="">
+                                    <a href="index.php?quanly=giohang" class="text-white">
                                         <i class="fas fa-cart-arrow-down"></i>
-                                    </button>
-                                </form>
+                                    </a>
+                                </button>
                             </div>
                         </div>
                         <!-- //cart details -->
@@ -280,17 +278,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             </div>
                         </li>
                         <li class="nav-item dropdown mr-lg-2 mb-lg-0 mb-2">
-                            <a class="nav-link dropdown-toggle active" href="#" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
-                                Trang
-                            </a>
-                            <div class="dropdown-menu">
-                                <a class="dropdown-item" href="product.php">Sản phẩm mới</a>
+                            <a class="nav-link active" href="payment.php">Thanh toán</a>
 
-                                <div class="dropdown-divider"></div>
-
-                                <a class="dropdown-item active" href="payment.php">Thanh toán</a>
-                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="contact.php">Liên hệ</a>
@@ -480,10 +469,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
         <div class="footer-top-first">
             <div class="container py-md-5 py-sm-4 py-3">
                 <!-- footer first section -->
-                <h2 class="footer-top-head-w3l font-weight-bold mb-2">Đồng hồ :</h2>
-                <p class="footer-main mb-4">
-                    Được thành lập vào những ngày cuối cùng của năm 1991, Đồng Hồ T-P đã tồn tại và phát triển đến
-                    ngày nay và đang dần vươn lên trở thành 1 trong những chuỗi bán lẻ đồng hồ hàng đầu ở Việt Nam.</p>
+
                 <!-- //footer first section -->
                 <!-- footer second section -->
                 <div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">

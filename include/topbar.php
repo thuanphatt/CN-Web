@@ -7,14 +7,13 @@ if (isset($_POST['dangnhap_home'])) {
     if ($taikhoan == '' || $matkhau == '') {
         echo '<script>alert("Làm ơn không để trống")</script>';
     } else {
-        $sql_select_admin = mysqli_query($con, "SELECT * FROM tbl_khachhang WHERE email='$taikhoan' AND password='$matkhau' LIMIT 1");
-        $count = mysqli_num_rows($sql_select_admin);
-        $row_dangnhap = mysqli_fetch_array($sql_select_admin);
-        if ($count > 0) {
-            $_SESSION['dangnhap_home'] = $row_dangnhap['name'];
-            $_SESSION['khachhang_id'] = $row_dangnhap['khachhang_id'];
+        $sql_select_admin = "SELECT * FROM tbl_khachhang WHERE email='$taikhoan' AND password='$matkhau' LIMIT 1";
+        $select_admin = $con->query($sql_select_admin)->fetch(PDO::FETCH_ASSOC);
+        if ($select_admin > 0) {
+            $_SESSION['dangnhap_home'] = $select_admin['name'];
+            $_SESSION['khachhang_id'] = $select_admin['khachhang_id'];
 
-            header('Location: index.php?quanly=giohang');
+            header('Location: index.php');
         } else {
             echo '<script>alert("Tài khoản mật khẩu sai")</script>';
         }
@@ -28,13 +27,24 @@ if (isset($_POST['dangnhap_home'])) {
     $address = $_POST['address'];
     $giaohang = $_POST['giaohang'];
 
-    $sql_khachhang = mysqli_query($con, "INSERT INTO tbl_khachhang(name,phone,email,address,note,giaohang,password) values ('$name','$phone','$email','$address','$note','$giaohang','$password')");
-    $sql_select_khachhang = mysqli_query($con, "SELECT * FROM tbl_khachhang ORDER BY khachhang_id DESC LIMIT 1");
-    $row_khachhang = mysqli_fetch_array($sql_select_khachhang);
-    $_SESSION['dangnhap_home'] = $name;
-    $_SESSION['khachhang_id'] = $row_khachhang['khachhang_id'];
 
-    header('Location:index.php?quanly=giohang');
+    $sql_khachhang =  "INSERT INTO tbl_khachhang(name,phone,email,address,note,giaohang,password) values ('$name','$phone','$email','$address','$note','$giaohang','$password')";
+    $add_khachhang = $con->query($sql_khachhang)->fetch(PDO::FETCH_ASSOC);
+
+    $sql_select_khachhang = "SELECT * FROM tbl_khachhang ORDER BY khachhang_id DESC LIMIT 1";
+    $select_khachhang = $con->query($sql_select_khachhang)->fetchAll(PDO::FETCH_ASSOC);
+    $_SESSION['dangnhap_home'] = $name;
+    $_SESSION['khachhang_id'] = $select_khachhang['khachhang_id'];
+
+    header('Location:index.php');
+} else if (isset($_GET['login'])) {
+    $dangxuat = $_GET['login'];
+} else {
+    $dangxuat = '';
+}
+if ($dangxuat == 'dangxuat') {
+    session_destroy();
+    header('Location: index.php');
 }
 ?>
 
@@ -68,6 +78,11 @@ if (isset($_POST['dangnhap_home'])) {
                     <li class="text-center border-right text-white">
                         <i class="fas fa-phone mr-2"></i>369369369
                     </li>
+                    <?php if (isset($_SESSION['dangnhap_home'])) : ?>
+                    <li class="text-center border-right text-white">
+                        <a href="?login=dangxuat" class="text-white">Đăng xuất</a>
+                    </li>
+                    <?php else : ?>
                     <li class="text-center border-right text-white">
                         <a href="#" data-toggle="modal" data-target="#dangnhap" class="text-white">
                             <i class="fas fa-sign-in-alt mr-2"></i>Đăng nhập</a>
@@ -76,6 +91,7 @@ if (isset($_POST['dangnhap_home'])) {
                         <a href="#" data-toggle="modal" data-target="#dangky" class="text-white">
                             <i class="fas fa-sign-out-alt mr-2"></i>Đăng ký</a>
                     </li>
+                    <?php endif; ?>
                 </ul>
                 <!-- //header lists -->
             </div>
@@ -197,13 +213,11 @@ if (isset($_POST['dangnhap_home'])) {
                     <!-- cart details -->
                     <div class="col-2 top_nav_right text-center mt-sm-0 mt-2">
                         <div class="wthreecartaits wthreecartaits2 cart cart box_1">
-                            <form action="#" method="post" class="last">
-                                <input type="hidden" name="cmd" value="_cart">
-                                <input type="hidden" name="display" value="1">
-                                <button class="btn w3view-cart" type="submit" name="submit" value="">
+                            <button class="btn w3view-cart" type="submit" name="submit" value="">
+                                <a href="?quanly=giohang" class="text-white">
                                     <i class="fas fa-cart-arrow-down"></i>
-                                </button>
-                            </form>
+                                </a>
+                            </button>
                         </div>
                     </div>
                     <!-- //cart details -->
