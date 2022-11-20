@@ -1,7 +1,7 @@
 <?php
 // Đường dẫn tuyệt đối 
 $root = realpath($_SERVER["DOCUMENT_ROOT"]);
-require "$root/CN-Web-main/vendor/autoload.php";
+require "$root/CN-Web/vendor/autoload.php";
 
 $dotenv = Dotenv\Dotenv::createImmutable(__DIR__ . '/../');
 $dotenv->load();
