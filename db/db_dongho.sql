@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Máy chủ: 127.0.0.1
--- Thời gian đã tạo: Th10 17, 2022 lúc 05:23 AM
+-- Thời gian đã tạo: Th10 20, 2022 lúc 04:37 PM
 -- Phiên bản máy phục vụ: 10.4.25-MariaDB
 -- Phiên bản PHP: 8.1.10
 
@@ -132,22 +132,12 @@ CREATE TABLE `tbl_donhang` (
 --
 
 INSERT INTO `tbl_donhang` (`donhang_id`, `sanpham_id`, `soluong`, `mahang`, `khachhang_id`, `ngaythang`, `tinhtrang`, `huydon`) VALUES
-(13, 20, 3, '4236', 15, '2019-10-04 02:33:55', 0, 0),
-(14, 21, 4, '4236', 15, '2019-10-04 02:33:56', 0, 0),
-(15, 20, 3, '6503', 16, '2019-10-04 02:34:56', 0, 0),
-(16, 21, 4, '6503', 16, '2019-10-04 02:34:56', 0, 0),
-(17, 21, 1, '2508', 17, '2019-10-04 02:35:19', 0, 0),
-(18, 26, 3, '4249', 18, '2019-10-04 02:45:46', 0, 0),
-(19, 26, 3, '8728', 19, '2019-10-04 02:46:40', 0, 0),
-(20, 21, 1, '5037', 20, '2019-10-04 02:48:16', 0, 0),
-(21, 20, 1, '5037', 20, '2019-10-04 02:48:17', 0, 0),
-(22, 21, 1, '1594', 21, '2019-10-04 02:51:05', 0, 0),
-(23, 20, 1, '1594', 21, '2019-10-04 02:51:05', 0, 0),
-(45, 27, 1, '2290', 31, '2022-11-14 04:07:26', 0, 0),
-(46, 21, 1, '2290', 31, '2022-11-14 04:07:26', 0, 0),
-(47, 21, 1, '3161', 32, '2022-11-14 04:09:40', 0, 0),
-(48, 33, 1, '4246', 33, '2022-11-15 13:42:28', 0, 0),
-(49, 31, 1, '555', 34, '2022-11-16 13:07:56', 0, 0);
+(71, 31, 1, '4537', 0, '2022-11-20 14:21:46', 0, 0),
+(72, 31, 1, '8977', 39, '2022-11-20 14:23:53', 0, 0),
+(73, 30, 1, '8977', 39, '2022-11-20 14:23:53', 0, 0),
+(74, 28, 1, '1502', 40, '2022-11-20 14:26:07', 0, 0),
+(75, 33, 1, '1502', 40, '2022-11-20 14:26:07', 0, 0),
+(76, 31, 10, '3719', 40, '2022-11-20 15:28:27', 0, 2);
 
 -- --------------------------------------------------------
 
@@ -192,9 +182,36 @@ INSERT INTO `tbl_giaodich` (`giaodich_id`, `sanpham_id`, `soluong`, `magiaodich`
 (21, 21, 1, '6626', '2022-11-11 03:33:38', 30, 1, 1),
 (22, 27, 1, '2290', '2022-11-14 04:07:26', 31, 0, 0),
 (23, 21, 1, '2290', '2022-11-14 04:07:26', 31, 0, 0),
-(24, 21, 1, '3161', '2022-11-14 04:09:40', 32, 0, 0),
-(25, 33, 1, '4246', '2022-11-15 13:42:28', 33, 0, 0),
-(26, 31, 1, '555', '2022-11-16 13:07:56', 34, 0, 0);
+(24, 21, 1, '3161', '2022-11-19 16:03:42', 32, 0, 1),
+(25, 33, 1, '4246', '2022-11-18 15:04:13', 33, 1, 0),
+(26, 31, 1, '555', '2022-11-16 13:07:56', 34, 0, 0),
+(27, 30, 1, '1783', '2022-11-19 15:51:59', 0, 0, 0),
+(28, 31, 1, '1783', '2022-11-19 15:51:59', 0, 0, 0),
+(29, 31, 1, '7853', '2022-11-19 15:52:55', 0, 0, 0),
+(30, 31, 1, '1308', '2022-11-19 15:53:25', 0, 0, 0),
+(31, 30, 1, '192', '2022-11-19 15:53:33', 0, 0, 0),
+(32, 30, 1, '8122', '2022-11-19 15:54:20', 0, 0, 0),
+(33, 30, 1, '7569', '2022-11-19 16:04:25', 32, 1, 0),
+(34, 31, 1, '918', '2022-11-20 03:55:59', 32, 0, 0),
+(35, 30, 1, '9032', '2022-11-20 04:37:37', 32, 0, 0),
+(36, 31, 2, '4585', '2022-11-20 05:47:46', 0, 0, 0),
+(37, 31, 1, '6617', '2022-11-20 05:50:32', 32, 0, 0),
+(38, 31, 1, '8391', '2022-11-20 05:51:37', 37, 0, 0),
+(39, 31, 10, '9885', '2022-11-20 05:53:11', 37, 0, 0),
+(40, 31, 10, '8427', '2022-11-20 05:55:02', 37, 0, 0),
+(41, 31, 10, '200', '2022-11-20 05:55:12', 37, 0, 0),
+(42, 31, 10, '5009', '2022-11-20 05:55:38', 37, 0, 0),
+(43, 33, 1, '3895', '2022-11-20 13:58:58', 32, 0, 0),
+(44, 30, 1, '8682', '2022-11-20 14:00:05', 32, 0, 0),
+(45, 30, 1, '2088', '2022-11-20 14:20:24', 32, 0, 1),
+(46, 31, 1, '2517', '2022-11-20 15:22:40', 32, 0, 1),
+(47, 29, 1, '2517', '2022-11-20 15:22:40', 32, 0, 1),
+(48, 31, 1, '4537', '2022-11-20 14:21:46', 0, 0, 0),
+(49, 31, 1, '8977', '2022-11-20 14:23:53', 39, 0, 0),
+(50, 30, 1, '8977', '2022-11-20 14:23:53', 39, 0, 0),
+(51, 28, 1, '1502', '2022-11-20 14:26:07', 40, 0, 0),
+(52, 33, 1, '1502', '2022-11-20 14:26:07', 40, 0, 0),
+(53, 31, 10, '3719', '2022-11-20 15:28:27', 40, 0, 2);
 
 -- --------------------------------------------------------
 
@@ -216,7 +233,7 @@ CREATE TABLE `tbl_giohang` (
 --
 
 INSERT INTO `tbl_giohang` (`giohang_id`, `tensanpham`, `sanpham_id`, `giasanpham`, `hinhanh`, `soluong`) VALUES
-(15, 'DOXA D203SBU', 31, '90000000', 'nam3.jpg', 4);
+(56, 'FOUETTÉ OR-FAIRY', 33, '40000000', 'nu2.jpg', 1);
 
 -- --------------------------------------------------------
 
@@ -240,10 +257,15 @@ CREATE TABLE `tbl_khachhang` (
 --
 
 INSERT INTO `tbl_khachhang` (`khachhang_id`, `name`, `phone`, `address`, `note`, `email`, `password`, `giaohang`) VALUES
-(12, 'Hiếu', '0932023992', '123/123', 'dasdasdas', 'hieu@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1),
 (32, 'Nguyễn Thuận Phát', '+84977739431', 'vinh long', '123', 'phatb1910429@student.ctu.edu.vn', 'e10adc3949ba59abbe56e057f20f883e', 0),
 (33, 'Nguyễn Thuận Phát', '+84977739431', 'vinh long', 'test1', 'thphat@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 0),
-(34, 'thuan phat', '+84977739431', 'vinh long', '123', 'phatb1910429@student.ctu.edu.vn', '8c5c8d5110633d0341597a95de67cfbe', 1);
+(34, 'thuan phat', '+84977739431', 'vinh long', '123', 'phatb1910429@student.ctu.edu.vn', '8c5c8d5110633d0341597a95de67cfbe', 1),
+(35, 'Nguyễn Thuận Phát', '+84977739431', 'vinh long', '123', 'phatb1910429@student.ctu.edu.vn', 'e10adc3949ba59abbe56e057f20f883e', 0),
+(36, 'Nguyễn Thuận Phát', '+84977739431', 'vinh long', '123', 'admin@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1),
+(37, 'tan le', '0989526656', 'binh thuy', 'tesst', 'tanle@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 0),
+(38, '232', '123123213', '123', '12312', 'admin@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 1),
+(39, 'truong', '0965155555', 'tra on', 'hot boy vinh xuan', 'nttruong@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 0),
+(40, 'Thuận Phát', '09887515252', 'Trà Ôn, Vĩnh Long', 'Gò Tranh', 'phat@gmail.com', 'e10adc3949ba59abbe56e057f20f883e', 0);
 
 -- --------------------------------------------------------
 
@@ -385,49 +407,49 @@ ALTER TABLE `tbl_admin`
 -- AUTO_INCREMENT cho bảng `tbl_baiviet`
 --
 ALTER TABLE `tbl_baiviet`
-  MODIFY `baiviet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+  MODIFY `baiviet_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_category`
 --
 ALTER TABLE `tbl_category`
-  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `category_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_danhmuc_tin`
 --
 ALTER TABLE `tbl_danhmuc_tin`
-  MODIFY `danhmuctin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `danhmuctin_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_donhang`
 --
 ALTER TABLE `tbl_donhang`
-  MODIFY `donhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=50;
+  MODIFY `donhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=77;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_giaodich`
 --
 ALTER TABLE `tbl_giaodich`
-  MODIFY `giaodich_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=27;
+  MODIFY `giaodich_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_giohang`
 --
 ALTER TABLE `tbl_giohang`
-  MODIFY `giohang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `giohang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_khachhang`
 --
 ALTER TABLE `tbl_khachhang`
-  MODIFY `khachhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `khachhang_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=41;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_sanpham`
 --
 ALTER TABLE `tbl_sanpham`
-  MODIFY `sanpham_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=35;
+  MODIFY `sanpham_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=36;
 
 --
 -- AUTO_INCREMENT cho bảng `tbl_slider`
