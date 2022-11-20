@@ -513,9 +513,7 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             <li class="mb-3">
                                 <a href="help.php">Hỗ trợ</a>
                             </li>
-                            <li class="mb-3">
-                                <a href="faqs.php">FAQs</a>
-                            </li>
+
                             <li class="mb-3">
                                 <a href="terms.php">Điều khoản sử dụng</a>
                             </li>

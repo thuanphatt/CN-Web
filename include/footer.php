@@ -88,9 +88,7 @@
                         <li class="mb-3">
                             <a href="help.php">Hỗ trợ</a>
                         </li>
-                        <li class="mb-3">
-                            <a href="faqs.php">FAQs</a>
-                        </li>
+
                         <li class="mb-3">
                             <a href="terms.php">Điều khoản sử dụng</a>
                         </li>
@@ -146,7 +144,8 @@
                                 </li>
                                 <li>
                                     <a class="icon gp" href="https://www.instagram.com/thuan.phatt/">
-                                        <i class="fab fa-instagram" style="background: url(./images/bg-instagram.jpg);"></i>
+                                        <i class="fab fa-instagram"
+                                            style="background: url(./images/bg-instagram.jpg);"></i>
                                     </a>
                                 </li>
                             </ul>

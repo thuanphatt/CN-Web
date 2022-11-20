@@ -216,7 +216,7 @@
                             </ul>
                         </div>
                         <!-- //reviews -->
-                        <!-- electronics -->
+                        <!-- Danh mục -->
                         <div class="left-side border-bottom py-2">
 
                             <h3 class="agileits-sear-head mb-3">Danh mục sản phẩm</h3>
@@ -236,7 +236,7 @@
                                 ?>
                             </ul>
                         </div>
-                        <!-- //electronics -->
+                        <!-- //Danh mục -->
 
 
                         <!-- best seller -->

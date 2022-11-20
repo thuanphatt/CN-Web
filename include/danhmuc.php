@@ -263,6 +263,27 @@ $title = $sql_category[0]['category_name'];
                         </ul>
                     </div>
                     <!-- //Màu mặt số -->
+                    <!-- Danh mục -->
+                    <div class="left-side border-bottom py-2">
+
+                        <h3 class="agileits-sear-head mb-3">Danh mục sản phẩm</h3>
+                        <ul>
+                            <?php
+                            $sql = 'SELECT * FROM tbl_category ORDER BY category_id DESC';
+                            $sql_category_sidebar = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                            foreach ($sql_category_sidebar as $category_sidebar) {
+                            ?>
+                            <li>
+                                <!-- <input type="checkbox" class="checked"> -->
+                                <span class="span"><a
+                                        href="index.php?quanly=danhmuc&id=<?php echo $category_sidebar['category_id'] ?>"><?php echo $category_sidebar['category_name'] ?></a></span>
+                            </li>
+                            <?php
+                            }
+                            ?>
+                        </ul>
+                    </div>
+                    <!-- //Danh mục -->
                 </div>
                 <!-- //product right -->
             </div>
