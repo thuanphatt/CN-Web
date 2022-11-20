@@ -15,13 +15,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <meta name="keywords" content="T-P Watch " />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <script>
-        addEventListener("load", function() {
-            setTimeout(hideURLbar, 0);
-        }, false);
+    addEventListener("load", function() {
+        setTimeout(hideURLbar, 0);
+    }, false);
 
-        function hideURLbar() {
-            window.scrollTo(0, 1);
-        }
+    function hideURLbar() {
+        window.scrollTo(0, 1);
+    }
     </script>
     <!-- //Meta tag Keywords -->
 
@@ -39,8 +39,12 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <!-- //Custom-Files -->
 
     <!-- web fonts -->
-    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
-    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
+    <link
+        href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
+        rel="stylesheet">
+    <link
+        href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
+        rel="stylesheet">
     <!-- //web fonts -->
 
 </head>
@@ -140,11 +144,13 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </div>
                         <div class="form-group">
                             <label class="col-form-label">Password</label>
-                            <input type="password" class="form-control" placeholder=" " name="Password" id="password1" required="">
+                            <input type="password" class="form-control" placeholder=" " name="Password" id="password1"
+                                required="">
                         </div>
                         <div class="form-group">
                             <label class="col-form-label">Confirm Password</label>
-                            <input type="password" class="form-control" placeholder=" " name="Confirm Password" id="password2" required="">
+                            <input type="password" class="form-control" placeholder=" " name="Confirm Password"
+                                id="password2" required="">
                         </div>
                         <div class="right-w3l">
                             <input type="submit" class="form-control" value="Register">
@@ -183,7 +189,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         <!-- search -->
                         <div class="col-10 agileits_search">
                             <form class="form-inline" action="#" method="post">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
+                                <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm"
+                                    aria-label="Search" required>
                                 <button class="btn my-2 my-sm-0" type="submit">Tìm kiếm</button>
                             </form>
                         </div>
@@ -220,7 +227,9 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         </select>
                     </form>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse"
+                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                    aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -236,12 +245,14 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                         $sql_category_danhmuc = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($sql_category_danhmuc as $category_danhmuc) {
                         ?>
-                            <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
-                                <a class="nav-link " href="index.php?quanly=danhmuc&id=<?php echo $category_danhmuc['category_id'] ?>" role="button" aria-haspopup="true" aria-expanded="false">
-                                    <?php echo $category_danhmuc['category_name'] ?>
-                                </a>
+                        <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
+                            <a class="nav-link "
+                                href="index.php?quanly=danhmuc&id=<?php echo $category_danhmuc['category_id'] ?>"
+                                role="button" aria-haspopup="true" aria-expanded="false">
+                                <?php echo $category_danhmuc['category_name'] ?>
+                            </a>
 
-                            </li>
+                        </li>
                         <?php
                         }
                         ?>
@@ -251,16 +262,18 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                             $sql_danhmuctin = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
                             ?>
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
+                                aria-haspopup="true" aria-expanded="false">
                                 Tin tức
                             </a>
                             <div class="dropdown-menu">
                                 <?php
                                 foreach ($sql_danhmuctin as $danhmuctin) {
                                 ?>
-                                    <a class="dropdown-item" href="index.php?quanly=tintuc&id_tin=<?php echo $danhmuctin['danhmuctin_id'] ?>">
-                                        <?php echo $danhmuctin['tendanhmuc'] ?>
-                                    </a>
+                                <a class="dropdown-item"
+                                    href="index.php?quanly=tintuc&id_tin=<?php echo $danhmuctin['danhmuctin_id'] ?>">
+                                    <?php echo $danhmuctin['tendanhmuc'] ?>
+                                </a>
                                 <?php
                                 }
                                 ?>
@@ -315,83 +328,60 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <span>M</span>ật
             </h3>
             <!-- //tittle heading -->
-            <h6 class="my-md-4 my-3">Privacy Policy</h6>
-            <p class="font-weight-light pl-sm-4 mb-2">We value the trust you place in us. That's why we insist upon the
-                highest standards for secure transactions and customer
-                information privacy. Please read the following statement to learn about our information gathering and
-                dissemination practices.
+            <h6 class="my-md-4 my-3">Chính sách bảo mật</h6>
+            <p class="font-weight-light pl-sm-4 mb-2">Chúng tôi tôn trọng quyền riêng tư của người dùng và đã phát triển
+                chính sách bảo mật này (“Chính sách Bảo mật”) để tuyên bố cam kết của mình để bảo vệ sự riêng tư của
+                bạn. Chính sách Bảo mật nhằm mô tả cho bạn, với tư cách cá nhân là người sử dụng Ứng dụng của chúng tôi
+                hoặc của các dịch vụ được cung cấp thông qua Ứng dụng (cùng với Ứng dụng, “Dịch vụ”), thông tin chúng
+                tôi thu thập, thông tin đó có thể được sử dụng, với người mà nó có thể được chia sẻ, và lựa chọn của bạn
+                về việc sử dụng như vậy và tiết lộ.
             </p>
-            <p class="font-weight-light pl-sm-4 mb-2">Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-                consectetur, adipisci velit, sed quia non numquam eius
-                modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem. </p>
+            <p class="font-weight-light pl-sm-4 mb-2">Chúng tôi khuyến khích bạn đọc Chính sách Bảo mật này một cách cẩn
+                thận khi sử dụng Dịch vụ. Bằng cách truy cập Dịch vụ, bạn thừa nhận và đồng ý rằng bạn đã đọc, chấp nhận
+                đầy đủ và sẽ tuân thủ Chính sách Bảo mật này.</p>
 
-            <h6 class="my-md-4 my-3">Personally Identifiable Information and other Information</h6>
-            <p class="font-weight-light pl-sm-4 mb-2">If you are going to use a passage of Lorem Ipsum, you need to be
-                sure there isn't anything embarrassing hidden in the
-                middle of text. All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks as
-                necessary</p>
-            <p class="font-weight-light pl-sm-4 mb-2">first true generator on the Internet. It uses a dictionary of over
-                200 Latin words, combined with a handful of model sentence
-                structures, to generate Lorem Ipsum which looks reasonable. The generated Lorem Ipsum is therefore
-                always free from repetition,
-                injected humour</p>
+            <h6 class="my-md-4 my-3">Thông tin chúng tôi thu thập được về bạn</h6>
+            <p class="font-weight-light pl-sm-4 mb-2">Thông tin bạn cung cấp hoặc có sẵn. Chúng tôi có thể thu thập và
+                lưu trữ bất kỳ thông tin nào bạn nhập thông qua Ứng dụng hoặc cung cấp cho chúng tôi theo một số cách
+                khác, chẳng hạn như thông qua việc sử dụng một số Dịch vụ của chúng tôi hoặc cung cấp thông tin của bạn
+                thông qua Facebook hoặc các mạng xã hội khác mà bạn kết nối với dịch vụ của chúng tôi.</p>
+            <p class="font-weight-light pl-sm-4 mb-2">Thông tin nhận dạng cá nhân. Mặc dù chúng tôi không yêu cầu
+                nhiều mục mà sẽ được coi là thông tin nhận dạng cá nhân, thông tin mà chúng tôi thu thập có thể bao gồm
+                các mục như tên, địa chỉ email và độ tuổi của bạn để chúng tôi có thể xác minh bạn đủ điều kiện sử dụng
+                các dịch vụ.</p>
 
-            <h6 class="my-md-4 my-3">Security Precautions</h6>
-            <p class="font-weight-light pl-sm-4 mb-2">Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus
-                Bonorum et Malorum" (The Extremes of Good and Evil)
-                by Cicero, written in 45 BC. This book is a treatise on the theory of ethics, very popular during the
-                Renaissance. The
-                first line of Lorem Ipsum, "Lorem ipsum dolor sit amet..", comes from a line in section 1.10.32.</p>
-            <p class="font-weight-light pl-sm-4 mb-2">Latin professor at Hampden-Sydney College in Virginia, looked up
-                one of the more obscure Latin words, consectetur, from
-                a Lorem Ipsum passage, and going through the cites of the word in classical literature, discovered the
-                undoubtable source.
-                Lorem Ipsum comes from sections 1.10.32 and 1.10.33 of "de Finibus Bonorum et Malorum"</p>
+            <h6 class="my-md-4 my-3">Cách chúng tôi sử dụng thông tin mà chúng tôi thu thập được</h6>
+            <p class="font-weight-light pl-sm-4 mb-2">Thông thường, chúng tôi có thể sử dụng thông tin mà chúng tôi thu
+                thập về bạn để.</p>
+            <p class="font-weight-light pl-sm-4 mb-2">Tạo điều kiện và tăng cường việc sử dụng Dịch vụ của bạn;</p>
 
-            <h6 class="my-md-4 my-3">What Information Can I Access?</h6>
-            <p class="font-weight-light pl-sm-4 mb-2"> Lorem Ipsum as their default model text, and a search for 'lorem
-                ipsum' will uncover many web sites still in their infancy.
-                Various versions have evolved over the years, sometimes by accident, sometimes on purpose (injected
-                humour and the like).</p>
-            <p class="font-weight-light pl-sm-4 mb-2"> Latin words, combined with a handful of model sentence
-                structures, to generate Lorem Ipsum which looks reasonable. The
-                generated Lorem Ipsum is therefore always free from repetition, injected humour, or non-characteristic
-                words etc.</p>
+            <h6 class="my-md-4 my-3">Cách chúng tôi bảo vệ thông tin cá nhân của bạn</h6>
+            <p class="font-weight-light pl-sm-4 mb-2"> 1. Tạo điều kiện và tăng cường việc sử dụng Dịch vụ của bạn;
+            <p class="font-weight-light pl-sm-4 mb-2"> 2. Thực hiện nghiên cứu và phân tích về việc bạn sử dụng hoặc
+                quan tâm đến trang web, Dịch vụ và nội dung do chúng tôi cung cấp hoặc các sản phẩm, dịch vụ và nội dung
+                do người khác cung cấp;</p>
 
-            <h6 class="my-md-4 my-3">Statistical Information</h6>
-            <p class="font-weight-light pl-sm-4 mb-2">There are many variations of passages of Lorem Ipsum available,
-                but the majority have suffered alteration in some form,
-                by injected humour, or randomised words which don't look even slightly believable. If you are going to
-                use a passage
-                of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All
-                the Lorem Ipsum
-                generators on the Internet tend to repeat predefined chunks as necessary, making this the first true
-                generator on the
-                Internet.
+            <h6 class="my-md-4 my-3">Sự lựa chọn của bạn về thu thập và sử dụng thông tin của bạn</h6>
+            <p class="font-weight-light pl-sm-4 mb-2">Sự lựa chọn của bạn về thu thập và sử dụng thông tin của bạn
             </p>
 
-            <h6 class="my-md-4 my-3">User Consent</h6>
+            <h6 class="my-md-4 my-3">Sự riêng tư của trẻ em</h6>
             <ol start="1" class="pl-sm-4 pl-3">
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.it has a more-or-less
-                    normal distribution of
-                    letters, as opposed Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                <li>Mặc dù Dịch vụ dành cho đối tượng chung, nhưng chúng tôi hạn chế việc sử dụng chúng cho các cá nhân
+                    từ 13 tuổi trở lên. Chúng tôi không cố ý tìm kiếm hoặc thu thập thông tin cá nhân từ trẻ em dưới 13
+                    tuổi.
                 </li>
-                <li>Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium,
-                    totam rem aperiam,
-                    eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo.
-                    Nemo enim ipsam voluptatem
-                    quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores</li>
-                <li>Lorem Ipsum is simply dummy text of the printing and typesetting industry.it has a more-or-less
-                    normal distribution of
-                    letters, as opposed Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
-                </li>
+                <li>Do đó, mặc dù chúng tôi thực hiện các bước để bảo mật thông tin của bạn, chúng tôi không hứa hẹn, và
+                    bạn không nên mong đợi, rằng thông tin cá nhân, tìm kiếm của bạn, hoặc các thông tin liên lạc khác
+                    sẽ luôn được bảo mật. Người dùng cũng nên quan tâm đến cách họ xử lý và tiết lộ thông tin cá nhân
+                    của họ và tránh phải gửi thông tin cá nhân qua email không an toàn.</li>
+
             </ol>
-            <h6 class="mb-md-4 mb-3">Policy updates</h6>
-            <p class="font-weight-light pl-sm-4 mb-2"> you need to be sure there isn't anything embarrassing hidden in
-                the middle of text. All the Lorem Ipsum generators on
-                the Internet tend to repeat predefined chunks as necessary, making this the first true generator on the
-                Internet. It
-                uses a dictionary of over 200 Latin words, combined with a handful of model sentence structures</p>
+            <h6 class="mb-md-4 mb-3">Liên lạc với chúng tôi bằng cách nào</h6>
+            <p class="font-weight-light pl-sm-4 mb-2">Nếu bạn có bất kỳ câu hỏi nào về Chính sách Bảo mật hoặc các thông
+                lệ xử lý thông tin của chúng tôi hoặc nếu bạn muốn yêu cầu thông tin về việc tiết lộ thông tin cá nhân
+                của chúng tôi cho các bên thứ ba vì mục đích tiếp thị trực tiếp của họ, vui lòng liên hệ với chúng tôi.
+            </p>
         </div>
     </div>
     <!-- //privacy -->
@@ -569,7 +559,8 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                                     </li>
                                     <li>
                                         <a class="icon gp" href="https://www.instagram.com/thuan.phatt/">
-                                            <i class="fab fa-instagram" style="background: url(./images/bg-instagram.jpg);"></i>
+                                            <i class="fab fa-instagram"
+                                                style="background: url(./images/bg-instagram.jpg);"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -602,82 +593,82 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <!-- nav smooth scroll -->
     <script>
-        $(document).ready(function() {
-            $(".dropdown").hover(
-                function() {
-                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
-                    $(this).toggleClass('open');
-                },
-                function() {
-                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
-                    $(this).toggleClass('open');
-                }
-            );
-        });
+    $(document).ready(function() {
+        $(".dropdown").hover(
+            function() {
+                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                $(this).toggleClass('open');
+            },
+            function() {
+                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                $(this).toggleClass('open');
+            }
+        );
+    });
     </script>
     <!-- //nav smooth scroll -->
 
     <!-- popup modal (for location)-->
     <script src="js/jquery.magnific-popup.js"></script>
     <script>
-        $(document).ready(function() {
-            $('.popup-with-zoom-anim').magnificPopup({
-                type: 'inline',
-                fixedContentPos: false,
-                fixedBgPos: true,
-                overflowY: 'auto',
-                closeBtnInside: true,
-                preloader: false,
-                midClick: true,
-                removalDelay: 300,
-                mainClass: 'my-mfp-zoom-in'
-            });
-
+    $(document).ready(function() {
+        $('.popup-with-zoom-anim').magnificPopup({
+            type: 'inline',
+            fixedContentPos: false,
+            fixedBgPos: true,
+            overflowY: 'auto',
+            closeBtnInside: true,
+            preloader: false,
+            midClick: true,
+            removalDelay: 300,
+            mainClass: 'my-mfp-zoom-in'
         });
+
+    });
     </script>
     <!-- //popup modal (for location)-->
 
     <!-- cart-js -->
     <script src="js/minicart.js"></script>
     <script>
-        paypals.minicarts
-            .render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+    paypals.minicarts
+        .render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
 
-        paypals.minicarts.cart.on('checkout', function(evt) {
-            var items = this.items(),
-                len = items.length,
-                total = 0,
-                i;
+    paypals.minicarts.cart.on('checkout', function(evt) {
+        var items = this.items(),
+            len = items.length,
+            total = 0,
+            i;
 
-            // Count the number of each item in the cart
-            for (i = 0; i < len; i++) {
-                total += items[i].get('quantity');
-            }
+        // Count the number of each item in the cart
+        for (i = 0; i < len; i++) {
+            total += items[i].get('quantity');
+        }
 
-            if (total < 3) {
-                alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
-                evt.preventDefault();
-            }
-        });
+        if (total < 3) {
+            alert('The minimum order quantity is 3. Please add more to your shopping cart before checking out');
+            evt.preventDefault();
+        }
+    });
     </script>
     <!-- //cart-js -->
 
     <!-- password-script -->
     <script>
-        window.onload = function() {
-            document.getElementById("password1").onchange = validatePassword;
-            document.getElementById("password2").onchange = validatePassword;
-        }
+    window.onload = function() {
+        document.getElementById("password1").onchange = validatePassword;
+        document.getElementById("password2").onchange = validatePassword;
+    }
 
-        function validatePassword() {
-            var pass2 = document.getElementById("password2").value;
-            var pass1 = document.getElementById("password1").value;
-            if (pass1 != pass2)
-                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-            else
-                document.getElementById("password2").setCustomValidity('');
-            //empty string means no validation error
-        }
+    function validatePassword() {
+        var pass2 = document.getElementById("password2").value;
+        var pass1 = document.getElementById("password1").value;
+        if (pass1 != pass2)
+            document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+        else
+            document.getElementById("password2").setCustomValidity('');
+        //empty string means no validation error
+    }
     </script>
     <!-- //password-script -->
 
@@ -689,34 +680,34 @@ License URL: http://creativecommons.org/licenses/by/3.0/
     <script src="js/move-top.js"></script>
     <script src="js/easing.js"></script>
     <script>
-        jQuery(document).ready(function($) {
-            $(".scroll").click(function(event) {
-                event.preventDefault();
+    jQuery(document).ready(function($) {
+        $(".scroll").click(function(event) {
+            event.preventDefault();
 
-                $('html,body').animate({
-                    scrollTop: $(this.hash).offset().top
-                }, 1000);
-            });
+            $('html,body').animate({
+                scrollTop: $(this.hash).offset().top
+            }, 1000);
         });
+    });
     </script>
     <!-- //end-smooth-scrolling -->
 
     <!-- smooth-scrolling-of-move-up -->
     <script>
-        $(document).ready(function() {
-            /*
-            var defaults = {
-            	containerID: 'toTop', // fading element id
-            	containerHoverID: 'toTopHover', // fading element hover id
-            	scrollSpeed: 1200,
-            	easingType: 'linear' 
-            };
-            */
-            $().UItoTop({
-                easingType: 'easeOutQuart'
-            });
-
+    $(document).ready(function() {
+        /*
+        var defaults = {
+        	containerID: 'toTop', // fading element id
+        	containerHoverID: 'toTopHover', // fading element hover id
+        	scrollSpeed: 1200,
+        	easingType: 'linear' 
+        };
+        */
+        $().UItoTop({
+            easingType: 'easeOutQuart'
         });
+
+    });
     </script>
     <!-- //smooth-scrolling-of-move-up -->
 
