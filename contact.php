@@ -62,11 +62,11 @@
                             <i class="fas fa-phone mr-2"></i>369369369
                         </li>
                         <li class="text-center border-right text-white">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal" class="text-white">
+                            <a href="#" data-toggle="modal" data-target="#dangnhap" class="text-white">
                                 <i class="fas fa-sign-in-alt mr-2"></i>Đăng nhập</a>
                         </li>
                         <li class="text-center text-white">
-                            <a href="#" data-toggle="modal" data-target="#exampleModal2" class="text-white">
+                            <a href="#" data-toggle="modal" data-target="#dangky" class="text-white">
                                 <i class="fas fa-sign-out-alt mr-2"></i>Đăng ký</a>
                         </li>
                     </ul>
