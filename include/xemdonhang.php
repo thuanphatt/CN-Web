@@ -39,7 +39,7 @@ $update_giaodich = $con->exec($sql_update_giaodich);
                             echo 'Đơn hàng : ' . $_SESSION['dangnhap_home'] . '&ensp;';
                         }
                         ?>
-                        <a href="?login=dangxuat"> Đăng xuất</a>
+
                         <div class="col-md-12">
 
                             <?php

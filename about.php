@@ -216,9 +216,9 @@
                     <form action="#" method="post">
                         <select id="agileinfo-nav_search" name="agileinfo_search" class="border" required="">
                             <option value="">Danh mục sản phẩm</option>
-                            <option value="Televisions">Nam</option>
-                            <option value="Headphones">Nữ</option>
-                            <option value="Computers">Cặp đôi</option>
+                            <option value="Men">Nam</option>
+                            <option value="Women">Nữ</option>
+                            <option value="Couple">Cặp đôi</option>
                         </select>
                     </form>
                 </div>
