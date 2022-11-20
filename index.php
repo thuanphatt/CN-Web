@@ -122,10 +122,9 @@ require('db/connect.php');
     <!-- //popup modal (for location)-->
 
     <!-- cart-js -->
-    <!--  <script src="js/minicart.js"></script> -->
     <script>
     paypals.minicarts
-        .render(); //use only unique class names other than paypals.minicarts.Also Replace same class name in css and minicart.min.js
+        .render();
 
     paypals.minicarts.cart.on('checkout', function(evt) {
         var items = this.items(),
@@ -210,14 +209,7 @@ require('db/connect.php');
     <!-- smooth-scrolling-of-move-up -->
     <script>
     $(document).ready(function() {
-        /*
-        var defaults = {
-        	containerID: 'toTop', // fading element id
-        	containerHoverID: 'toTopHover', // fading element hover id
-        	scrollSpeed: 1200,
-        	easingType: 'linear' 
-        };
-        */
+
         $().UItoTop({
             easingType: 'easeOutQuart'
         });

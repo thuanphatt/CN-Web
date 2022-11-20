@@ -35,7 +35,7 @@ $sql_category = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
                     foreach ($sql_category as $category_danhmuc) {
                     ?>
-                    <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
+                    <li class="nav-item mr-lg-2 mb-lg-0 mb-2">
 
                         <a class="nav-link " href="?quanly=danhmuc&id=<?php echo $category_danhmuc['category_id'] ?>"
                             role="button" aria-haspopup="true" aria-expanded="false">
