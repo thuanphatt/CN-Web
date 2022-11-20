@@ -85,11 +85,11 @@ License URL: http://creativecommons.org/licenses/by/3.0/
 
     <!-- modals -->
     <!-- log in -->
-    <div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="dangnhap" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title text-center">Log In</h5>
+                    <h5 class="modal-title text-center">Đăng nhập</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
@@ -97,71 +97,70 @@ License URL: http://creativecommons.org/licenses/by/3.0/
                 <div class="modal-body">
                     <form action="#" method="post">
                         <div class="form-group">
-                            <label class="col-form-label">Username</label>
-                            <input type="text" class="form-control" placeholder=" " name="Name" required="">
+                            <label class="col-form-label">Email</label>
+                            <input type="text" class="form-control" placeholder=" " name="email_login" required="">
                         </div>
                         <div class="form-group">
-                            <label class="col-form-label">Password</label>
-                            <input type="password" class="form-control" placeholder=" " name="Password" required="">
+                            <label class="col-form-label">Mật khẩu</label>
+                            <input type="password" class="form-control" placeholder=" " name="password_login"
+                                required="">
                         </div>
                         <div class="right-w3l">
-                            <input type="submit" class="form-control" value="Log in">
+                            <input type="submit" class="form-control" name="dangnhap_home" value="Đăng nhập">
                         </div>
-                        <div class="sub-w3l">
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing">
-                                <label class="custom-control-label" for="customControlAutosizing">Remember me?</label>
-                            </div>
-                        </div>
-                        <p class="text-center dont-do mt-3">Don't have an account?
-                            <a href="#" data-toggle="modal" data-target="#exampleModal2">
-                                Register Now</a>
+
+                        <p class="text-center dont-do mt-3">Chưa có tài khoản?
+                            <a href="#" data-toggle="modal" data-target="#dangky">
+                                Đăng ký</a>
                         </p>
                     </form>
                 </div>
             </div>
         </div>
     </div>
+
     <!-- register -->
-    <div class="modal fade" id="exampleModal2" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal fade" id="dangky" tabindex="-1" role="dialog" aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title">Register</h5>
+                    <h5 class="modal-title">Đăng ký</h5>
                     <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
                 <div class="modal-body">
-                    <form action="#" method="post">
+                    <form action="" method="post">
                         <div class="form-group">
-                            <label class="col-form-label">Your Name</label>
-                            <input type="text" class="form-control" placeholder=" " name="Name" required="">
+                            <label class="col-form-label">Tên khách hàng</label>
+                            <input type="text" class="form-control" placeholder=" " name="name" required="">
                         </div>
                         <div class="form-group">
                             <label class="col-form-label">Email</label>
-                            <input type="email" class="form-control" placeholder=" " name="Email" required="">
+                            <input type="email" class="form-control" placeholder=" " name="email" required="">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">Phone</label>
+                            <input type="text" class="form-control" placeholder=" " name="phone" required="">
+                        </div>
+                        <div class="form-group">
+                            <label class="col-form-label">Address</label>
+                            <input type="text" class="form-control" placeholder=" " name="address" required="">
                         </div>
                         <div class="form-group">
                             <label class="col-form-label">Password</label>
-                            <input type="password" class="form-control" placeholder=" " name="Password" id="password1"
-                                required="">
+                            <input type="password" class="form-control" placeholder=" " name="password" required="">
+                            <input type="hidden" class="form-control" placeholder="" name="giaohang" value="0">
                         </div>
                         <div class="form-group">
-                            <label class="col-form-label">Confirm Password</label>
-                            <input type="password" class="form-control" placeholder=" " name="Confirm Password"
-                                id="password2" required="">
+                            <label class="col-form-label">Ghi chú</label>
+                            <textarea class="form-control" name="note"></textarea>
                         </div>
+
                         <div class="right-w3l">
-                            <input type="submit" class="form-control" value="Register">
+                            <input type="submit" class="form-control" name="dangky" value="Đăng ký">
                         </div>
-                        <div class="sub-w3l">
-                            <div class="custom-control custom-checkbox mr-sm-2">
-                                <input type="checkbox" class="custom-control-input" id="customControlAutosizing2">
-                                <label class="custom-control-label" for="customControlAutosizing2">I Accept to the Terms
-                                    & Conditions</label>
-                            </div>
-                        </div>
+
                     </form>
                 </div>
             </div>
