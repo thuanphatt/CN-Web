@@ -19,7 +19,7 @@ if ($dangxuat == 'dangxuat') {
 
 <head>
     <meta charset="UTF-8">
-    <title>Welcome Admin</title>
+    <title>Admin</title>
     <link href="../css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
 </head>
 

@@ -3,8 +3,6 @@ session_start();
 include('../db/connect.php');
 ?>
 <?php
-// session_destroy();
-// unset('dangnhap');
 if (isset($_SESSION['admin_id'])) header('Location: dashboard.php');
 if (isset($_POST['dangnhap'])) {
     $taikhoan = $_POST['taikhoan'];
@@ -42,8 +40,7 @@ if (isset($_POST['dangnhap'])) {
                 <input type="text" name="taikhoan" placeholder="Điền Email" class="form-control"><br>
                 <label>Mật khẩu</label>
                 <input type="password" name="matkhau" placeholder="Điền mật khẩu" class="form-control"><br>
-                <button type="submit" name="dangnhap" class="btn btn-success text-center" value="Đăng nhập">Dang
-                    nhap</button>
+                <input type="submit" name="dangnhap" class="btn btn-success text-center" value="Đăng nhập"></input>
             </form>
         </div>
     </div>
