@@ -63,15 +63,19 @@
                 <div class="col-md-3 col-sm-6 footer-grids">
                     <h3 class="text-white font-weight-bold mb-3">Danh mục</h3>
                     <ul>
+                        <?php
+                        $sql = 'SELECT * FROM tbl_category ORDER BY category_id DESC';
+                        $sql_category_sidebar = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
+                        foreach ($sql_category_sidebar as $category_sidebar) {
+                        ?>
                         <li class="mb-3">
-                            <a href="product.php">Nam</a>
+                            <!-- <input type="checkbox" class="checked"> -->
+                            <span class="span"><a
+                                    href="index.php?quanly=danhmuc&id=<?php echo $category_sidebar['category_id'] ?>"><?php echo $category_sidebar['category_name'] ?></a></span>
                         </li>
-                        <li class="mb-3">
-                            <a href="product.php">Nữ</a>
-                        </li>
-                        <li class="mb-3">
-                            <a href="product.php">Cặp đôi</a>
-                        </li>
+                        <?php
+                        }
+                        ?>
                     </ul>
                 </div>
                 <!-- //footer categories -->
