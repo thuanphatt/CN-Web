@@ -66,10 +66,10 @@ if (isset($_POST['themgiohang'])) {
             $sanpham_id = $_POST['thanhtoan_product_id'][$i];
             $soluong = $_POST['thanhtoan_soluong'][$i];
             $sql = "INSERT INTO tbl_donhang(sanpham_id,khachhang_id,soluong,mahang) values ('$sanpham_id','$khachhang_id','$soluong','$mahang')";
-            $sql_donhang = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
+            $sql_donhang = $con->exec($sql);
 
             $sql_giaodich = "INSERT INTO tbl_giaodich(sanpham_id,soluong,magiaodich,khachhang_id) values ('$sanpham_id','$soluong','$mahang','$khachhang_id')";
-            $xuly_giaodich = $con->query($sql_giaodich)->fetch(PDO::FETCH_ASSOC);
+            $xuly_giaodich = $con->exec($sql_giaodich);
 
             $sql_delete_thanhtoan =  "DELETE FROM tbl_giohang WHERE sanpham_id='$sanpham_id'";
             $delete_thanhtoan = $con->query($sql_delete_thanhtoan)->fetch(PDO::FETCH_ASSOC);
@@ -103,7 +103,7 @@ if (isset($_POST['themgiohang'])) {
         </h3>
         <?php
         if (isset($_SESSION['dangnhap_home'])) {
-            echo '<p style="color:#000;">Xin chào bạn: ' . $_SESSION['dangnhap_home'] . '<a href="?quanly=giohang&login=dangxuat">Đăng xuất</a></p>';
+            echo '<p style="color:#000;">Xin chào bạn: ' . $_SESSION['dangnhap_home'];
         } else {
             echo '';
         }

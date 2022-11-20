@@ -86,7 +86,7 @@ $sql_update_giaodich = $con->query($sql_giaodich)->fetch(PDO::FETCH_ASSOC);
             <?php
             if (isset($_GET['quanly']) == 'xemdonhang') {
                 $mahang = $_GET['mahang'];
-                $sql = "SELECT * FROM tbl_donhang,tbl_sanpham WHERE tbl_donhang.sanpham_id=tbl_sanpham.sanpham_id AND tbl_donhang.mahang='$mahang'";
+                $sql = "SELECT * FROM tbl_donhang,tbl_sanpham WHERE tbl_donhang.sanpham_id=tbl_sanpham.sanpham_id AND tbl_donhang.mahang='$mahang' ORDER BY tbl_donhang.ngaythang DESC";
                 $sql_chitiet =  $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
             ?>
             <div class="col-md-7">

@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -57,10 +60,28 @@
                     <!-- header lists -->
                     <ul>
 
+                        <?php
+                        if (isset($_SESSION['dangnhap_home'])) {
+
+                        ?>
+                        <li class="text-center border-right text-white">
+                            <a href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>"
+                                class="text-white">
+                                <i class="fas fa-truck mr-2"></i>Xem đơn hàng :
+                                <?php echo $_SESSION['dangnhap_home'] ?></a>
+                        </li>
+                        <?php
+                        }
+                        ?>
 
                         <li class="text-center border-right text-white">
                             <i class="fas fa-phone mr-2"></i>369369369
                         </li>
+                        <?php if (isset($_SESSION['dangnhap_home'])) : ?>
+                        <li class="text-center border-right text-white">
+                            <a href="?login=dangxuat" class="text-white">Đăng xuất</a>
+                        </li>
+                        <?php else : ?>
                         <li class="text-center border-right text-white">
                             <a href="#" data-toggle="modal" data-target="#dangnhap" class="text-white">
                                 <i class="fas fa-sign-in-alt mr-2"></i>Đăng nhập</a>
@@ -69,6 +90,7 @@
                             <a href="#" data-toggle="modal" data-target="#dangky" class="text-white">
                                 <i class="fas fa-sign-out-alt mr-2"></i>Đăng ký</a>
                         </li>
+                        <?php endif; ?>
                     </ul>
                     <!-- //header lists -->
                 </div>
