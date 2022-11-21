@@ -10,7 +10,6 @@ if (isset($_POST['dangnhap_home'])) {
         if ($select_admin > 0) {
             $_SESSION['dangnhap_home'] = $select_admin['name'];
             $_SESSION['khachhang_id'] = $select_admin['khachhang_id'];
-
             header('Location: index.php');
         } else {
             echo '<script>alert("Tài khoản mật khẩu sai")</script>';

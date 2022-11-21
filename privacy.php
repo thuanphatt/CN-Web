@@ -12,13 +12,13 @@ session_start();
     <meta name="keywords" content="T-P Watch " />
     <link rel="icon" type="image/x-icon" href="./images/icon.png">
     <script>
-    addEventListener("load", function() {
-        setTimeout(hideURLbar, 0);
-    }, false);
+        addEventListener("load", function() {
+            setTimeout(hideURLbar, 0);
+        }, false);
 
-    function hideURLbar() {
-        window.scrollTo(0, 1);
-    }
+        function hideURLbar() {
+            window.scrollTo(0, 1);
+        }
     </script>
     <!-- //Meta tag Keywords -->
 
@@ -36,12 +36,8 @@ session_start();
     <!-- //Custom-Files -->
 
     <!-- web fonts -->
-    <link
-        href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext"
-        rel="stylesheet">
-    <link
-        href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese"
-        rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Lato:100,100i,300,300i,400,400i,700,700i,900,900i&amp;subset=latin-ext" rel="stylesheet">
+    <link href="//fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i&amp;subset=cyrillic,cyrillic-ext,greek,greek-ext,latin-ext,vietnamese" rel="stylesheet">
     <!-- //web fonts -->
 
 </head>
@@ -63,12 +59,11 @@ session_start();
                         if (isset($_SESSION['dangnhap_home'])) {
 
                         ?>
-                        <li class="text-center border-right text-white">
-                            <a href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>"
-                                class="text-white">
-                                <i class="fas fa-truck mr-2"></i>Xem đơn hàng :
-                                <?php echo $_SESSION['dangnhap_home'] ?></a>
-                        </li>
+                            <li class="text-center border-right text-white">
+                                <a href="index.php?quanly=xemdonhang&khachhang=<?php echo $_SESSION['khachhang_id'] ?>" class="text-white">
+                                    <i class="fas fa-truck mr-2"></i>Xem đơn hàng :
+                                    <?php echo $_SESSION['dangnhap_home'] ?></a>
+                            </li>
                         <?php
                         }
                         ?>
@@ -78,18 +73,18 @@ session_start();
                             <i class="fas fa-phone mr-2"></i>369369369
                         </li>
                         <?php if (isset($_SESSION['dangnhap_home'])) : ?>
-                        <li class="text-center border-right text-white">
-                            <a href="?login=dangxuat" class="text-white">Đăng xuất</a>
-                        </li>
+                            <li class="text-center border-right text-white">
+                                <a href="?login=dangxuat" class="text-white">Đăng xuất</a>
+                            </li>
                         <?php else : ?>
-                        <li class="text-center border-right text-white">
-                            <a href="#" data-toggle="modal" data-target="#dangnhap" class="text-white">
-                                <i class="fas fa-sign-in-alt mr-2"></i>Đăng nhập</a>
-                        </li>
-                        <li class="text-center text-white">
-                            <a href="#" data-toggle="modal" data-target="#dangky" class="text-white">
-                                <i class="fas fa-sign-out-alt mr-2"></i>Đăng ký</a>
-                        </li>
+                            <li class="text-center border-right text-white">
+                                <a href="#" data-toggle="modal" data-target="#dangnhap" class="text-white">
+                                    <i class="fas fa-sign-in-alt mr-2"></i>Đăng nhập</a>
+                            </li>
+                            <li class="text-center text-white">
+                                <a href="#" data-toggle="modal" data-target="#dangky" class="text-white">
+                                    <i class="fas fa-sign-out-alt mr-2"></i>Đăng ký</a>
+                            </li>
                         <?php endif; ?>
                     </ul>
                     <!-- //header lists -->
@@ -118,8 +113,7 @@ session_start();
                         </div>
                         <div class="form-group">
                             <label class="col-form-label">Mật khẩu</label>
-                            <input type="password" class="form-control" placeholder=" " name="password_login"
-                                required="">
+                            <input type="password" class="form-control" placeholder=" " name="password_login" required="">
                         </div>
                         <div class="right-w3l">
                             <input type="submit" class="form-control" name="dangnhap_home" value="Đăng nhập">
@@ -204,8 +198,7 @@ session_start();
                         <!-- search -->
                         <div class="col-10 agileits_search">
                             <form class="form-inline" action="#" method="post">
-                                <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm"
-                                    aria-label="Search" required>
+                                <input class="form-control mr-sm-2" type="search" placeholder="Tìm kiếm sản phẩm" aria-label="Search" required>
                                 <button class="btn my-2 my-sm-0" type="submit">Tìm kiếm</button>
                             </form>
                         </div>
@@ -242,9 +235,7 @@ session_start();
                         </select>
                     </form>
                 </div>
-                <button class="navbar-toggler" type="button" data-toggle="collapse"
-                    data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
-                    aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse" id="navbarSupportedContent">
@@ -260,14 +251,12 @@ session_start();
                         $sql_category_danhmuc = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
                         foreach ($sql_category_danhmuc as $category_danhmuc) {
                         ?>
-                        <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
-                            <a class="nav-link "
-                                href="index.php?quanly=danhmuc&id=<?php echo $category_danhmuc['category_id'] ?>"
-                                role="button" aria-haspopup="true" aria-expanded="false">
-                                <?php echo $category_danhmuc['category_name'] ?>
-                            </a>
+                            <li class="nav-item  mr-lg-2 mb-lg-0 mb-2">
+                                <a class="nav-link " href="index.php?quanly=danhmuc&id=<?php echo $category_danhmuc['category_id'] ?>" role="button" aria-haspopup="true" aria-expanded="false">
+                                    <?php echo $category_danhmuc['category_name'] ?>
+                                </a>
 
-                        </li>
+                            </li>
                         <?php
                         }
                         ?>
@@ -277,18 +266,16 @@ session_start();
                             $sql_danhmuctin = $con->query($sql)->fetchAll(PDO::FETCH_ASSOC);
 
                             ?>
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown"
-                                aria-haspopup="true" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 Tin tức
                             </a>
                             <div class="dropdown-menu">
                                 <?php
                                 foreach ($sql_danhmuctin as $danhmuctin) {
                                 ?>
-                                <a class="dropdown-item"
-                                    href="index.php?quanly=tintuc&id_tin=<?php echo $danhmuctin['danhmuctin_id'] ?>">
-                                    <?php echo $danhmuctin['tendanhmuc'] ?>
-                                </a>
+                                    <a class="dropdown-item" href="index.php?quanly=tintuc&id_tin=<?php echo $danhmuctin['danhmuctin_id'] ?>">
+                                        <?php echo $danhmuctin['tendanhmuc'] ?>
+                                    </a>
                                 <?php
                                 }
                                 ?>
@@ -439,9 +426,7 @@ session_start();
     <footer>
         <div class="footer-top-first">
             <div class="container py-md-5 py-sm-4 py-3">
-                <!-- footer first section -->
 
-                <!-- //footer first section -->
                 <!-- footer second section -->
                 <div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
                     <div class="col-md-4 offer-footer">
@@ -571,8 +556,7 @@ session_start();
                                     </li>
                                     <li>
                                         <a class="icon gp" href="https://www.instagram.com/thuan.phatt/">
-                                            <i class="fab fa-instagram"
-                                                style="background: url(./images/bg-instagram.jpg);"></i>
+                                            <i class="fab fa-instagram" style="background: url(./images/bg-instagram.jpg);"></i>
                                         </a>
                                     </li>
                                 </ul>
@@ -605,38 +589,38 @@ session_start();
 
     <!-- nav smooth scroll -->
     <script>
-    $(document).ready(function() {
-        $(".dropdown").hover(
-            function() {
-                $('.dropdown-menu', this).stop(true, true).slideDown("fast");
-                $(this).toggleClass('open');
-            },
-            function() {
-                $('.dropdown-menu', this).stop(true, true).slideUp("fast");
-                $(this).toggleClass('open');
-            }
-        );
-    });
+        $(document).ready(function() {
+            $(".dropdown").hover(
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideDown("fast");
+                    $(this).toggleClass('open');
+                },
+                function() {
+                    $('.dropdown-menu', this).stop(true, true).slideUp("fast");
+                    $(this).toggleClass('open');
+                }
+            );
+        });
     </script>
     <!-- //nav smooth scroll -->
 
     <!-- popup modal (for location)-->
     <script src="js/jquery.magnific-popup.js"></script>
     <script>
-    $(document).ready(function() {
-        $('.popup-with-zoom-anim').magnificPopup({
-            type: 'inline',
-            fixedContentPos: false,
-            fixedBgPos: true,
-            overflowY: 'auto',
-            closeBtnInside: true,
-            preloader: false,
-            midClick: true,
-            removalDelay: 300,
-            mainClass: 'my-mfp-zoom-in'
-        });
+        $(document).ready(function() {
+            $('.popup-with-zoom-anim').magnificPopup({
+                type: 'inline',
+                fixedContentPos: false,
+                fixedBgPos: true,
+                overflowY: 'auto',
+                closeBtnInside: true,
+                preloader: false,
+                midClick: true,
+                removalDelay: 300,
+                mainClass: 'my-mfp-zoom-in'
+            });
 
-    });
+        });
     </script>
     <!-- //popup modal (for location)-->
 
@@ -644,20 +628,20 @@ session_start();
 
     <!-- password-script -->
     <script>
-    window.onload = function() {
-        document.getElementById("password1").onchange = validatePassword;
-        document.getElementById("password2").onchange = validatePassword;
-    }
+        window.onload = function() {
+            document.getElementById("password1").onchange = validatePassword;
+            document.getElementById("password2").onchange = validatePassword;
+        }
 
-    function validatePassword() {
-        var pass2 = document.getElementById("password2").value;
-        var pass1 = document.getElementById("password1").value;
-        if (pass1 != pass2)
-            document.getElementById("password2").setCustomValidity("Passwords Don't Match");
-        else
-            document.getElementById("password2").setCustomValidity('');
-        //empty string means no validation error
-    }
+        function validatePassword() {
+            var pass2 = document.getElementById("password2").value;
+            var pass1 = document.getElementById("password1").value;
+            if (pass1 != pass2)
+                document.getElementById("password2").setCustomValidity("Passwords Don't Match");
+            else
+                document.getElementById("password2").setCustomValidity('');
+            //empty string means no validation error
+        }
     </script>
     <!-- //password-script -->
 
@@ -669,34 +653,34 @@ session_start();
     <script src="js/move-top.js"></script>
     <script src="js/easing.js"></script>
     <script>
-    jQuery(document).ready(function($) {
-        $(".scroll").click(function(event) {
-            event.preventDefault();
+        jQuery(document).ready(function($) {
+            $(".scroll").click(function(event) {
+                event.preventDefault();
 
-            $('html,body').animate({
-                scrollTop: $(this.hash).offset().top
-            }, 1000);
+                $('html,body').animate({
+                    scrollTop: $(this.hash).offset().top
+                }, 1000);
+            });
         });
-    });
     </script>
     <!-- //end-smooth-scrolling -->
 
     <!-- smooth-scrolling-of-move-up -->
     <script>
-    $(document).ready(function() {
-        /*
-        var defaults = {
-        	containerID: 'toTop', // fading element id
-        	containerHoverID: 'toTopHover', // fading element hover id
-        	scrollSpeed: 1200,
-        	easingType: 'linear' 
-        };
-        */
-        $().UItoTop({
-            easingType: 'easeOutQuart'
-        });
+        $(document).ready(function() {
+            /*
+            var defaults = {
+            	containerID: 'toTop', // fading element id
+            	containerHoverID: 'toTopHover', // fading element hover id
+            	scrollSpeed: 1200,
+            	easingType: 'linear' 
+            };
+            */
+            $().UItoTop({
+                easingType: 'easeOutQuart'
+            });
 
-    });
+        });
     </script>
     <!-- //smooth-scrolling-of-move-up -->
 

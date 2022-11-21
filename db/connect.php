@@ -17,7 +17,6 @@ try {
     PDO::MYSQL_ATTR_INIT_COMMAND => 'SET NAMES utf8',
     PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION
   ];
-
   // Kết nối database
   $con = new PDO($dsn, $db_user, $db_pass, $options);
 } catch (Exception $e) {

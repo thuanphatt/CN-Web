@@ -1,5 +1,4 @@
 <?php
-
 require('db/connect.php');
 if (isset($_POST['themgiohang'])) {
     $tensanpham = $_POST['tensanpham'];
@@ -18,10 +17,6 @@ if (isset($_POST['themgiohang'])) {
         $sql_giohang = "INSERT INTO tbl_giohang(tensanpham,sanpham_id,giasanpham,hinhanh,soluong) values ('$tensanpham','$sanpham_id','$gia','$hinhanh','$soluong')";
     }
     $insert_row = $con->query($sql_giohang)->fetch(PDO::FETCH_ASSOC);
-    // if($insert_row==0){
-    // 	header('Location:index.php?quanly=chitietsp&id='.$sanpham_id);	
-    // }
-
 } elseif (isset($_POST['capnhatsoluong'])) {
 
     for ($i = 0; $i < count($_POST['product_id']); $i++) {
@@ -120,7 +115,6 @@ if (isset($_POST['themgiohang'])) {
 
             <div class="table-responsive">
                 <form action="" method="POST">
-
                     <table class="timetable_sub">
                         <thead>
                             <tr>
@@ -139,9 +133,6 @@ if (isset($_POST['themgiohang'])) {
                             $i = 0;
                             $total = 0;
                             foreach ($lay_giohang as $giohang) {
-
-                                // print_r($sql_lay_giohang);
-
                                 $subtotal = $giohang['soluong'] * $giohang['giasanpham'];
                                 $total += $subtotal;
                                 $i++;
