@@ -7,7 +7,6 @@ require('db/connect.php');
 
 <head>
     <title>T-P Watch</title>
-    <!-- Meta tag Keywords -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta charset="UTF-8" />
     <meta name="keywords" content="T-P Watch" />
@@ -21,7 +20,6 @@ require('db/connect.php');
         window.scrollTo(0, 1);
     }
     </script>
-    <!-- //Meta tag Keywords -->
 
     <!-- Custom-Files -->
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css" media="all" />
