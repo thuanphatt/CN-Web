@@ -412,9 +412,7 @@ session_start();
     <footer>
         <div class="footer-top-first">
             <div class="container py-md-5 py-sm-4 py-3">
-                <!-- footer first section -->
 
-                <!-- //footer first section -->
                 <!-- footer second section -->
 
                 <div class="row w3l-grids-footer border-top border-bottom py-sm-4 py-3">
