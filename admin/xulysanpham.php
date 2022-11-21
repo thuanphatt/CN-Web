@@ -1,6 +1,7 @@
 <?php
 session_start();
 include('../db/connect.php');
+// Nếu không tồn tại session đăng nhập thì chuyển đền trang index.php 
 if (!isset($_SESSION['dangnhap'])) {
     header('Location: index.php');
 }
