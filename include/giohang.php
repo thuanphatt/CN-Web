@@ -1,7 +1,6 @@
 <?php
 require('db/connect.php');
 if (isset($_POST['themgiohang'])) {
-    print_r($_POST);
     $tensanpham = $_POST['tensanpham'];
     $sanpham_id = $_POST['sanpham_id'];
     $hinhanh = $_POST['hinhanh'];
