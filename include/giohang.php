@@ -1,15 +1,15 @@
 <?php
 require('db/connect.php');
 if (isset($_POST['themgiohang'])) {
+    print_r($_POST);
     $tensanpham = $_POST['tensanpham'];
     $sanpham_id = $_POST['sanpham_id'];
     $hinhanh = $_POST['hinhanh'];
-    $gia = $_POST['giasanpham'];
+    $gia = $_POST['giakhuyenmai'];
     $soluong = $_POST['soluong'];
     $sql = "SELECT * FROM tbl_giohang WHERE sanpham_id='$sanpham_id'";
     $select_giohang = $con->query($sql)->fetch(PDO::FETCH_ASSOC);
     if ($select_giohang > 0) {
-
         $soluong = $select_giohang['soluong'] + 1;
         $sql_giohang = "UPDATE tbl_giohang SET soluong='$soluong' WHERE sanpham_id='$sanpham_id'";
     } else {
@@ -133,7 +133,7 @@ if (isset($_POST['themgiohang'])) {
                             $i = 0;
                             $total = 0;
                             foreach ($lay_giohang as $giohang) {
-                                $subtotal = $giohang['soluong'] * $giohang['giasanpham'];
+                                $subtotal = $giohang['soluong'] * (int)$giohang['giasanpham'];
                                 $total += $subtotal;
                                 $i++;
                             ?>

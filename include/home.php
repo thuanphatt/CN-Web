@@ -58,6 +58,8 @@
                                                             value="<?php echo $product['sanpham_id'] ?>" />
                                                         <input type="hidden" name="giasanpham"
                                                             value="<?php echo $product['sanpham_gia'] ?>" />
+                                                        <input type="hidden" name="giakhuyenmai"
+                                                            value="<?php echo $product['sanpham_giakhuyenmai'] ?>" />
                                                         <input type="hidden" name="hinhanh"
                                                             value="<?php echo $product['sanpham_image'] ?>" />
                                                         <input type="hidden" name="soluong" value="1" />

@@ -66,7 +66,7 @@ $title = $sql_category[0]['category_name'];
                                                     <input type="hidden" name="hinhanh"
                                                         value="<?php echo $category['sanpham_image'] ?>" />
                                                     <input type="hidden" name="soluong" value="1" />
-                                                    <input type="submit" name="themgiohang" value="Thêm giỏ hàng"
+                                                    <input type="submit" name="themgiohang" value="Thêmm giỏ hàng"
                                                         class="button" />
                                                 </fieldset>
                                             </form>
